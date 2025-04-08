@@ -1,1 +1,11 @@
-
+    .primary-green { color: green; }
+    .yellow { color: orange; }
+    .red { color: red; }
+    .fs-14px { font-size: 14px; }
+    .fs-18px { font-size: 18px; }
+    .fs-1 { font-size: 1em; }
+    .bg-primary-green { background-color: green; color: white; }
+    .text-bright-gray { color: #555; }
+    .search-form input { width: 200px; }
+    .search-form button { padding: 0.375rem 0.75rem; }
+    .wh-64px { width: 64px; height: 64px; }
