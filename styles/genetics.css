@@ -99,3 +99,16 @@
     grid-template-columns: 1fr;
   }
 }
+/* Adjust the size of the dog image to be closer to the DNA icon */
+.small-icon {
+  max-width: 32px;  /* Reduced from 40px */
+  max-height: 32px; /* Reduced from 40px */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.dna-icon {
+  color: white;
+  font-size: 28px; /* Keep this the same */
+}
