@@ -16,152 +16,50 @@
 .search-form input { width: 200px; }
 .search-form button { padding: 0.375rem 0.75rem; }
 
-/* Icon/image sizing */
-.wh-64px { width: 64px; height: 64px; }
-
-/* Pictogram image */
-.pictogram-image {
-    max-width: 40px;
-    max-height: 40px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
-/* Genetics of Breeding Section */
-#genetics-of-breeding {
-    padding: 3rem 0;
+/* Genetics Section */
+.genetics-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-#genetics-of-breeding .title-row {
-    text-align: center;
-    margin-bottom: 3rem;
+.genetics-section h1 {
+  color: #3c763d;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-#genetics-of-breeding h1 {
-    color: #3c763d;
-    font-weight: bold;
+/* Card Grid Layout */
+.genetics-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 
-.genetics-cards-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
+/* Individual Cards */
 .genetics-card {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 15px;
-    margin-bottom: 2rem;
-}
-
-.icon-box {
-    width: 64px;
-    height: 64px;
-    background-color: #3c763d;
-    border-radius: 0.3rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.icon-box img {
-    max-width: 40px;
-    max-height: 40px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
-
-.icon-box i {
-    color: white;
-    font-size: 1.5rem;
-}
-
-.card-content {
-    text-align: center;
-}
-
-.card-content h5 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.card-content p {
-    font-size: 0.875rem;
-    color: #555;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .genetics-card {
-        width: 50%;
-    }
-}
-
-@media (max-width: 576px) {
-    .genetics-card {
-        width: 100%;
-    }
-}
-.pictogram-image {
-  max-width: 40px;
-  max-height: 40px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.wh-64px {
-  width: 64px;
-  height: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bg-primary-green {
-  background-color: #3c763d;
-  color: white;
-}
-/* Grid layout for genetics cards */
-.genetics-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-}
-
-.genetics-card {
-  width: 25%;
-  padding: 0 15px;
-  margin-bottom: 2rem;
-}
-
-.genetics-card-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  text-align: center;
 }
 
-/* Icon container */
-.genetics-icon {
-  width: 64px;
-  height: 64px;
+/* Icon container - consolidated styles */
+.icon-container {
+  width: 60px;
+  height: 60px;
   background-color: #3c763d;
-  border-radius: 0.3rem;
+  border-radius: 5px;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 
-/* Pictogram image */
-.pictogram-image {
+/* Image sizing - consolidated styles */
+.small-icon, .pictogram-image {
   max-width: 40px;
   max-height: 40px;
   width: auto;
@@ -169,80 +67,35 @@
   object-fit: contain;
 }
 
-/* Icon style */
-.genetics-icon i {
+/* Text icon styling */
+.dna-icon {
   color: white;
-  font-size: 24px;
+  font-size: 28px;
 }
 
-/* Card content */
-.genetics-card-content {
-  text-align: center;
+/* Card text styling */
+.genetics-card h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.genetics-card-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.genetics-card-text {
-  font-size: 0.875rem;
+.genetics-card p {
   color: #555;
-  text-align: center;
-}
-
-/* Typography */
-.genetics-title {
-  text-align: center;
-  font-weight: bold;
-  color: #3c763d;
-  margin-bottom: 2rem;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 250px; /* Prevent text from getting too wide */
 }
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
-  .genetics-card {
-    width: 50%;
+  .genetics-cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
-  .genetics-card {
-    width: 100%;
+  .genetics-cards {
+    grid-template-columns: 1fr;
   }
 }
-/* Grid layout for genetics cards */
-.genetics-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-}
-
-.genetics-card {
-  width: 25%;
-  padding: 0 15px;
-  margin-bottom: 2rem;
-}
-
-.genetics-icon {
-  width: 64px;
-  height: 64px;
-  background-color: #3c763d;
-  border-radius: 0.3rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.pictogram-image {
-  max-width: 40px;
-  max-height: 40px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-
