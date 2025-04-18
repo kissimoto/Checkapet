@@ -9,3 +9,21 @@
     .search-form input { width: 200px; }
     .search-form button { padding: 0.375rem 0.75rem; }
     .wh-64px { width: 64px; height: 64px; }
+
+.pictogram-image {
+    max-width: 60px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
