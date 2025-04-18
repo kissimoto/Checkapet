@@ -1,29 +1,119 @@
-    .primary-green { color: green; }
-    .yellow { color: orange; }
-    .red { color: red; }
-    .fs-14px { font-size: 14px; }
-    .fs-18px { font-size: 18px; }
-    .fs-1 { font-size: 1em; }
-    .bg-primary-green { background-color: green; color: white; }
-    .text-bright-gray { color: #555; }
-    .search-form input { width: 200px; }
-    .search-form button { padding: 0.375rem 0.75rem; }
-    .wh-64px { width: 64px; height: 64px; }
+/* genetics.css */
 
-.pictogram-image {
-    max-width: 60px;
-    max-height: 60px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 3px;
+/* Colors */
+:root {
+  --checkapet-green: #3c763d;
+  --checkapet-light-green: #77b96c;
+  --checkapet-status-clear: #2e8540;
+  --checkapet-status-carrier: #c75c00;
+  --checkapet-status-affected: #c12a0c;
 }
 
-.icon-box {
-    width: 80px;
-    height: 80px;
+/* Genetics of breeding section */
+.genetics-of-breeding {
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+}
+
+/* Text colors */
+.primary-green { 
+    color: var(--checkapet-green); 
+}
+
+.yellow { 
+    color: orange; 
+}
+
+.red { 
+    color: red; 
+}
+
+/* Background colors */
+.bg-primary-green { 
+    background-color: var(--checkapet-green); 
+    color: white; 
+}
+
+/* Font sizes */
+.fs-14px { 
+    font-size: 14px; 
+}
+
+.fs-18px { 
+    font-size: 18px; 
+}
+
+.fs-1 { 
+    font-size: 1em; 
+}
+
+/* Text colors */
+.text-bright-gray { 
+    color: #555; 
+}
+
+/* Search form */
+.search-form input { 
+    width: 200px; 
+}
+
+.search-form button { 
+    padding: 0.375rem 0.75rem; 
+}
+
+/* Pictogram styling */
+.wh-64px { 
+    width: 64px; 
+    height: 64px; 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.icon-box {
+    background-color: var(--checkapet-green);
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: scale(1.05);
+}
+
+.pictogram-image {
+    max-width: 45px;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Card layouts */
+.genetics-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.genetics-card h5 {
+    color: var(--checkapet-green);
+    margin-top: 12px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.genetics-card p {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .genetics-card {
+        margin-bottom: 30px;
+    }
 }
