@@ -1,35 +1,37 @@
 header {
     padding: 1rem 0;
-    border-bottom: 1px solid #eee; /* Optional: Add a bottom border */
+    border-bottom: 1px solid #eee;
 }
-
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333; /* Adjust color as needed */
+    color: #333;
     text-decoration: none;
 }
-
 .nav-link {
-    color: #555; /* Adjust color as needed */
+    color: #555;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
-
 .nav-link:hover {
-    color: #007bff; /* Adjust hover color as needed */
+    color: #007bff;
 }
-
+.nav-link.active {
+    color: #3c763d;
+    font-weight: bold;
+}
 input[type="text"] {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
 .btn-secondary {
-    background-color: #6c757d; /* Bootstrap secondary button color */
+    background-color: #6c757d;
     color: white;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
+}
+.tertiary-green {
+    color: #3c763d;
 }
