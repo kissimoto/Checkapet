@@ -212,3 +212,37 @@
     width: 100%;
   }
 }
+/* Grid layout for genetics cards */
+.genetics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.genetics-card {
+  width: 25%;
+  padding: 0 15px;
+  margin-bottom: 2rem;
+}
+
+.genetics-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #3c763d;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pictogram-image {
+  max-width: 40px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
