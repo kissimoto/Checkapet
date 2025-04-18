@@ -108,3 +108,23 @@
         width: 100%;
     }
 }
+.pictogram-image {
+  max-width: 40px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.wh-64px {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-primary-green {
+  background-color: #3c763d;
+  color: white;
+}
