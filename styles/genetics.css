@@ -112,3 +112,23 @@
   color: white;
   font-size: 28px; /* Keep this the same */
 }
+
+/* Add this to your genetics.css file */
+
+/* Specific styling for the dog icon */
+.dog-icon {
+  max-width: 28px;  /* Match the DNA icon size */
+  max-height: 28px; /* Match the DNA icon size */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Keep the general small-icon class for other images */
+.small-icon {
+  max-width: 40px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
