@@ -75,12 +75,6 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
 }
 
-/* Text icon styling */
-.dna-icon {
-  color: white;
-  font-size: 28px;
-}
-
 /* Card text styling */
 .genetics-card h3 {
   color: #333;
@@ -193,4 +187,14 @@ h1, h2, h3, h4, h5, h6 {
 .percentage {
   margin-top: 10px;
   color: #666;
+}
+/* Text colors for status */
+.clear-text {
+    color: #2e8540;
+    font-weight: 600;
+}
+
+.affected-text {
+    color: #c12a0c;
+    font-weight: 600;
 }
