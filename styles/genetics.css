@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
 
 /* Then add the font-family rule */
@@ -101,6 +100,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 }
+
 /* Adjust the size of the dog image to be closer to the DNA icon */
 .small-icon {
   max-width: 32px;  /* Reduced from 40px */
@@ -114,8 +114,6 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-size: 28px; /* Keep this the same */
 }
-
-/* Add this to your genetics.css file */
 
 /* Specific styling for the dog icon */
 .dog-icon {
@@ -134,14 +132,24 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   object-fit: contain;
 }
-/* Centered genetic grid */
+
+/* FIXES: Added space between headers and content */
+h3.primary-green, h3.female-header {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: 'Sanchez', serif;
+  color: #3c763d;
+}
+
+/* Centered genetic grid with controlled width */
 .female-genetic-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, auto);
   gap: 10px;
-  max-width: 800px;
-  margin: 0 auto; /* This centers the grid horizontally */
+  max-width: 650px; /* Reduced from 800px to control the spread */
+  margin: 0 auto 30px; /* This centers the grid horizontally and adds bottom margin */
   border: 1px solid #ddd;
 }
 
@@ -155,50 +163,63 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-.female-header {
-  text-align: center;
-  font-family: 'Sanchez', serif;
-  color: #3c763d;
-  margin: 30px 0 20px;
-}
-
-.paw-pair {
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.percentage {
-  margin-top: 10px;
-  color: #666;
-}
-
-/* Paw icon color matching 'Carrier' text */
-.paw-icon {
-  color: #c75c00; /* This is the orange color used for 'Carrier' */
-}
-
+/* FIX: Adjusted paw icon positioning */
 .paw-pair {
   display: flex;
   justify-content: center;
-  gap: 5px;
-  margin-bottom: 5px;
+  align-items: center;
+  position: relative;
+  height: 30px; /* Fixed height for consistent spacing */
+  margin-bottom: 10px;
+}
+
+/* FIX: Making one paw higher than the other */
+.paw-pair .paw-icon:first-child {
+  position: relative;
+  top: -4px; /* Move the first paw icon up a bit */
+  margin-right: 5px;
+}
+
+.paw-pair .paw-icon:last-child {
+  position: relative;
+  top: 4px; /* Move the second paw icon down a bit */
+  margin-left: 5px;
 }
 
 .percentage {
   margin-top: 10px;
   color: #666;
+  font-weight: 500;
 }
+
 /* Text colors for status */
 .clear-text {
-    color: #2e8540;
-    font-weight: 600;
+  color: #2e8540;
+  font-weight: 600;
 }
 
 .affected-text {
-    color: #c12a0c;
-    font-weight: 600;
+  color: #c12a0c;
+  font-weight: 600;
 }
+
+/* Updated accordion styling */
 .accordion {
-  max-width: 900px;  /* Adjust as needed */
+  max-width: 900px;
   margin: 0 auto;
+}
+
+/* Gene status styling */
+.gene-status {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.gene-status-text {
+  font-weight: 600;
+  margin-left: 10px;
 }
