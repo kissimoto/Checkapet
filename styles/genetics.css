@@ -198,3 +198,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #c12a0c;
     font-weight: 600;
 }
+.accordion {
+  max-width: 900px;  /* Adjust as needed */
+  margin: 0 auto;
+}
