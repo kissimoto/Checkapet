@@ -163,12 +163,30 @@ h1, h2, h3, h4, h5, h6 {
 
 .female-header {
   text-align: center;
+  font-family: 'Sanchez', serif;
   color: #3c763d;
   margin: 30px 0 20px;
 }
 
 .paw-pair {
   display: flex;
+  margin-bottom: 5px;
+}
+
+.percentage {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Paw icon color matching 'Carrier' text */
+.paw-icon {
+  color: #c75c00; /* This is the orange color used for 'Carrier' */
+}
+
+.paw-pair {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
   margin-bottom: 5px;
 }
 
