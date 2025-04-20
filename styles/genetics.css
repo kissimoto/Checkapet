@@ -280,3 +280,79 @@ h3 {
   font-size: 0.9em;
   color: #555;
 }
+/* Additional CSS needed for genetic grid */
+
+/* Diagonal line in the top-left cell */
+.maternal-paternal-cell {
+  position: relative;
+  min-width: 120px;
+}
+
+.diagonal-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, transparent calc(50% - 1px), #ddd, transparent calc(50% + 1px));
+}
+
+.maternal-label, .paternal-label {
+  position: absolute;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+.maternal-label {
+  bottom: 10px;
+  left: 10px;
+}
+
+.paternal-label {
+  top: 10px;
+  right: 10px;
+}
+
+/* Grid of paws in each cell */
+.paw-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 120px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.paw-grid .paw-icon {
+  font-size: 18px;
+  margin: 4px;
+}
+
+/* Single paw indicator beneath status text */
+.single-paw-indicator {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Genetic table styling */
+.genetic-table {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  border-collapse: collapse;
+}
+
+.genetic-table th, .genetic-table td {
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+/* Make sure carrier is more orange than red */
+.carrier-status .paw-icon, 
+.carrier-status .gene-status-text {
+  color: #ff9400 !important; /* Brighter orange */
+}
