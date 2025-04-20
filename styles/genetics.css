@@ -190,39 +190,35 @@ h3.primary-green, h3.female-header, h3 {
 }
 
 /* Color coding for different statuses */
-/* HEALTHY - Green paws */
-.gene-status:nth-of-type(1) .paw-icon {
-  color: #2e8540;
+.healthy-status .paw-icon {
+  color: #2e8540 !important; /* Green */
 }
 
-/* CARRIER - Orange paws */
-.gene-status:nth-of-type(2) .paw-icon {
-  color: #c75c00;
+.carrier-status .paw-icon {
+  color: #c75c00 !important; /* Orange */
 }
 
-/* AFFECTED - Red paws */
-.gene-status:nth-of-type(3) .paw-icon {
-  color: #c12a0c;
+.affected-status .paw-icon {
+  color: #c12a0c !important; /* Red */
 }
 
-/* Matching text colors */
-.gene-status:nth-of-type(1) .gene-status-text {
-  color: #2e8540;
+.healthy-status .gene-status-text {
+  color: #2e8540 !important;
 }
 
-.gene-status:nth-of-type(2) .gene-status-text {
-  color: #c75c00;
+.carrier-status .gene-status-text {
+  color: #c75c00 !important;
 }
 
-.gene-status:nth-of-type(3) .gene-status-text {
-  color: #c12a0c;
+.affected-status .gene-status-text {
+  color: #c12a0c !important;
 }
 
 /* Header spacing */
 h3 {
-  margin-top: 40px;
-  margin-bottom: 25px;
-  text-align: center;
+  text-align: center !important;
+  margin-top: 40px !important;
+  margin-bottom: 25px !important;
 }
 
 /* We've moved the paw coloring to the main gene status section */
