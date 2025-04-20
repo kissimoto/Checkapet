@@ -162,97 +162,248 @@
                 
 <h3 class="female-header">FEMALE</h3>
 
-<div class="female-genetic-grid">
-  <!-- Row 1 -->
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
+<!-- Autosomal Recessive Inheritance Section -->
+<h3>Autosomal recessive gene pictogram for simple inheritance</h3>
+
+<!-- Status indicators -->
+<div class="gene-status healthy-status my-4 mx-auto p-3 border">
+    <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-paw paw-icon me-2"></i>
+        <i class="fa-solid fa-paw paw-icon me-3"></i>
+        <span class="gene-status-text">HEALTHY (N/N)</span>
     </div>
-    <div class="percentage">100%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">50%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">100%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">50%</div>
-  </div>
-  
-  <!-- Row 2 -->
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">50%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">50%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">50%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">50%</div>
-  </div>
-  
-  <!-- Row 3 -->
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">100%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">50%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">100%</div>
-  </div>
-  <div class="female-genetic-grid-cell">
-    <div class="paw-pair">
-      <i class="fa fa-paw paw-icon"></i>
-      <i class="fa fa-paw paw-icon"></i>
-    </div>
-    <div class="percentage">50%</div>
-  </div>
 </div>
+
+<div class="gene-status carrier-status my-4 mx-auto p-3 border">
+    <div class="mb-2">Affected if dominant, Unaffected if recessive</div>
+    <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-paw paw-icon me-2"></i>
+        <i class="fa-solid fa-paw paw-icon me-3"></i>
+        <span class="gene-status-text">CARRIER (heterozygous)</span>
+    </div>
+</div>
+
+<div class="gene-status affected-status my-4 mx-auto p-3 border">
+    <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-paw paw-icon me-2"></i>
+        <i class="fa-solid fa-paw paw-icon me-3"></i>
+        <span class="gene-status-text">AFFECTED (homozygous)</span>
+    </div>
+</div>
+
+<!-- Genetic grid table -->
+<table class="genetic-table table table-bordered mb-5">
+    <thead>
+        <tr>
+            <th class="maternal-paternal-cell position-relative">
+                <div class="diagonal-line"></div>
+                <span class="maternal-label">Maternal</span>
+                <span class="paternal-label">Paternal</span>
+            </th>
+            <th class="healthy-status text-center">Clear</th>
+            <th class="carrier-status text-center">Carrier</th>
+            <th class="affected-status text-center">Affected</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Clear row -->
+        <tr>
+            <td class="healthy-status">
+                Clear
+                <div class="single-paw-indicator">
+                    <i class="fa-solid fa-paw paw-icon"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                </div>
+            </td>
+        </tr>
+        <!-- Carrier row -->
+        <tr>
+            <td class="carrier-status">
+                Carrier
+                <div class="single-paw-indicator">
+                    <i class="fa-solid fa-paw paw-icon"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                </div>
+            </td>
+        </tr>
+        <!-- Affected row -->
+        <tr>
+            <td class="affected-status">
+                Affected
+                <div class="single-paw-indicator">
+                    <i class="fa-solid fa-paw paw-icon"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Autosomal Dominant Inheritance Section -->
+<h3>Autosomal dominant gene pictogram for simple inheritance</h3>
+
+<!-- Status indicators for dominant -->
+<div class="gene-status healthy-status my-4 mx-auto p-3 border">
+    <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-paw paw-icon me-2"></i>
+        <i class="fa-solid fa-paw paw-icon me-3"></i>
+        <span class="gene-status-text">HEALTHY (N/N)</span>
+    </div>
+</div>
+
+<div class="gene-status affected-status my-4 mx-auto p-3 border">
+    <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-paw paw-icon me-2"></i>
+        <i class="fa-solid fa-paw paw-icon me-3"></i>
+        <span class="gene-status-text">AFFECTED (N/m or m/m)</span>
+    </div>
+</div>
+
+<!-- Dominant genetic grid table -->
+<table class="genetic-table table table-bordered mb-5">
+    <thead>
+        <tr>
+            <th class="maternal-paternal-cell position-relative">
+                <div class="diagonal-line"></div>
+                <span class="maternal-label">Maternal</span>
+                <span class="paternal-label">Paternal</span>
+            </th>
+            <th class="healthy-status text-center">Clear</th>
+            <th class="affected-status text-center">Affected</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Clear row -->
+        <tr>
+            <td class="healthy-status">
+                Clear
+                <div class="single-paw-indicator">
+                    <i class="fa-solid fa-paw paw-icon"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                </div>
+            </td>
+        </tr>
+        <!-- Affected row -->
+        <tr>
+            <td class="affected-status">
+                Affected
+                <div class="single-paw-indicator">
+                    <i class="fa-solid fa-paw paw-icon"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                </div>
+            </td>
+            <td>
+                <div class="paw-grid">
+                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Additional explanation block -->
+<div class="explanation-box p-3 border rounded bg-light mb-5">
+    <p><strong>Key:</strong></p>
+    <ul class="list-unstyled">
+        <li class="mb-2"><i class="fa-solid fa-paw healthy-status"></i> Clear/Healthy (N/N)</li>
+        <li class="mb-2"><i class="fa-solid fa-paw carrier-status"></i> Carrier (N/m) - only in recessive inheritance</li>
+        <li class="mb-2"><i class="fa-solid fa-paw affected-status"></i> Affected (m/m, or N/m in dominant inheritance)</li>
+    </ul>
+</div> 
 
 <h3>Autosomal dominant explanation</h3>
 
