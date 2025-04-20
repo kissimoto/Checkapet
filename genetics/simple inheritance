@@ -284,6 +284,24 @@
     </tbody>
 </table>
 
+
+<h3>Autosomal dominant explanation</h3>
+
+<p>Results of test will be given as'<span class="clear-text">Clear</span>','or<span class="affected-text">Affected</span>'.(no carrier as if the gene is there it is affected).</p>
+<p class="clear-text">Clear (N/N)</p>
+<p>Genotype:N / N[two copies of the normal gene]</p>
+<p>The individual is a non-carrier of the mutant gene.</p>
+<p>It is very unlikely to develop the disease and therefore it can be used in breeding. They will never pass the mutation to the offspring, and therefore can be bred to any other individual.</p>
+
+<p class="affected-text">Affected (N / M or M / M)</p>
+<p>Affected individuals can have one of two genotypes:</p>
+<p>Genotype:N / N[one normal and one mutant gene]</p>
+<p>Due to the dominant nature of this condition heterozygous/carrier individuals are likely to develop the disease and show its symptoms.</p>
+<p>Genotype:M / M[two copies of the mutant gene ]</p>
+<p>Homozygously affected individuals are at very high risk of developing the disease and showing its symptoms more severely than N / M affected ones.</p>
+<p>It is not recommended to use affected individuals in breeding</p>
+<p>The mutant gene will be transferred to its offspring</p>
+
 <!-- Autosomal Dominant Inheritance Section -->
 <h3 class="primary-green">Autosomal dominant gene pictogram for simple inheritance</h3>
 
@@ -303,27 +321,6 @@
         <span class="gene-status-text">AFFECTED (N/m or m/m)</span>
     </div>
 </div>
-
-
-
-<h3>Autosomal dominant explanation</h3>
-
-<p>Results of test will be given as'<span class="clear-text">Clear</span>','or<span class="affected-text">Affected</span>'.(no carrier as if the gene is there it is affected).</p>
-<p class="clear-text">Clear (N/N)</p>
-<p>Genotype:N / N[two copies of the normal gene]</p>
-<p>The individual is a non-carrier of the mutant gene.</p>
-<p>It is very unlikely to develop the disease and therefore it can be used in breeding. They will never pass the mutation to the offspring, and therefore can be bred to any other individual.</p>
-
-<p class="affected-text">Affected (N / M or M / M)</p>
-<p>Affected individuals can have one of two genotypes:</p>
-<p>Genotype:N / N[one normal and one mutant gene]</p>
-<p>Due to the dominant nature of this condition heterozygous/carrier individuals are likely to develop the disease and show its symptoms.</p>
-<p>Genotype:M / M[two copies of the mutant gene ]</p>
-<p>Homozygously affected individuals are at very high risk of developing the disease and showing its symptoms more severely than N / M affected ones.</p>
-<p>It is not recommended to use affected individuals in breeding</p>
-<p>The mutant gene will be transferred to its offspring</p>
-
-<h3>Autosomal dominant gene pictogram for simple inheritance</h3>
 
 <!-- Dominant Genetic Grid Table -->
 <table class="table table-bordered mb-5 mx-auto" style="max-width: 650px;">
