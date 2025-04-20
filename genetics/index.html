@@ -163,7 +163,8 @@
 <h3 class="female-header">FEMALE</h3>
 
 <!-- Autosomal Recessive Inheritance Section -->
-<h3>Autosomal recessive gene pictogram for simple inheritance</h3>
+<!-- Autosomal Recessive Inheritance Section -->
+<h3 class="primary-green">Autosomal recessive gene pictogram for simple inheritance</h3>
 
 <!-- Status indicators -->
 <div class="gene-status healthy-status my-4 mx-auto p-3 border">
@@ -191,117 +192,226 @@
     </div>
 </div>
 
-<!-- Genetic grid table -->
-<table class="genetic-table table table-bordered mb-5">
+<!-- Recessive Genetic Grid Table -->
+<table class="table table-bordered mb-5 mx-auto" style="max-width: 650px;">
     <thead>
         <tr>
-            <th class="maternal-paternal-cell position-relative">
-                <div class="diagonal-line"></div>
-                <span class="maternal-label">Maternal</span>
-                <span class="paternal-label">Paternal</span>
+            <!-- Diagonal Maternal/Paternal header -->
+            <th class="position-relative" style="min-width: 150px;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom right, transparent calc(50% - 1px), #ddd, transparent calc(50% + 1px));"></div>
+                <span style="position: absolute; bottom: 10px; left: 10px;">Maternal</span>
+                <span style="position: absolute; top: 10px; right: 10px;">Paternal</span>
             </th>
-            <th class="healthy-status text-center">Clear</th>
-            <th class="carrier-status text-center">Carrier</th>
-            <th class="affected-status text-center">Affected</th>
+            <!-- Color-coded column headers -->
+            <th class="text-center" style="color: #2e8540;">Clear</th>
+            <th class="text-center" style="color: #ff9400;">Carrier</th>
+            <th class="text-center" style="color: #c12a0c;">Affected</th>
         </tr>
     </thead>
     <tbody>
         <!-- Clear row -->
         <tr>
-            <td class="healthy-status">
+            <!-- Color-coded row header with paw -->
+            <td style="color: #2e8540;">
                 Clear
-                <div class="single-paw-indicator">
-                    <i class="fa-solid fa-paw paw-icon"></i>
+                <div class="text-center mt-2">
+                    <i class="fa-solid fa-paw" style="color: #2e8540;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
+            <!-- Four green paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+            <!-- Two green, two orange paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+            <!-- Four orange paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
                 </div>
             </td>
         </tr>
         <!-- Carrier row -->
         <tr>
-            <td class="carrier-status">
+            <!-- Color-coded row header with paw -->
+            <td style="color: #ff9400;">
                 Carrier
-                <div class="single-paw-indicator">
-                    <i class="fa-solid fa-paw paw-icon"></i>
+                <div class="text-center mt-2">
+                    <i class="fa-solid fa-paw" style="color: #ff9400;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+            <!-- Two green, two orange paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon healthy-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+            <!-- One green, two orange, one red paw -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+            <!-- Two orange, two red paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
                 </div>
             </td>
         </tr>
         <!-- Affected row -->
         <tr>
-            <td class="affected-status">
+            <!-- Color-coded row header with paw -->
+            <td style="color: #c12a0c;">
                 Affected
-                <div class="single-paw-indicator">
-                    <i class="fa-solid fa-paw paw-icon"></i>
+                <div class="text-center mt-2">
+                    <i class="fa-solid fa-paw" style="color: #c12a0c;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
+            <!-- Four orange paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon carrier-status"></i>
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+            <!-- Two orange, two red paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #ff9400;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
                 </div>
             </td>
-            <td>
-                <div class="paw-grid">
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
-                    <i class="fa-solid fa-paw paw-icon affected-status"></i>
+            <!-- Four red paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Autosomal Dominant Inheritance Section -->
+<h3 class="primary-green">Autosomal dominant gene pictogram for simple inheritance</h3>
+
+<!-- Status indicators for dominant -->
+<div class="gene-status healthy-status my-4 mx-auto p-3 border">
+    <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-paw paw-icon me-2"></i>
+        <i class="fa-solid fa-paw paw-icon me-3"></i>
+        <span class="gene-status-text">HEALTHY (N/N)</span>
+    </div>
+</div>
+
+<div class="gene-status affected-status my-4 mx-auto p-3 border">
+    <div class="d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-paw paw-icon me-2"></i>
+        <i class="fa-solid fa-paw paw-icon me-3"></i>
+        <span class="gene-status-text">AFFECTED (N/m or m/m)</span>
+    </div>
+</div>
+
+<!-- Dominant Genetic Grid Table -->
+<table class="table table-bordered mb-5 mx-auto" style="max-width: 650px;">
+    <thead>
+        <tr>
+            <!-- Diagonal Maternal/Paternal header -->
+            <th class="position-relative" style="min-width: 150px;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom right, transparent calc(50% - 1px), #ddd, transparent calc(50% + 1px));"></div>
+                <span style="position: absolute; bottom: 10px; left: 10px;">Maternal</span>
+                <span style="position: absolute; top: 10px; right: 10px;">Paternal</span>
+            </th>
+            <!-- Color-coded column headers -->
+            <th class="text-center" style="color: #2e8540;">Clear</th>
+            <th class="text-center" style="color: #c12a0c;">Affected</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Clear row -->
+        <tr>
+            <!-- Color-coded row header with paw -->
+            <td style="color: #2e8540;">
+                Clear
+                <div class="text-center mt-2">
+                    <i class="fa-solid fa-paw" style="color: #2e8540;"></i>
+                </div>
+            </td>
+            <!-- Four green paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                </div>
+            </td>
+            <!-- Two green, two red paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                </div>
+            </td>
+        </tr>
+        <!-- Affected row -->
+        <tr>
+            <!-- Color-coded row header with paw -->
+            <td style="color: #c12a0c;">
+                Affected
+                <div class="text-center mt-2">
+                    <i class="fa-solid fa-paw" style="color: #c12a0c;"></i>
+                </div>
+            </td>
+            <!-- Two green, two red paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                </div>
+            </td>
+            <!-- One green, three red paws -->
+            <td class="text-center">
+                <div class="d-flex flex-wrap justify-content-center" style="max-width: 100px; margin: 0 auto;">
+                    <i class="fa-solid fa-paw m-1" style="color: #2e8540;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
+                    <i class="fa-solid fa-paw m-1" style="color: #c12a0c;"></i>
                 </div>
             </td>
         </tr>
