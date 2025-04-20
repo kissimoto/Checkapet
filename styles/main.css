@@ -10,6 +10,11 @@ header {
     padding: 1rem 0;
     border-bottom: 1px solid #eee;
 }
+/* Override any Bootstrap margins that might be affecting spacing */
+.navbar-nav .nav-item {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
@@ -24,9 +29,17 @@ header {
 .nav-link:hover {
     color: #007bff;
 }
+
+/* Make sure the nav items are evenly spaced */
+.navbar-nav {
+  width: 100%;
+}
+
+/* Ensure the active nav link stands out */
 .nav-link.active {
-    color: #3c763d;
-    font-weight: bold;
+  color: #3c763d !important;
+  font-weight: bold;
+  border-bottom: 2px solid #3c763d;
 }
 
 /* Spread menu items across navbar */
