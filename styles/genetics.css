@@ -261,29 +261,6 @@ h3 {
   margin-left: 10px;
 }
 
-/* Remove duplicate HEALTHY status - only keep the first 3 */
-.gene-status:nth-of-type(n+4) {
-  display: none;
-}
-
-/* HEALTHY status - green */
-.gene-status:nth-of-type(1) .gene-status-text {
-  color: #2e8540; /* Green for healthy text */
-}
-
-.gene-status:nth-of-type(1) .paw-icon {
-  color: #2e8540; /* Green for healthy paws */
-}
-
-/* AFFECTED status - red */
-.gene-status:nth-of-type(3) .gene-status-text {
-  color: #c12a0c; /* Red for affected text */
-}
-
-.gene-status:nth-of-type(3) .paw-icon {
-  color: #c12a0c; /* Red for affected paws */
-}
-
 /* First column first row styling */
 .female-genetic-grid-cell:first-child .percentage {
   display: none; /* Hide percentage in first column first row */
