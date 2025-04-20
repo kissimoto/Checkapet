@@ -28,6 +28,21 @@ header {
     color: #3c763d;
     font-weight: bold;
 }
+
+/* Spread menu items across navbar */
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Enhance active menu item styling */
+.nav-link.active {
+  color: #3c763d !important; /* Make sure the green color is applied */
+  font-weight: bold;
+  border-bottom: 2px solid #3c763d; /* Adds underline for better visibility */
+}
+
 input[type="text"] {
     padding: 0.5rem;
     border: 1px solid #ccc;
