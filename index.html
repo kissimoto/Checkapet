@@ -2,250 +2,356 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckAPet - Home</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Sanchez -->
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Checkapet/styles/main.css">
 </head>
 <body>
-<header class="w-100 lg-light d-partial-id-7753" data-of-type-partial>
-    <div class="container"> 
-        <nav class="navbar navbar-expand-lg navbar-light l-80px">
-            <a class="navbar-brand" href="/Checkapet/">CHECKAPET</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="flex-grow-1 d-flex justify-content-around navbar-nav me-auto mb-2 mb-lg-0 fs-12px fw-bold align-items-md-center">
-                    <li class="nav-item ay-7 tertiary-green fs-14px"><a href="/Checkapet/" class="nav-link">Home</a></li>
-                    <li class="nav-item ay-7 tertiary-green fs-14px"><a href="/Checkapet/breeding/" class="nav-link">Breeding</a></li>
-                    <li class="nav-item ay-7 tertiary-green fs-14px"><a href="/Checkapet/buying/" class="nav-link">Buying</a></li>
-                    <li class="nav-item ay-7 tertiary-green fs-14px"><a href="/Checkapet/vets/" class="nav-link">Vets</a></li>
-                    <li class="nav-item ay-7 tertiary-green fs-14px"><a href="/Checkapet/genetics/" class="nav-link">Genetics</a></li> 
-                    <li class="nav-item ay-7 tertiary-green fs-14px search-item">
-                        <form class="d-flex flex-nowrap align-items-center rounded-start-5 border bg-white text-center ps-3 pe-2 search-form">
-                            <div class="d-flex align-items-center">
-                                <i class="fa fa-magnifying-glass text-muted mx-1"></i>
-                                <input class="form-control border-0 rounded-0 search-input" type="search" placeholder="Search something here">
-                            </div>
-                            <button class="btn btn-secondary rounded-0 rounded-end-5 g-primary-green search-button" type="submit">Search</button>
-                        </form>
-                    </li>
-                    <li class="nav-item ay-7 tertiary-green fs-14px"><a href="/Checkapet/glossary/" class="nav-link">Glossary</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</header>
+    <!-- Navigation -->
+    <header class="w-100 bg-light">
+        <div class="container"> 
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo with link to home page -->
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <span class="logo-circle me-2"></span>
+                    <span class="brand-text">CHECKAPET</span>
+                </a>
+                
+                <!-- Mobile toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navbar items -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="/Checkapet/" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="/Checkapet/breeding/" class="nav-link">Breeding</a></li>
+                        <li class="nav-item"><a href="/Checkapet/buying/" class="nav-link">Buying</a></li>
+                        <li class="nav-item"><a href="/Checkapet/vets/" class="nav-link">Vets</a></li>
+                        <li class="nav-item"><a href="/Checkapet/genetics/" class="nav-link">Genetics</a></li>
+                    </ul>
+                    
+                    <!-- Search form -->
+                    <form class="d-flex search-form me-2">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fa fa-search text-muted"></i>
+                            </span>
+                            <input class="form-control border-start-0" type="search" 
+                                   placeholder="Search something here" aria-label="Search">
+                        </div>
+                    </form>
+                    
+                    <!-- Glossary button -->
+                    <a href="/Checkapet/glossary/" class="btn btn-success glossary-btn">Glossary</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Main Content Wrapper -->
     <main>
-        <section class="g-primary-green text-white ph-5 section-first">
-            <div class="container-xxl">
+        <!-- Hero Section with cat and dog image -->
+        <section class="bg-primary-green text-white py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h1 class="display-4 fw-bold text-white">Welcome to CheckAPet</h1>
+                        <p class="fs-5">The place to find a healthy, happy new family member and a bright start to life. At CheckAPet we only feature breeders who prioritize health, welfare and temperament.</p>
+                        <p class="fs-5">Health testing is mandatory for breeding dogs and cats, if their offspring are advertised on this site. The offspring will be much more likely to have healthier, and so happier, lives as a result of reducing the risk of inherited disease.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Happy dog and cat" class="img-fluid-cover rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inbreeding and Extreme Breeding Section -->
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <h2 class="fw-bold mb-4">The Consequences of Inbreeding and<br>Extreme Breeding Practices</h2>
+                    <p class="mb-5">Pedigree dogs and cats are not inherently more healthy than non-pedigree. A pedigree certificate is a family tree for that individual, not evidence for health. How healthy or well 'designed' those individuals are depends on how the breeder selects the animals that are to be bred. This is where health testing comes in to the decision-making process, choosing dogs that do not carry genes or physical features that will cause disease in the next generation.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-6">
+                    <div class="img-container">
+                        <img src="https://images.freeimages.com/images/large-previews/0aa/playing-dogs-4-1375719.jpg" alt="Two dogs running and playing" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mt-4 mt-lg-0">What is the current problem CheckAPet is trying to solve?</h2>
+                    <p>Years of inbreeding and breeding for appearance have caused high rates of inherited diseases in purebred dogs, and to a lesser extent in cats. Breeding for extreme features has led to many dogs suffering from painful conditions all their life, such as heart, skin, joint and breathing problems. Some breeds such as the French Bulldog face a significantly reduced lifespan as a result of their disease. Sadly, their life expectancy in the UK is now only four and a half years.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What are the issues section with two columns -->
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <h2 class="fw-bold mb-4">What are the issues?</h2>
+                    <p class="mb-5">The dream for someone like you, looking for a family pet, is a happy, well adjusted, healthy individual that can be part of your lives for many years to come. No one wants to see a family member suffer and the heart-break of losing a pet can be a difficult experience.</p>
+                    
+                    <h2 class="fw-bold mb-4 mt-5">How do we contribute to fixing them?</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-6">
+                    <div class="rounded-box">
+                        <h3 class="fw-bold text-center">Genetic Health Risks</h3>
+                        <p>Some breeds have severe genetic diseases that can cause suffering, making breeding them in their current state questionable. Testing the breeding 'parents' for disease and only breeding from those that do not carry genes detrimental to health is a big step in the right direction. Not all tests are essential every time in every breed, but a consideration for the risks of disease and using the tests that can help rule out that disease, are important.</p>
+                    </div>
+                    
+                    <div class="rounded-box">
+                        <h3 class="fw-bold text-center">Cost of Health Testing</h3>
+                        <p>Health tests before breeding and the costs, vary considerably between breeds depending on the inherited conditions they suffer from. This can affect the cost of a puppy or kitten but will be a good investment for future health and welfare. However, a high price does not guarantee good breeding.</p>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="col-lg-6">
+                    <div class="rounded-box">
+                        <h3 class="fw-bold text-center">Breeding Challenges</h3>
+                        <p>Breeding for health may be complex and can be costly. Trying to eliminate one disease can affect the occurrence of another. There is much more to breeding than genetic testing, the family history of health and disease, and the physical health of the parents are all important.</p>
+                    </div>
+                    
+                    <div class="rounded-box">
+                        <h3 class="fw-bold text-center">Outcrossing and cross-breeding</h3>
+                        <p>Breeding two or more breeds together (cross-breeding) or breeding two unrelated of the same breed (outcrossing) can help to dilute the gene pool. Kennel or breed clubs often resist this as they are working towards a 'standard' description of a purebred dog. This can result in closely related individuals producing puppies.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="rounded-box">
+                        <h3 class="fw-bold text-center">Legal responsibility</h3>
+                        <p>Breeders are legally responsible for producing healthy dogs under UK law.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Community Section with light green background -->
+        <section class="py-5" style="background-color: #a4d39c;">
+            <div class="container">
                 <div class="row">
-                    <div class="col-12 d-flex flex-column justify-content-center text-center">
-                        <h1>Welcome to CheckAPet</h1>
-                        <p>The place to find a healthy, happy new family member and a bright start to life. At CheckAPet we only feature breeders who prioritise health, welfare and temperament. Health testing is mandatory for breeding dogs and cats, if their offspring are advertised on this site. The offspring will be much more likely to have healthier and so happier lives as a result of reducing the risk of inherited disease. Most puppies sold in the UK are not from Kennel Club registered breeders. There is no restriction on who can breed, and we want to support those who test parents so as to reduce the risk of inherited disease in the offspring. We are committed to supporting responsible breeders who are making a positive change. Explore the various breeds and their crosses on this site and educate yourself on what a healthy dog looks like. Always ensure the breed you choose matches your family’s lifestyle, before committing to your new family member!</p>
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold mb-3">Join the CheckAPet community</h2>
+                        <p class="mb-4">Register your interest to breed or buy, and join our community of responsible breeders, veterinarians and pet lovers dedicated to improving the lives of pets across the UK.</p>
                     </div>
-                </div>
-                <div class="div-block image-container">
-                    <img src="image1.jpg" alt="Dogs" class="w-100 rounded-3 object-fit-cover">
-                </div>
-            </div>
-        </section>
-
-        <section class="d-flex justify-content-center bg-light pt-5 pb-5 section-second">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-10 col-sm-12 text-center">
-                        <h2>The Consequences of Inbreeding and Extreme Breeding Practices</h2>
-                        <p>Pedigree dogs and cats are not inherently more healthy than non-pedigree. A pedigree certificate is a family tree for that individual, not evidence for health. How healthy or well designed those individuals are depends on how the breeder selects the animals that are to be bred. This is where health testing comes in to the decision-making process, choosing dogs that do not carry genes or physical features that will cause disease in the next generation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="col-12 d-flex justify-content-center flex-column section-third">
-        <div class="container">
-            <div class="row gap-3 align-items-center justify-content-between row-image-text">
-                <div class="col-md-6 col-12 image-container">
-                    <img src="image2.jpg" alt="Dogs" class="w-100 rounded-3 object-fit-cover">
-                </div>
-                <div class="col-md-6 col-12 text-container">
-                    <h2 class="fw-bold text-center">What is the current problem CheckAPet is trying to solve?</h2>
-                    <p>Years of inbreeding and breeding for appearance have caused high rates of inherited diseases in purebred dogs, and to a lesser extent in cats. Breeding for extreme features has led to many dogs suffering from painful conditions all their life, such as heart, skin, joint and breathing problems. Some breeds such as the French Bulldog face a significantly reduced lifespan as a result. Sadly, their life expectancy in the UK is now only four and a half years.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="d-flex justify-content-center pt-5 pb-5 bg-cream section-fourth">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-sm-12 text-center">
-                    <h2>What are the issues?</h2>
-                    <p>The dream for someone like you, looking for a family pet, is a happy, well adjusted, healthy individual that can be part of your lives for many years to come. No one wants to see a family member suffer and the heart-break of losing a pet can be a difficult experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="d-flex justify-content-center pt-5 pb-5 bg-cream section-fifth">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-sm-12 text-center">
-                    <h2>How do we contribute to fixing them?</h2>
-                    <p>We bring about change and are passionate about ensuring a significant improvement in the health of cats and dogs. Sadly, their life expectancy in the UK is now only four and a half years.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="d-flex justify-content-center pt-5 pb-5 bg-cream section-sixth">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-sm-12 text-center">
-                         <h2>Why do we do what we do?</h2>
-                         <p>We want you to have the best possible experience when choosing your new pet.  We want you to be fully informed and confident in your choice, knowing that you are supporting breeders who prioritise health and welfare.  We believe that by connecting responsible breeders with caring families, we can help to improve the overall health and well-being of dogs and cats.</p>
+                    <div class="col-lg-4 d-flex align-items-center justify-content-lg-end justify-content-center mt-3 mt-lg-0">
+                        <a href="#" class="btn btn-light me-3">REGISTER TO BUY</a>
+                        <a href="#" class="btn btn-outline-light">REGISTER TO ADVERTISE</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="container mt-5 mb-5 section-seventh">
+        <!-- How Do I Choose Section -->
+        <section class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-12">
-                    <h2 class="text-center fw-bold">Frequently Asked Questions</h2>
+                <div class="col-md-10 text-center">
+                    <h2 class="fw-bold mb-4">How Do I Choose a Family Dog or Cat?</h2>
                 </div>
-                <div class="col-12 col-sm-12 col-md-10 col-lg-8">
-                    <div class="accordion accordion-flush" id="faqAccordion">
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                <div class="col-md-10">
+                    <p>Health testing is not a golden bullet to solve all issues faced by dogs and cats today, but it is a big step in the right direction! Having a clear understanding of what a moderate looking, healthy dog or cat looks like, is a good place to start. Pedigree cats are usually the ones that suffer from inherited disease rather than 'moggies'. They should not have a squashed face, short legs or folded ears and they should have a full coat of fur. It might seem obvious, but there are some poor alien creatures out there! Dogs should not have overly long backs, very short legs, a squashed face or multiple, thick folds of skin. Ears should not be overly long or short, and should ideally stand erect. Dogs and cats should be able to breathe silently, sleep peacefully, run energetically and have a positive, friendly disposition to be an ideal family pet. This site will guide you through the process, helping with considerations and conflicts you may have.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expectations Section with Dog Image -->
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h2 class="fw-bold">CheckAPet Expectations and Suggestions</h2>
+                    <p>All owners expect a long happy relationship with their pet and to support this we suggest</p>
+                    
+                    <ol class="mt-4">
+                        <li class="mb-3">Choose a well bred dog or cat. Breeding from healthy (and health tested), unrelated animals with normal conformation, is more likely to produce healthy puppies and kittens.</li>
+                        <li class="mb-3">Choose a breeder that has practiced preventative healthcare and puppy socialisation. For example, worming and vaccinations are important for both parents and offspring. Gradual exposure to their environment during development helps puppies and kittens to be socially resilient.</li>
+                    </ol>
+                </div>
+                <div class="col-lg-5">
+                    <div class="img-container h-100">
+                        <img src="https://images.unsplash.com/photo-1720393681064-4645912e8903?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dog with a stick" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Well Bred Dog Section -->
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2 class="fw-bold mb-4">What Is A Well Bred Dog (Pedigree Cat)?</h2>
+                    <p>It's a relatively simple checklist...</p>
+                    
+                    <ol class="ps-4 mt-4">
+                        <li class="mb-3">Physical and genetic health tests for the parents, performed before breeding, to check that they are healthy and they don't pass any avoidable problems to the next generation.</li>
+                        <li class="mb-3">A veterinary health check of the puppy before you buy it.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Do I Do This Section -->
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2 class="fw-bold mb-4">How Do I Do This?</h2>
+                    <ol class="ps-4">
+                        <li class="mb-3">All breeding dogs should be tested for common (and sometimes less common) diseases in that breed to the best of knowledge and evidence. Make sure you have copies of these certificates.</li>
+                        <li class="mb-3">
+                            <a href="https://puppycontract.org.uk/sites/default/files/2018-10/The%20Puppy%20Contract.pdf" target="_blank" class="text-decoration-none">Puppy Contract</a>
+                            <p>This is filled out by you and the breeder. It is a free 7 page document designed to support the responsible breeding and buying of puppies. It covers all the information required when buying a dog.</p>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fw-bold">Be prepared to walk away</span>
+                            <p>If these stipulations cannot be met or something feels wrong. [This is the most difficult bit - be strong! Buying from bad breeders encourages them to continue. Report any concerns]</p>
+                        </li>
+                        <li class="mb-3">Never allow delivery of a pet or collection from a place other than where it was bred and ALWAYS see the mother</li>
+                    </ol>
+                    <p class="mt-4">It is not illegal to breed dogs with extreme conformation, but we think it is time for change. Consumers have the power to support responsible breeders and reject those that do not care. Buying from breeders who show low standards of welfare (also known as 'greeders'), encourages them to continue their 'greeding'.</p>
+                    <p>Of course, not all disease can be prevented, but many inherited issues causing illness can be avoided by choosing healthy parents. Some of these can be tested for and some are in the 'look' or 'phenotype' of the dog/cat.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Essential Documents Section -->
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2 class="fw-bold text-center mb-4">Recommended documents for all puppies</h2>
+                    
+                    <p class="text-center mb-5">Breeders do not need to be part of a club or society to health test. Testing parents for inherited disease can reduce the chance of these being passed on to future generations. This means those pets will have healthier lives as part of your family. It does not guarantee health, there is more to consider, but it is a start in helping to reduce preventative disease.</p>
+                    
+                    <div class="row g-4">
+                        <!-- Row 1 -->
+                        <div class="col-md-4 text-center">
+                            <div class="document-icon mx-auto">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <p>Microchip registration document (legal requirement by 8 weeks old for puppies but 5 months old for kittens, so new owner can do this)</p>
+                        </div>
+                        
+                        <div class="col-md-4 text-center">
+                            <div class="document-icon mx-auto">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <p>A signed AWF Puppy Contract</p>
+                        </div>
+                        
+                        <div class="col-md-4 text-center">
+                            <div class="document-icon mx-auto">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <p>Temporary health insurance (4 weeks free)</p>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="col-md-4 text-center">
+                            <div class="document-icon mx-auto">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <p>Vaccination certificate showing vet check of the puppy/kitten and ideally a first vaccination</p>
+                        </div>
+                        
+                        <div class="col-md-4 text-center">
+                            <div class="document-icon mx-auto">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <p>Copies of the parents health certificate(s)</p>
+                        </div>
+                        
+                        <div class="col-md-4 text-center">
+                            <div class="document-icon mx-auto">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <p>Details of socialisation so far and diet used (provide small amount in original bag). Any current routine that may be helpful for the new owner.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section with Accordions (like genetics page) -->
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
+                    
+                    <div class="accordion mt-4" id="faqAccordion">
+                        <!-- Question 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                     What about the Kennel Club?
                                 </button>
                             </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     <p>The Kennel Club (KC) is a registration of specific dog breeds, designed through breeding over generations, to fit a certain look. The KC describes the 'perfect' example of dog breeds in what is called a 'Breed Standard'. These do not necessarily take into consideration the health of the individual. They may encourage extreme features that are harmful to the welfare of the individuals. The 'Pedigree' is a family tree for the puppy, it does not represent health.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                        
+                        <!-- Question 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     What about a Cross Breed?
                                 </button>
                             </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>Buying a mixed breed dog may convey some health benefits, although they may not live longer than pedigrees, their quality of life may be better than those with parents exhibiting more exaggerated characteristics. "Hybrid vigor" refers to the possibility of health benefits from crossbreeding, while "inbred" denotes closely related dog matings, reflected in the coefficient of inbreeding (COI) on some dog group websites. However, some mixes are NOT recommended e.g. Poodle and French bulldog, Sharpei and French bulldog and other crosses between two breeds that have multiple issues already.</p>
+                                    <p>Buying a mixed breed dog may convey some health benefits, although they may not live longer than pedigrees, their quality of life may be better than those with parents exhibiting more exaggerated characteristics. "Hybrid vigor" refers to the possibility of health benefits from crossbreeding, while "inbred" denotes closely related dog matings, reflected in the "coefficient of inbreeding" (COI) on some dog group websites. However, some mixes are NOT recommended e.g. Poodle and French bulldog, Sharpei and French bulldog and other crosses between two breeds that have multiple issues already.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                    Should Cross Breeds Have Tests?
+                        
+                        <!-- Question 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Should Cross-Breeds Have Tests?
                                 </button>
                             </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>Ideally health testing should be carried out when cross-breeding. For example Labradoodles or Cockerpoos. Both parents should be tested for their respective breed-related issues. This should apply to the first and subsequent generations since deleterious genes may become apparent in later generations. Health tests for both parents are advisable for cross-breeds too.</p>
+                                    <p>Ideally health testing should be carried out when cross-breeding. For example, Labradoodles or Cockerpoos. Both parents should be tested for their respective breed-related issues. This should apply to the first and subsequent generations since deleterious genes may become apparent in later generations. Health tests for both parents are advisable for cross-breeds too.</p>
                                 </div>
                             </div>
                         </div>
-                         <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                        
+                        <!-- Question 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     Green Flags. What are the signs of a Good Breeder?
                                 </button>
                             </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    <p>A good breeder will prioritise the health and welfare of their dogs. They will be knowledgeable about the breed and any health issues that may affect it. They will be happy to answer your questions and provide you with information about the parents of your puppy, including health test results. They will allow you to see the puppies more than once and are kept fully updated.  Litter born and brought up in a family home with photos to support this. Offered a blanket to bring home that smelled of mum and litter environment.  Has been involved with the breed and breeding for several years. May have a waiting list, indicating they breed based on demand rather than just to produce puppies. Signed puppy contract, microchip details, usually a first vaccine, insurance and advice on puppy care.  Has a detailed socialisation plan for puppies, including noise desensitisation with exposure to household noises, exposure to new surfaces and objects, interaction with people/gentle children and other animals, car rides, and household experiences. Some experience away form the litter to get used to being more independent.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                                    What if my breeder doesn't meet some of these standards?
-                                </button>
-                            </h2>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p>A crossbreed, also known as a mixed-breed, is a dog whose parents are of different breeds, or a mix of several breeds. Crossbreeds can make wonderful family pets. Like purebred dogs, crossbreeds can be affected by inherited health conditions. However, a well-bred crossbreed is less likely to be affected by the breed-specific conditions that affect purebreds. It is still important to ask breeders of crossbreeds about the health of the parents.  A first generation cross-breed is known as an F1.  A second generation cross-breed (F2) is the result of breeding two F1s together.  Breeding F1s together is not recommended as the puppies can inherit a double dose of any undesirable genes.  The same applies to F3 generations.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
-                                    Red Flags. What to look out for?
-                                </button>
-                            </h2>
-                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                     <p><li>Prices puppies differently based on colour or gender, except for health-related reasons (e.g. deafness, hernia).</li>
-                                        <li>Offers puppies for sale directly on their website, often with a PayPal button.</li>
-                                         <li>Breeds multiple types of dogs instead of focusing on one or two breeds.</li>
-                                        <li> to meet or speak with you before the sale. They should enquire about your circumstances and ensure you're providing a good home.</li>
-                                        <li>Makes excuses for why you can't see the parent(s).</li>
-                                        <li>Offers to deliver the puppy or kitten to you.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
-                                    How does brachycephaly (flat faces) affect dogs' lives?
-                                </button>
-                            </h2>
-                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                     <p><li>French bulldogs, pugs and bulldogs are the most commonly discussed brachycephalic dogs.</li>
-                                         <li>Their most well known condition is the ‘brachycephalic obstructive airway syndrome’ or BOAS. This describes the obstructed breathing causing a noise called stertor or ‘awake snoring’. This is the result of a long soft palate blocking the airway at the back of the throat.</li>
-                                            <li>They are also commonly affected by all or some of the following; Collapse and exercise intolerance, regurgitation and risk of aspiration pneumonia, sleep apnoea, allergies, exposed and bulging eyes causing corneal damage and ulcers, dry eye, multiple gut diseases, heat Intolerance, skin fold pyoderma, hemi-vertebrae and paralysis/disc disease, orthopaedic disease, multiple myelopathies, chrondrodysplasia (faulty bone and cartilage), dental malocclusions and resultant disease, Chiari-like malformation and syringomyelia, inability to reproduce without caesarean, obesity.</li></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
-                                    What if my breeder doesn't meet some of these standards?
-                                </button>
-                            </h2>
-                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p>If your breeder doesn't meet some of these standards, it doesn't necessarily mean that they are a bad breeder.  However, it is important to be aware of the potential risks.  If you are unsure, you can ask your vet for advice.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11" aria-expanded="false" aria-controls="faq11">
-                                    "Stop and Think Before Buying a Flat-Faced Dog" (Brachycephalic Working Group)
-                                </button>
-                            </h2>
-                            <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                     <p>The Brachycephalic Working Group is a group of organisations working together to improve the health and welfare of brachycephalic dogs.  They have produced a leaflet called "Stop and Think Before Buying a Flat-Faced Dog" which provides information about the health problems associated with brachycephaly.  It encourages prospective buyers to consider the potential health and welfare implications before buying a flat-faced dog.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item border rounded-2 mb-2">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12" aria-expanded="false" aria-controls="faq12">
-                                    Why are there no Munchkin cats or Scottish Folds for sale?
-                                </button>
-                            </h2>
-                            <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                     <p>Munchkin cats and Scottish Folds are breeds that are known to have significant health problems.  Munchkin cats have a genetic mutation that causes their legs to be abnormally short.  This can lead to joint problems and other health issues.  Scottish Folds have a genetic mutation that affects cartilage development, leading to painful and debilitating arthritis.  For these reasons, we do not feature these breeds on our site.</p>
+                                    <p>Content for question 4...</p>
                                 </div>
                             </div>
                         </div>
@@ -255,49 +361,56 @@
         </section>
     </main>
 
-    <footer class="bg-primary-green py-5">
+    <!-- Footer -->
+    <footer class="bg-success text-white py-5">
         <div class="container">
-            <div class="row justify-content-md-between align-items-center">
-                <div class="col-md-3 col-12 d-flex flex-column gap-md-5 gap-3 mb-4 mb-md-0">
-                    <div class="d-flex flex-column justify-content-center">
-                        <p class="text-white footer-vision-text">Our vision is for a healthier population of happy pets in the UK</p>
-                        <div class="d-flex gap-3">
-                            <a class="btn btn-light py-1 px-2 rounded-pill" href="#" target="_self" type="external">
-                                 <i class="fa-brands fa-facebook text-secondary" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-light py-1 px-2 rounded-pill" href="#" target="_self" type="external">
-                                <i class="fa-brands fa-twitter text-secondary" aria-hidden="true"></i>
-                            </a>
-                        </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <p>Our vision is for a healthier population of happy pets in the UK.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 footer-links-col">
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="mb-3">Your Link</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Vets</a></li>
-                        <li><a href="#" class="text-white">Breeders</a></li>
-                        <li><a href="#" class="text-white">Buyers</a></li>
+                        <li class="mb-2"><a href="/Checkapet/vets/" class="text-white text-decoration-none">Vets</a></li>
+                        <li class="mb-2"><a href="/Checkapet/breeding/" class="text-white text-decoration-none">Breeders</a></li>
+                        <li class="mb-2"><a href="/Checkapet/buying/" class="text-white text-decoration-none">Buyers</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-6 footer-links-col">
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="mb-3">Information</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Glossary</a></li>
-                        <li><a href="#" class="text-white">Laboratories for health testing</a></li>
-                        <li><a href="#" class="text-white">Terms and Conditions</a></li>
-                        <li><a href="#" class="text-white">Cookie Policy</a></li>
+                        <li class="mb-2"><a href="/Checkapet/glossary/" class="text-white text-decoration-none">Glossary</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Laboratories for health testing</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-12 footer-image-col">
-                     <img src="footer-image.jpg" alt="Footer Image"  class="w-100 rounded-3">
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="mb-3">CheckAPet</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Terms and Conditions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Cookie Policy</a></li>
+                    </ul>
                 </div>
             </div>
-            <hr class="hr text-white mt-5 footer-divider">
-            <div class="d-flex gap-2 gap-md-5 flex-md-row flex-column justify-content-md-between footer-bottom-text">
-                <p class="text-white">© 2023 CheckAPet Limited</p>
-                <p class="text-white">Company number 12345678</p>
-                <p class="text-white">Registered in England and Wales</p>
-                <p class="text-white">VAT registration number 123 4567 89</p>
+            
+            <div class="text-center pt-4 mt-4 border-top border-white-50">
+                <p class="small mb-0">©2023 CheckAPet. All rights reserved | Privacy & Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap</script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/Checkapet/js/main.js"></script>
+</body>
+</html>
