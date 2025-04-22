@@ -51,6 +51,15 @@ header {
     border-bottom: 2px solid #3c763d;
 }
 
+
+        /* Make navbar items distribute evenly */
+        .navbar-nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+
 .logo-circle {
     display: inline-block;
     width: 30px;
