@@ -25,6 +25,16 @@
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 30px 0;
+    }
+    
+    .breeding-selection select {
+        margin-bottom: 10px;
+    }
+}
+
 
 .hero-image img {
     width: 100%;
