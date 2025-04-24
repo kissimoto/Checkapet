@@ -82,39 +82,38 @@
         
         <!-- Breeding Tool Interface -->
 <section class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-8">
-            <div class="breeding-tool mt-4">
-                <div class="d-flex flex-wrap align-items-center justify-content-center">
-                            <span class="me-3">I want to breed my</span>
-                            
-                            <!-- Animal Type Selector -->
-                            <select id="animalType" class="form-select me-3" style="width: auto;">
-                                <option value="Dog">Dog</option>
-                                <option value="Cat">Cat</option>
-                            </select>
-                            
-                            <!-- Breed Selector -->
-                            <select id="breedSelect" class="form-select me-3" style="width: auto;">
-                                <option value="">Choose Breed</option>
-                            </select>
-                            
-                            <span class="me-3">with</span>
-                            
-                            <!-- Second Breed Selector -->
-                            <select id="secondBreedSelect" class="form-select" style="width: auto;">
-                                <option value="">Choose Second Breed (Optional)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mt-3">
-                            <p>Only select another breed if you are crossbreeding</p>
-                            <button id="showTestsButton" class="btn btn-success">Show Tests</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="breeding-tool mt-4">
+        <div class="row g-3">
+          <!-- Column 1: Animal type + button -->
+          <div class="col-12 col-md-4">
+            <label for="animalType" class="form-label">I want to breed my</label>
+            <select id="animalType" class="form-select mb-3">
+              <option value="Dog">Dog</option>
+              <option value="Cat">Cat</option>
+            </select>
+            <button id="showTestsButton" class="btn btn-success w-100">Show Tests</button>
+          </div>
+
+          <!-- Column 2: Breed selectors -->
+          <div class="col-12 col-md-8">
+            <label for="breedSelect" class="form-label">Breed</label>
+            <select id="breedSelect" class="form-select mb-3">
+              <option value="">Choose Breed</option>
+            </select>
+
+            <label for="secondBreedSelect" class="form-label">Second Breed (Optional)</label>
+            <select id="secondBreedSelect" class="form-select">
+              <option value="">Choose Second Breed (Optional)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
         
         <!-- Test Results Section (Initially Hidden) -->
         <section id="testResultsSection" class="container py-4" style="display: none;">
