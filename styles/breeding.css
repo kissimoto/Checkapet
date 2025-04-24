@@ -141,6 +141,12 @@
     padding: 3rem 0;
 }
 
+.custom-breeding-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
 .info-icon {
     font-size: 2.5rem;
     color: #3c763d;
@@ -184,6 +190,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
