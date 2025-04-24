@@ -82,6 +82,9 @@
     max-width: 800px;
     margin: 0 auto;
 }
+.legal-bg {
+    background-color: rgb(247, 244, 236); /* matches original */
+}
 
 /* Accordion Styling to match genetics page */
 .accordion-container {
