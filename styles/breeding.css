@@ -34,7 +34,7 @@
 
 /* Breeding Tool Section */
 .breeding-selection {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
     padding: 2rem 0;
@@ -69,13 +69,13 @@
 
 /* Test Results Section */
 #testResultsSection {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 /* Accordion Styling to match genetics page */
 .accordion-container {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto 2rem;
 }
 
