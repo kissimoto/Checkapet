@@ -1,85 +1,134 @@
 /* Breeding Page Specific Styles */
 
 /* Hero Section */
-.breeding-hero {
+.hero-section {
     background-color: #3c763d;
     color: white;
-    padding: 0;
+    padding: 50px 0;
     margin-bottom: 2rem;
 }
 
-.breeding-hero-content {
-    padding: 3rem 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.breeding-hero h1 {
+.hero-section h1 {
     color: white;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
-.breeding-hero .lead {
+.hero-section p {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
-.breeding-hero .img-container {
-    height: 300px;
-    max-height: 300px;
-    border-radius: 0;
+.hero-image {
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.breeding-hero .img-fluid-cover {
+.hero-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 /* Breeding Tool Section */
-.breeding-tool-container {
+.breeding-selection {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding: 2rem 0;
 }
 
-/* Accordion Styling */
+.breeding-selection select {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px;
+}
+
+.breeding-note {
+    margin: 1rem 0;
+    color: #666;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.show-tests-btn {
+    background-color: #3c763d;
+    border-color: #3c763d;
+    padding: 8px 24px;
+}
+
+.show-tests-btn:hover {
+    background-color: #2e5b2e;
+    border-color: #2e5b2e;
+}
+
+/* Test Results Section */
+#testResultsSection {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Accordion Styling to match genetics page */
 .accordion-container {
     max-width: 800px;
     margin: 0 auto 2rem;
-    overflow-x: hidden;
 }
 
 .accordion-item {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #dee2e6;
     border-radius: 0.25rem;
     overflow: hidden;
 }
 
 .accordion-button {
     padding: 1rem 1.25rem;
+    font-weight: 500;
+    background-color: #fff;
+    color: #333;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #eaf2ea;
+    background-color: #fff;
     color: #3c763d;
 }
 
 .accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(60, 118, 61, 0.25);
+    box-shadow: none;
+    border-color: #dee2e6;
+}
+
+.accordion-button::after {
+    transition: transform 0.2s ease;
 }
 
 .accordion-body {
     padding: 1.25rem;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
-/* Two-column section */
+/* Section Headings */
+.section-heading {
+    text-align: center;
+    color: #3c763d;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.section-subheading {
+    color: #3c763d;
+    margin-bottom: 1rem;
+}
+
+/* Health Testing Section */
 .health-testing-section {
     background-color: #f9f9f9;
+    padding: 3rem 0;
 }
 
 .info-icon {
@@ -90,26 +139,28 @@
     text-align: center;
 }
 
+/* Two-column layout */
 @media (min-width: 768px) {
-    .col-md-6 .pe-md-4 {
+    .col-divider {
         border-right: 1px solid #ddd;
         padding-right: 2rem;
     }
     
-    .col-md-6 .ps-md-4 {
+    .col-right-padding {
         padding-left: 2rem;
     }
 }
 
 /* Card styling */
-.card {
+.info-card {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
 }
 
-.card:hover {
+.info-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -124,12 +175,13 @@
     object-fit: cover;
 }
 
+/* Responsive adjustments */
 @media (max-width: 991px) {
-    .breeding-hero-content {
-        padding: 2rem 0;
+    .hero-section {
+        padding: 30px 0;
     }
     
-    .breeding-hero .img-container {
-        height: 250px;
+    .breeding-selection select {
+        margin-bottom: 10px;
     }
 }
