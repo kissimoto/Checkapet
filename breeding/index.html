@@ -61,55 +61,49 @@
     </header>
 
     <main>
-        <!-- Hero Section with Cat and Dog Image -->
-        <section class="breeding-hero">
-            <div class="container-fluid p-0">
-                <div class="row g-0 align-items-stretch">
-                    <div class="col-lg-6">
-                        <div class="breeding-hero-content px-4 px-lg-5">
-                            <h1>Recommended Tests when Breeding</h1>
-                            <p class="lead">Ensuring the health and wellbeing of future generations starts with proper testing</p>
-                        </div>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h1>Recommended Tests when Breeding</h1>
+                        <p>Ensuring the health and wellbeing of future generations starts with proper testing</p>
                     </div>
-                    <div class="col-lg-6 p-0">
-                        <div class="img-container">
-                            <img src="https://images.unsplash.com/photo-1609074405294-355851aead3e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Puppy with owner" class="img-fluid-cover">
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1609074405294-355851aead3e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Puppy with owner">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Breeding Tool Interface -->
-        <section class="container py-5">
-            <div class="breeding-tool-container">
-                <div class="breeding-tool">
-                    <div class="d-flex flex-wrap align-items-center justify-content-center">
-                        <span class="me-3">I want to breed my</span>
-                        
-                        <!-- Animal Type Selector -->
-                        <select id="animalType" class="form-select me-3" style="width: auto;">
-                            <option value="Dog">Dog</option>
-                            <option value="Cat">Cat</option>
-                        </select>
-                        
-                        <!-- Breed Selector -->
-                        <select id="breedSelect" class="form-select me-3" style="width: auto;">
-                            <option value="">Choose Breed</option>
-                        </select>
-                        
-                        <span class="me-3">with</span>
-                        
-                        <!-- Second Breed Selector -->
-                        <select id="secondBreedSelect" class="form-select" style="width: auto;">
-                            <option value="">Choose Second Breed (Optional)</option>
-                        </select>
-                    </div>
+        <!-- Breeding Selection Area -->
+        <section class="container">
+            <div class="breeding-selection">
+                <div class="d-flex flex-wrap justify-content-center align-items-center">
+                    <span>I want to breed my</span>
                     
-                    <div class="mt-3">
-                        <p>Only select another breed if you are crossbreeding</p>
-                        <button id="showTestsButton" class="btn btn-success">Show Tests</button>
-                    </div>
+                    <select id="animalType" class="form-select">
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                    </select>
+                    
+                    <select id="breedSelect" class="form-select">
+                        <option value="">Choose Breed</option>
+                    </select>
+                    
+                    <span>with</span>
+                    
+                    <select id="secondBreedSelect" class="form-select">
+                        <option value="">Choose Second Breed (Optional)</option>
+                    </select>
+                </div>
+                
+                <p class="breeding-note">Only select another breed if you are crossbreeding</p>
+                
+                <div class="button-container">
+                    <button id="showTestsButton" class="btn btn-success show-tests-btn">Show Tests</button>
                 </div>
             </div>
         </section>
@@ -122,25 +116,21 @@
         <!-- Health Testing Information -->
         <section class="container-fluid py-5 bg-light">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2 class="text-center mb-4">Health Testing - why bother?</h2>
-                        <div class="card">
-                            <div class="card-body">
-                                <p>Health testing is part of a comprehensive breeding program. You do not need to be part of a club or breed society to run health tests. Testing the parents for inherited disease reduces the chance of these being passed onto future generations. Those pets will have healthier lives; they will be a better family pet and return customers in the future more likely. It does not guarantee health, but it is a good start in helping to reduce preventative disease.</p>
-                                <p>For prospective puppy buyers and breeders alike, understanding the potential health issues within each breed is crucial. By prioritising health and collaborating on evidence-based strategies, we can work towards healthier future generations of dogs.</p>
-                            </div>
-                        </div>
+                <h2 class="section-heading">Health Testing - why bother?</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Health testing is part of a comprehensive breeding program. You do not need to be part of a club or breed society to run health tests. Testing the parents for inherited disease reduces the chance of these being passed onto future generations. Those pets will have healthier lives; they will be a better family pet and return customers in the future more likely. It does not guarantee health, but it is a good start in helping to reduce preventative disease.</p>
+                        <p>For prospective puppy buyers and breeders alike, understanding the potential health issues within each breed is crucial. By prioritising health and collaborating on evidence-based strategies, we can work towards healthier future generations of dogs.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Genetic Health Issues Section with Container to Prevent Overflow -->
+        <!-- Genetic Health Issues Section -->
         <section class="container py-5">
-            <h2 class="text-center mb-5">Issues Related to Dog Breeding and Genetic Health</h2>
+            <h2 class="section-heading">Issues Related to Dog Breeding and Genetic Health</h2>
             
-            <!-- Accordion container to prevent overflow and maintain consistent width -->
+            <!-- Accordion container to match genetics page -->
             <div class="accordion-container">
                 <div class="accordion" id="breedingIssuesAccordion">
                     <!-- Issue 1 -->
@@ -176,15 +166,15 @@
             </div>
         </section>
         
-        <!-- Health Testing Guidance Section (Two Columns) with Icons -->
+        <!-- Health Testing Guidance Section (Two Columns) -->
         <section class="container-fluid py-5 health-testing-section">
             <div class="container">
                 <div class="row">
                     <!-- Left Column -->
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <div class="pe-md-4">
+                        <div class="col-divider">
                             <i class="fas fa-paw info-icon"></i>
-                            <h2 class="text-center mb-4">What else should I consider?</h2>
+                            <h3 class="section-subheading text-center">What else should I consider?</h3>
                             <p>DNA tests detect genes or their markers for a specific disease, they are not a diagnosis of disease. Genetic health testing is an integral part of responsible dog breeding, but there are other important considerations. Only breed from a healthy dog without disease, such as gut or skin disease, some joint diseases (for which there may not be any tests), and consider the temperament of each individual. Your vet can do an overall clinical examination to check for other conditions including the heart and general conformation.</p>
                             
                             <p>When using genetic health testing, it is important to understand concepts such as modes of inheritance, penetrance, prevalence, and phenotype for a specific variant (mutation) in your breed in order to interpret test results. Breeders also need to know which variants are causing health concerns in their breed and which health conditions currently have no genetic test available. Information on this site, and some others, can help you decide by breed or by health condition which DNA tests to run. An increasing number of DNA tests are being provided for single gene disorders.</p>
@@ -193,12 +183,12 @@
                     
                     <!-- Right Column -->
                     <div class="col-md-6">
-                        <div class="ps-md-4">
+                        <div class="col-right-padding">
                             <i class="fas fa-syringe info-icon"></i>
-                            <h2 class="text-center mb-4">How do I test?</h2>
+                            <h3 class="section-subheading text-center">How do I test?</h3>
                             <p>A blood test (taken by your vet) or a cheek/buccal swab are required (can be done at home). Genetic health testing is not a diagnosis of disease.</p>
                             
-                            <h2>Laboratories for Genetic Testing in the UK:</h2>
+                            <h4 class="section-subheading">Laboratories for Genetic Testing in the UK:</h4>
                             <p>There are several well-recognised labs for genetic testing in the UK, some of which partner with the Kennel Club for certified testing:</p>
                             
                             <ul>
@@ -223,7 +213,7 @@
         
         <!-- Recommended Documents Section -->
         <section class="container py-5">
-            <h2 class="text-center mb-4">Recommended documents for all puppies</h2>
+            <h2 class="section-heading">Recommended documents for all puppies</h2>
             <p class="text-center mb-5">Breeders do not need to be part of a club or society to health test. Testing parents for inherited disease can reduce the chance of these being passed on to future generations. This means those pets will have healthier lives as part of your family. It does not guarantee health, there is more to consider, but it is a start in helping to reduce preventative disease.</p>
             
             <!-- Documents Grid -->
@@ -312,7 +302,7 @@
         <!-- Legal Considerations Section -->
         <section class="container-fluid py-5 bg-cream">
             <div class="container">
-                <h2 class="text-center mb-4">Legal considerations</h2>
+                <h2 class="section-heading">Legal considerations</h2>
                 <p class="text-center mb-5">Current UK legislation does not protect puppies or provide penalties for irresponsible breeding. Irresponsible breeding is an important cause of suffering and is frequently associated with preventable breed-related and inherited disease.</p>
                 
                 <!-- Legal Info Accordion -->
@@ -347,14 +337,14 @@
             </div>
         </section>
         
-        <!-- Three Columns Dog Pictures Section -->
+        <!-- Three Columns Image Section -->
         <section class="container py-5">
             <div class="row">
                 <!-- Column 1 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="img-container" style="height: 220px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1632236542159-809925d85fc0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Dog getting medicine" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    <div class="info-card">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1632236542159-809925d85fc0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Dog getting medicine">
                         </div>
                         <div class="card-body">
                             <p>Concentration on the emotional flexibility and well-being of puppies, as well as the genetic traits associated with appearance and health, is critical for the emotional welfare of these pets.</p>
@@ -366,9 +356,9 @@
                 
                 <!-- Column 2 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="img-container" style="height: 220px; overflow: hidden;">
-                            <img src="https://plus.unsplash.com/premium_photo-1663041606868-bf51840308b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Dog being examined by vet" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    <div class="info-card">
+                        <div class="card-img-container">
+                            <img src="https://plus.unsplash.com/premium_photo-1663041606868-bf51840308b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Dog being examined by vet">
                         </div>
                         <div class="card-body">
                             <p>Between April 2020 and March 2021, 3.2 million households in the UK acquired a pet. Pedigree dogs were more popular than non-pedigree cats. 59% of all cats bought in this time period were purebred breeds (715,000) and 43% were moggies (685,000) with the rest being crossbreed cats.</p>
@@ -378,9 +368,9 @@
                 
                 <!-- Column 3 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="img-container" style="height: 220px; overflow: hidden;">
-                            <img src="https://plus.unsplash.com/premium_photo-1677165478387-bf323fd6ef72?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Cat held by vet" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    <div class="info-card">
+                        <div class="card-img-container">
+                            <img src="https://plus.unsplash.com/premium_photo-1677165478387-bf323fd6ef72?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Cat held by vet">
                         </div>
                         <div class="card-body">
                             <p>When choosing a breed or crossbreed, the associated poor health is ignored. The well known 'cute effect' of animals with squashed baby-faces cannot be ignored, and is triggered by seeing these images. Their endearing look often overrules their poor health and quality of life, when deciding to buy one of these breeds.</p>
@@ -395,10 +385,9 @@
     <footer>
         <div class="container">
             <div class="row">
-                <!-- Logo and Vision Statement -->
+                <!-- Vision Statement -->
                 <div class="col-md-3 mb-4 mb-md-0">
-                    <img src="/Checkapet/images/logo-white.png" alt="CheckAPet Logo" class="mb-3" width="150">
-                    <p class="mb-3">Our vision is for a healthier population of happy pets in the UK</p>
+                    <p class="mb-3">Our vision is for a healthier population of happy pets in the UK.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-tiktok"></i></a>
@@ -417,40 +406,4 @@
                 </div>
                 
                 <!-- Information Column -->
-                <div class="col-md-3 mb-4 mb-md-0">
-                    <h5>Information</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/Checkapet/glossary.html">Glossary</a></li>
-                        <li class="mb-2"><a href="/Checkapet/health-testing.html">Laboratories for health testing</a></li>
-                    </ul>
-                </div>
-                
-                <!-- CheckAPet Column -->
-                <div class="col-md-3">
-                    <h5>CheckAPet</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="/Checkapet/about.html">About Us</a></li>
-                        <li class="mb-2"><a href="/Checkapet/contact.html">Contact Us</a></li>
-                        <li class="mb-2"><a href="/Checkapet/terms.html">Terms and Conditions</a></li>
-                        <li class="mb-2"><a href="/Checkapet/cookies.html">Cookie Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Copyright Bar -->
-            <div class="row mt-5">
-                <div class="col">
-                    <hr>
-                    <p class="text-center mb-0">©2025 CheckAPet. All rights reserved | <a href="/Checkapet/privacy.html">Privacy & Policy</a> | <a href="/Checkapet/terms-of-service.html">Terms of Service</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="/Checkapet/js/main.js"></script>
-    <script src="/Checkapet/breeding/main.js"></script>
-</body>
-</html>
+                <div class="col-md-
