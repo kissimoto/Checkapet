@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/Checkapet/styles/main.css">
-    <link rel="stylesheet" href="/Checkapet/styles/breeding.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -62,11 +61,11 @@
 
     <main>
         <!-- Hero Section with Cat and Dog Image -->
-        <section class="hero">
+        <section class="breeding-hero">
             <div class="container-fluid p-0">
                 <div class="row g-0 align-items-stretch">
                     <div class="col-lg-6">
-                        <div class="hero-content px-4 px-lg-5">
+                        <div class="breeding-hero-content px-4 px-lg-5">
                             <h1>Recommended Tests when Breeding</h1>
                             <p class="lead">Ensuring the health and wellbeing of future generations starts with proper testing</p>
                         </div>
@@ -82,35 +81,33 @@
         
         <!-- Breeding Tool Interface -->
         <section class="container py-5">
-            <div class="row">
-                <div class="col">
-                    <div class="breeding-tool mt-4">
-                        <div class="d-flex flex-wrap align-items-center">
-                            <span class="me-3">I want to breed my</span>
-                            
-                            <!-- Animal Type Selector -->
-                            <select id="animalType" class="form-select me-3" style="width: auto;">
-                                <option value="Dog">Dog</option>
-                                <option value="Cat">Cat</option>
-                            </select>
-                            
-                            <!-- Breed Selector -->
-                            <select id="breedSelect" class="form-select me-3" style="width: auto;">
-                                <option value="">Choose Breed</option>
-                            </select>
-                            
-                            <span class="me-3">with</span>
-                            
-                            <!-- Second Breed Selector -->
-                            <select id="secondBreedSelect" class="form-select" style="width: auto;">
-                                <option value="">Choose Second Breed (Optional)</option>
-                            </select>
-                        </div>
+            <div class="breeding-tool-container">
+                <div class="breeding-tool">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center">
+                        <span class="me-3">I want to breed my</span>
                         
-                        <div class="mt-3">
-                            <p>Only select another breed if you are crossbreeding</p>
-                            <button id="showTestsButton" class="btn btn-success">Show Tests</button>
-                        </div>
+                        <!-- Animal Type Selector -->
+                        <select id="animalType" class="form-select me-3" style="width: auto;">
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                        </select>
+                        
+                        <!-- Breed Selector -->
+                        <select id="breedSelect" class="form-select me-3" style="width: auto;">
+                            <option value="">Choose Breed</option>
+                        </select>
+                        
+                        <span class="me-3">with</span>
+                        
+                        <!-- Second Breed Selector -->
+                        <select id="secondBreedSelect" class="form-select" style="width: auto;">
+                            <option value="">Choose Second Breed (Optional)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <p>Only select another breed if you are crossbreeding</p>
+                        <button id="showTestsButton" class="btn btn-success">Show Tests</button>
                     </div>
                 </div>
             </div>
@@ -142,7 +139,7 @@
         <section class="container py-5">
             <h2 class="text-center mb-5">Issues Related to Dog Breeding and Genetic Health</h2>
             
-            <!-- Accordion container to prevent overflow -->
+            <!-- Accordion container to prevent overflow and maintain consistent width -->
             <div class="accordion-container">
                 <div class="accordion" id="breedingIssuesAccordion">
                     <!-- Issue 1 -->
