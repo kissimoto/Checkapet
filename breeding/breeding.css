@@ -1,12 +1,14 @@
-/* Updated Hero Section CSS */
-.hero {
+/* Breeding Page Specific Styles */
+
+/* Hero Section */
+.breeding-hero {
     background-color: #3c763d;
     color: white;
-    padding: 0; /* Remove default padding */
+    padding: 0;
     margin-bottom: 2rem;
 }
 
-.hero-content {
+.breeding-hero-content {
     padding: 3rem 0;
     height: 100%;
     display: flex;
@@ -14,35 +16,120 @@
     justify-content: center;
 }
 
-.hero h1 {
+.breeding-hero h1 {
     color: white;
     margin-bottom: 1rem;
 }
 
-.hero .lead {
+.breeding-hero .lead {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
 }
 
-.hero .img-container {
+.breeding-hero .img-container {
     height: 300px;
     max-height: 300px;
     border-radius: 0;
     overflow: hidden;
 }
 
-.hero .img-fluid-cover {
+.breeding-hero .img-fluid-cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Breeding Tool Section */
+.breeding-tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Accordion Styling */
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    overflow-x: hidden;
+}
+
+.accordion-item {
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.accordion-button {
+    padding: 1rem 1.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #eaf2ea;
+    color: #3c763d;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(60, 118, 61, 0.25);
+}
+
+.accordion-body {
+    padding: 1.25rem;
+    background-color: #ffffff;
+}
+
+/* Two-column section */
+.health-testing-section {
+    background-color: #f9f9f9;
+}
+
+.info-icon {
+    font-size: 2.5rem;
+    color: #3c763d;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 .pe-md-4 {
+        border-right: 1px solid #ddd;
+        padding-right: 2rem;
+    }
+    
+    .col-md-6 .ps-md-4 {
+        padding-left: 2rem;
+    }
+}
+
+/* Card styling */
+.card {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-img-container {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 100%;
+    object-fit: cover;
+}
+
 @media (max-width: 991px) {
-    .hero-content {
+    .breeding-hero-content {
         padding: 2rem 0;
     }
     
-    .hero .img-container {
+    .breeding-hero .img-container {
         height: 250px;
     }
 }
