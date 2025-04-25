@@ -1,1 +1,146 @@
+/* Buying Page Specific Styles */
 
+/* Background colors */
+.bg-light-green {
+    background-color: #8BC34A;
+}
+
+.bg-medium-green {
+    background-color: #689F38;
+}
+
+.primary-green {
+    color: #3c763d;
+}
+
+.primary-blue {
+    color: #0066cc;
+}
+
+.bg-primary-blue {
+    background-color: #0066cc;
+}
+
+/* Breed selector styling */
+.breed-selector-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Test Results Section */
+#testResultsSection {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Button styling */
+.btn-success {
+    background-color: #3c763d;
+    border-color: #3c763d;
+}
+
+.btn-success:hover {
+    background-color: #2e5b2e;
+    border-color: #2e5b2e;
+}
+
+/* Accordion styling (like Vets page) */
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fff;
+    color: #3c763d;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+/* Considerations and Recommendations list styling */
+.considerations-list,
+.recommendations-list {
+    margin-bottom: 2rem;
+}
+
+.consideration-item,
+.recommendation-item {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.consideration-item i,
+.recommendation-item i {
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.consideration-item p,
+.recommendation-item p {
+    margin-bottom: 0;
+}
+
+.consideration-note {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin: 1rem 0 1rem 2rem;
+}
+
+/* Checklist item styling */
+.checklist-item {
+    margin-bottom: 1.5rem;
+}
+
+.checklist-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    background-color: #689F38;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+/* Image styling */
+img.rounded {
+    border-radius: 8px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive spacing adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .checklist-item {
+        margin-bottom: 2rem;
+    }
+}
