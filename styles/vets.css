@@ -89,3 +89,6 @@ img.rounded {
         font-size: 1.75rem;
     }
 }
+.hero-section h1 {
+    color: white;
+}
