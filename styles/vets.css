@@ -110,3 +110,18 @@ img.rounded {
 .hero-img-container:hover img {
     transform: scale(1.03); /* Subtle zoom effect */
 }
+/* Accordion hover effects - with higher specificity */
+.accordion .accordion-item {
+    margin-bottom: 0.75rem !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 0.5rem !important;
+    overflow: hidden !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.accordion .accordion-item:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
