@@ -1,1 +1,185 @@
+/* Glossary Page Specific Styles */
 
+/* Hero section styling */
+.hero {
+    background-color: #3c763d;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.hero .lead {
+    color: white;
+    font-size: 1.25rem;
+}
+
+/* Alphabet index navigation */
+.alpha-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.5rem 0;
+    gap: 0.5rem;
+}
+
+.alpha-index a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #3c763d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.alpha-index a:hover, 
+.alpha-index a.active {
+    background-color: #3c763d;
+    color: white;
+    transform: scale(1.1);
+}
+
+.alpha-index a.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Glossary accordion styling */
+.glossary-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.glossary-item {
+    margin-bottom: 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glossary-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.glossary-item .accordion-button {
+    background-color: #f8f9fa;
+    color: #3c763d;
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+.glossary-item .accordion-button:not(.collapsed) {
+    background-color: #3c763d;
+    color: white;
+}
+
+.glossary-item .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+.glossary-item .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233c763d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.glossary-item .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.glossary-item .accordion-body {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.glossary-item .accordion-body p:last-child {
+    margin-bottom: 0;
+}
+
+.glossary-item .accordion-body ul {
+    padding-left: 1.5rem;
+}
+
+.glossary-item .accordion-body a {
+    color: #3c763d;
+    text-decoration: none;
+}
+
+.glossary-item .accordion-body a:hover {
+    text-decoration: underline;
+}
+
+/* Hidden items when filtered */
+.glossary-item.hidden {
+    display: none;
+}
+
+/* Section headers */
+.glossary-section-header {
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    margin: 1.5rem 0 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    color: #3c763d;
+}
+
+/* Search styling */
+.search-form {
+    position: relative;
+}
+
+.search-form .form-control:focus {
+    border-color: #3c763d;
+    box-shadow: 0 0 0 0.25rem rgba(60, 118, 61, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .alpha-index a {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .glossary-item .accordion-button {
+        padding: 0.75rem 1rem;
+    }
+    
+    .glossary-item .accordion-body {
+        padding: 1.25rem;
+    }
+}
+
+/* Empty message styling */
+.no-results-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.no-results-message i {
+    font-size: 3rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.no-results-message p {
+    font-size: 1.1rem;
+    color: #495057;
+}
