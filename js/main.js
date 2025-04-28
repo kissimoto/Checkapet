@@ -195,3 +195,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Add inline styles directly to each accordion item
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+        // Set initial styles
+        item.style.marginBottom = '0.75rem';
+        item.style.borderRadius = '0.5rem';
+        item.style.overflow = 'hidden';
+        item.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+        
+        // Add hover event listeners
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px)';
+            this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+            this.style.position = 'relative';
+            this.style.zIndex = '10';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+            this.style.position = '';
+            this.style.zIndex = '';
+        });
+    });
+});
