@@ -1,1 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckAPet - Glossary</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Sanchez -->
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Checkapet/styles/main.css">
+    <link rel="stylesheet" href="/Checkapet/styles/glossary.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="w-100 bg-light">
+        <div class="container"> 
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo with link to home page -->
+                <a class="navbar-brand d-flex align-items-center" href="/Checkapet/">
+                    <span class="logo-circle me-2"></span>
+                    <span class="brand-text">CHECKAPET</span>
+                </a>
+                
+                <!-- Mobile toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navbar items -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="/Checkapet/" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="/Checkapet/breeding/" class="nav-link">Breeding</a></li>
+                        <li class="nav-item"><a href="/Checkapet/buying/" class="nav-link">Buying</a></li>
+                        <li class="nav-item"><a href="/Checkapet/vets/" class="nav-link">Vets</a></li>
+                        <li class="nav-item"><a href="/Checkapet/genetics/" class="nav-link">Genetics</a></li>
+                    </ul>
+                    
+                    <!-- Search form -->
+                    <form class="d-flex search-form me-2">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fa fa-search text-muted"></i>
+                            </span>
+                            <input class="form-control border-start-0" type="search" 
+                                   placeholder="Search test or condition" aria-label="Search" id="glossary-search">
+                        </div>
+                    </form>
+                    
+                    <!-- Glossary button -->
+                    <a href="/Checkapet/glossary/" class="btn btn-success glossary-btn active">Glossary</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
+    <main>
+        <!-- Hero Section -->
+        <section class="py-4" style="background-color: #3c763d;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center text-white">
+                        <h1 class="mb-3">Genetic Tests Glossary</h1>
+                        <p class="lead">A comprehensive guide to genetic tests available for dogs and cats</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glossary Introduction -->
+        <section class="container py-4 mb-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-info">
+                        <h4>DNA Tests</h4>
+                        <p>Tests that come under the UK Kennel Club Scheme can be reported directly to the KC by the lab. A blood test (whole blood in EDTA) or a cheek/buccal swab are required. Genetic Health testing is not a diagnosis of disease.</p>
+                        <p class="mb-0"><strong>Note:</strong> Use the search box above to quickly find specific tests or conditions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alpha index for quick navigation -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="alpha-index" id="alpha-index">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glossary Accordion Section -->
+        <section class="container mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="accordion glossary-accordion" id="glossaryAccordion">
+                        <!-- Afibrinogenemia -->
+                        <div class="accordion-item glossary-item" data-term="afibrinogenemia afg bleeding disorder">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#afibrinogenemia" aria-expanded="false">
+                                    Afibrinogenemia (AFG)
+                                </button>
+                            </h2>
+                            <div id="afibrinogenemia" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p>A rare congenital fibrinogen bleeding disorder affecting dogs.</p>
+                                    <p>There are three types:</p>
+                                    <ul>
+                                        <li>Deficiency (hypofibrinogenemia)</li>
+                                        <li>Absence of fibrinogen (afibrinogenemia)</li>
+                                        <li>Normal or decreased levels of a dysfunctional fibrinogen (dysfibrinogenemia or hypodysfibrinogenemia)</li>
+                                    </ul>
+                                    <p>A variant has been identified that is very likely associated with cases of severe bleeding due to afibrinogenemia in a small family of Dachshunds. It is thought that this mutation has already been spread in Dachshunds through carriers before cases were ascertained. Genetic testing allows selective breeding to prevent afibrinogenemia-affected puppies in the future.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CEA/CH -->
+                        <div class="accordion-item glossary-item" data-term="cea ch collie eye anomaly choroid hypoplasia">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cea" aria-expanded="false">
+                                    CEA/CH - Collie Eye Anomaly/Choroid Hypoplasia
+                                </button>
+                            </h2>
+                            <div id="cea" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> Australian Shepherd, Bearded Collie, Border Collie, Lancashire Heeler, Nova Scotia Duck Tolling Retriever (NSDTR/Toller), Rough Collie, Shetland Sheepdog (Sheltie), and Smooth Collie</p>
+                                    <p><strong>Also found in:</strong> Australian Kelpie, Collie, English Shepherd, Longhaired Whippet</p>
+                                    <p>Collie Eye Anomaly results in abnormal development of the eye's choroid. The disease can be mild or severe, from thinning in the choroid layer of the eye (where the dog's vision remains normal, though dogs with this mild form can produce severely affected offspring) to the severe form of the disease where the dog can suffer serious loss of vision.</p>
+                                    <p>Colobomas can be seen around and at the optic nerve head. Colobomas may lead to secondary complications such as partial or complete retinal detachments and/or growth of new but abnormal blood vessels with bleeding inside the eye. The disease can affect one or both eyes and can lead to vision loss, although this disease rarely leads to complete blindness.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chondrodystrophy -->
+                        <div class="accordion-item glossary-item" data-term="chondrodystrophy cddy cdpa ivdd intervertebral disc disease">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chondrodystrophy" aria-expanded="false">
+                                    Chondrodystrophy (CDDY) and Intervertebral Disc Disease (IVDD)
+                                </button>
+                            </h2>
+                            <div id="chondrodystrophy" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Semi-dominant/dominant</p>
+                                    <p>A check for two mutations: Chondrodystrophy (CDDY with IVDD Risk) and Chondrodysplasia (CDPA)</p>
+                                    <p>Chondrodystrophy (FGF4-12) causes short legs AND the risk of developing Intervertebral Disc Disease. The test checks for two mutations: CDDY, and CDPA, one result for each mutation. All Dachshunds have positive tests (homozygous for both mutations) so there is little point in testing them.</p>
+                                    <p>Chondrodysplasia (FGF4-18) This mutation explains the short-legged phenotype known as chondrodysplasia (CDPA) in breeds such as Basset Hound, Pembroke Welsh Corgi, Dachshunds, West Highland White Terriers and Scottish Terriers. CDPA inheritance is considered to follow an autosomal dominant mode.</p>
+                                    <p>Chondrodystrophy (CDDY with IVDD Risk) is a trait that is common to many dog breeds and is characterized by shorter legs. It can also be associated with Intervertebral Disc Disease (IVDD) due to premature degeneration of the intervertebral disc, the cartilage which separates vertebrae from each other, absorbs shocks and allows slight movement of the vertebrae. In affected dogs, premature calcification of part or all of the discs at early age (from birth to 1 year of age) leaves them susceptible to herniation into the spinal canal where the inflammation and hemorrhage can cause severe pain and neurological dysfunction.</p>
+                                    <p>CDDY is inherited as a semi-dominant trait which means that dogs with 2 copies of the mutation are smaller than dogs with only 1 copy. For IVDD, the inheritance follows a dominant mode, meaning that 1 copy of CDDY mutation is sufficient to predispose dogs to IVDD.</p>
+                                    <p>The CDDY mutation has been found in breeds such as: Basset Hound, Beagle, Bichon Frise, Cardigan Welsh Corgi, Cavalier King Charles Spaniel, Chesapeake Bay Retriever, Chihuahua, American Cocker Spaniel, Coton de Tulear, Dachshund, Dandie Dinmont Terrier, English Springer Spaniel, French Bulldog, Havanese, Jack Russell Terrier, Nova Scotia Duck Tolling Retriever, Pekingese, Pembroke Welsh Corgi, Poodle (Miniature and Toy), Portuguese Water Dog, Scottish Terrier, Shih Tzu.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cobalamin Malabsorption -->
+                        <div class="accordion-item glossary-item" data-term="cobalamin malabsorption imerslund-grasbeck syndrome vitamin b12">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cobalamin" aria-expanded="false">
+                                    Cobalamin Malabsorption (Imerslund-Gräsbeck Syndrome)
+                                </button>
+                            </h2>
+                            <div id="cobalamin" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> Beagle and Border Collie</p>
+                                    <p>Cobalamin malabsorption (Imerslund-Gräsbeck Syndrome) refers to a genetic disorder by which Vitamin B12 (cobalamin) fails to be absorbed from the intestine. Low cobalamin causes irreversible damage to the brain and nervous system, leading to changes in the hematopoietic system and to neurological symptoms, including anorexia, lethargy and failure to gain weight. Cobalamin malabsorption can be managed by supplementation with regular doses of cobalamin.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Degenerative Myelopathy -->
+                        <div class="accordion-item glossary-item" data-term="degenerative myelopathy radiculomyelopathy dm sod1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dm" aria-expanded="false">
+                                    Degenerative Myelopathy / Degenerative Radiculomyelopathy (DM)
+                                </button>
+                            </h2>
+                            <div id="dm" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive with variable penetrance</p>
+                                    <p>Canine degenerative myelopathy (also known as chronic degenerative radiculomyelopathy) is a progressive disease of the spinal cord in older dogs. The disease has an insidious onset typically between 7 and 14 years of age. It begins with hind limb ataxia. As of July 15, 2008, the mutated gene responsible for DM has been found present in 43 breeds including German Shepherds, Boxers, Chesapeake Bay Retrievers, Rhodesian Ridgebacks, and both breeds of Welsh Corgis. The disease is chronic and progressive, resulting in paralysis.</p>
+                                    <p>Degenerative myelopathy initially affects the back legs and causes muscle weakness and lack of coordination, dragging one or both rear paws, causing irregularly worn nails. As the disease progresses, there is extensive paralysis and symptoms such as incontinence with difficulties with both balance and walking. Eventually there is front limb involvement and extensive muscle atrophy with cranial nerve and respiratory muscle involvement necessitating euthanasia. Progression of the disease is generally slow, but highly variable, from within a few months, to up to three years.</p>
+                                    <p>Testing is advised if close relatives have suffered from the disease as the gene has incomplete penetrance and all dogs with the mutation DO NOT necessarily develop the disease.</p>
+                                    <p>In the Bernese Mountain dog, both Exon 1 and Exon 2 tests are recommended.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dyserythropoietic Anaemia and Myopathy Syndrome -->
+                        <div class="accordion-item glossary-item" data-term="dyserythropoietic anaemia myopathy syndrome dams">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dams" aria-expanded="false">
+                                    Dyserythropoietic Anaemia and Myopathy Syndrome (DAMS)
+                                </button>
+                            </h2>
+                            <div id="dams" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> English Springer Spaniel</p>
+                                    <p>DAMS is an inherited disease affecting the English Springer Spaniel and the Labrador Retriever. The disease is characterised by progressive weakness, muscle atrophy, pelvic limb weakness, swallowing problems and regurgitation. In the English Springer Spaniel symptoms also include anaemia and cardiomyopathy.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Factor VII Deficiency -->
+                        <div class="accordion-item glossary-item" data-term="factor vii deficiency proconvertin blood clotting">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#factor7" aria-expanded="false">
+                                    Factor VII Deficiency
+                                </button>
+                            </h2>
+                            <div id="factor7" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> Beagle</p>
+                                    <p><strong>Also found in:</strong> Airedale Terrier, Finnish Hound, Giant Schnauzer, Papillon, Scottish Deerhound, Deerhound, Welsh Springer Spaniel</p>
+                                    <p>A mild bleeding disorder caused by lack of Factor VII (proconvertin) which plays a role in the blood clotting system. Affected dogs bruise easily and nosebleeds maybe seen. There is often prolonged bleeding after surgery or trauma which may be severe.</p>
+                                    <p>Disease can be managed with the infusion of Frozen Fresh Plasma or blood transfusion.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Glaucoma / Goniodysgenesis -->
+                        <div class="accordion-item glossary-item" data-term="glaucoma goniodysgenesis ggd olfml3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#glaucoma" aria-expanded="false">
+                                    Glaucoma / Goniodysgenesis
+                                </button>
+                            </h2>
+                            <div id="glaucoma" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> Border Collie</p>
+                                    <p>Goniodysgenesis is a developmental abnormality of the anterior chamber, strongly associated with glaucoma and blindness. This abnormality affects the drainage pathway increasing intra-ocular pressure, which damages the optic nerve causing vision loss.</p>
+                                    <p>GGD is caused by a mutation in Olfactomedin-like 3 (OLFML3).</p>
+                                    <p>Symptoms include: severe eye pain, epiphora, photophobia, blepharospasm, mydriasis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hereditary Cataract -->
+                        <div class="accordion-item glossary-item" data-term="hereditary cataract hsf hsf4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cataract" aria-expanded="false">
+                                    Hereditary Cataract
+                                </button>
+                            </h2>
+                            <div id="cataract" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p>Cataract is one of the most common diseases in dogs and a hereditary form has already been described in 100 breeds. In addition to a genetic epidemiology, eye injuries, metabolic disorders (including diabetes) or nutritional deficiencies may also lead to cataracts.</p>
+                                    <p>The disease leads to blindness by a clouding of the lens.</p>
+                                    
+                                    <p><strong>Hereditary Cataract (HSF) - Autosomal Dominant Form</strong></p>
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Breeds:</strong> Australian Shepherd, Miniature American Shepherd, Wirehaired Pointing Griffon (Korthals Griffon)</p>
+                                    <p>Early onset, resulting in complete blindness, the only effective treatment is surgical intervention. Homozygous dogs show more severe progress of the disease than heterozygous.</p>
+                                    
+                                    <p><strong>Hereditary Cataract (HSF4) - Autosomal Recessive Form</strong></p>
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> Boston Terrier, French Bulldog, Staffordshire Bull Terrier</p>
+                                    <p>The disease leads to blindness due to lens opacity. In the Boston Terrier, a distinction is made between two forms: the early form occurs at the age of a few months, always progressive, and ends in complete blindness (also seen in SBT), while the late form occurs after three years of age and expresses a highly variable course and severity of disease.</p>
+                                    <p>Since this form is inherited autosomal recessive in both breeds, genetic testing allows for the determination of the genetic status, and thereby selective breeding.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Histiocytic Sarcoma Risk -->
+                        <div class="accordion-item glossary-item" data-term="histiocytic sarcoma risk bernese mountain dog">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#histiocytic" aria-expanded="false">
+                                    Histiocytic Sarcoma Risk (Bernese Mountain Dog)
+                                </button>
+                            </h2>
+                            <div id="histiocytic" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> EDTA blood test</p>
+                                    <p>A test based on nine genetic markers, which gives results as a genetic index of risk of developing the disease. (Results based on a population of 1081 French BMD's)</p>
+                                    <p><strong>Results:</strong></p>
+                                    <ul>
+                                        <li>A = Individual has 4 times the chance of NOT developing the disease</li>
+                                        <li>B = Neutral index</li>
+                                        <li>C = Individual has 4 times the chance of developing the disease and the markers being transmitted to the offspring. Never mate a C to a C.</li>
+                                    </ul>
+                                    <p>For more information: <a href="https://antagene.com/pdf/histiocytic_sarcoma_test_procedure.pdf" target="_blank">https://antagene.com/pdf/histiocytic_sarcoma_test_procedure.pdf</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lafora Disease -->
+                        <div class="accordion-item glossary-item" data-term="lafora disease myoclonic epilepsy">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lafora" aria-expanded="false">
+                                    Lafora Disease/Myoclonic Epilepsy
+                                </button>
+                            </h2>
+                            <div id="lafora" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> EDTA blood test</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> Basset Hound, Beagle, and Miniature Wire Haired Dachshund</p>
+                                    <p><strong>Also seen in:</strong> Welsh Corgi (Cardigan), Chihuahua, French Bull Dog, Newfoundland, Pembroke Welsh Corgi</p>
+                                    <p>Late onset inherited neurological disorder causing progressive twitching and weakness, a type of epilepsy.</p>
+                                    <p>Symptoms start after 5 years of age, and are characterised by a quick and involuntary jerking of the head backward (myoclonus), which can occur spontaneously or triggered by noise or light flashing. They may have jaw smacking, panic attacks, impaired vision, aggression and urinary incontinence and some with high pitched vocalisations. Symptoms may progress to epileptic seizures.</p>
+                                    <p>The disease is caused by a mutation which causes intracellular accumulation of abnormal glycogen (Lafora bodies).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Laryngeal Paralysis -->
+                        <div class="accordion-item glossary-item" data-term="laryngeal paralysis bull terrier">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#laryngeal" aria-expanded="false">
+                                    Laryngeal Paralysis
+                                </button>
+                            </h2>
+                            <div id="laryngeal" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive</p>
+                                    <p><strong>Breeds:</strong> Bull Terrier and Miniature Bull Terrier</p>
+                                    <p>Characterised by difficulties in breathing and sometimes death, especially during physical activity. Affected individuals may require surgery. Clinical signs include decreasing exercise tolerance, progressive laryngeal stridor, voice impairment, episodes of breathing difficulties and collapsing.</p>
+                                    <p>A genetic variant has been identified as a major genetic risk factor for an early onset form of laryngeal paralysis. Dogs which are homozygous for the variant have a 23 fold increased risk of developing the disease, so dogs carrying the variant should be bred with clear dogs, or not bred, to avoid producing puppies with two copies of the variant.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Laryngeal Paralysis Polyneuropathy -->
+                        <div class="accordion-item glossary-item" data-term="laryngeal paralysis polyneuropathy lppn3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lppn" aria-expanded="false">
+                                    Laryngeal Paralysis Polyneuropathy
+                                </button>
+                            </h2>
+                            <div id="lppn" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> Leonberger</p>
+                                    <p><strong>Also found in:</strong> Labrador Retriever and St. Bernard</p>
+                                    <p>The LPPN3 is another mutation that causes Laryngeal Paralysis Polyneuropathy. Affected puppies usually develop severe symptoms of laryngeal paralysis at a young age, loud breathing and gagging, dysphagia, changes in barking frequency and quality, high-stepping and uncoordinated gait, stumbling and tripping, exercise intolerance, and muscle atrophy.</p>
+                                    <p>In Leonberger there two more mutations known to cause the disease LPN1 and LPN2, the three tests are recommended for complete diagnosis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MDR1 - Multidrug Resistance Gene -->
+                        <div class="accordion-item glossary-item" data-term="mdr1 multidrug resistance gene abcb1 drug sensitivity p-glycoprotein">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mdr1" aria-expanded="false">
+                                    MDR1 - Multidrug Resistance Gene 1 (ABCB1)
+                                </button>
+                            </h2>
+                            <div id="mdr1" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal trait</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> Australian Shepherd, Border Collie, Rough Collie, Shetland Sheepdog (Sheltie), and Smooth Collie</p>
+                                    <p>MDR1 is a genetic disorder found in many dog breeds. Affected dogs, when treated with certain drugs fail to pump these drugs across the blood-brain-barrier resulting in accumulation of certain drugs in the central nervous system and neurologic symptoms ranging from tremors, anorexia and excess salivation to blindness, coma and even death. Some of these drugs are able to cause toxicity at 1/200th of the dose required to cause toxicity in healthy dogs.</p>
+                                    <p>Affected dogs lack P-Glycoprotein, which is responsible as a membrane transporter. This condition is due to a mutation in the multi-drug resistance gene. Heterozygous individuals can also show some signs of sensitivity.</p>
+                                    
+                                    <p><strong>Drugs that cause sensitivity to dogs with the mutation:</strong></p>
+                                    
+                                    <p><strong>Class A: Do not use these drugs in dogs with MDR1 Gene Defect</strong></p>
+                                    <ul>
+                                        <li>Ivermectine substances "Anti parasites": (Diapec®, Ecomectin®, Equimax®, Eqvalan®, Ivomec®, Noromectin®, Paramectin®, Qualimec®, Sumex®, Virbamec®)</li>
+                                        <li>Doramectine substances "Anti parasites": (Dectomax®)</li>
+                                        <li>Loperamide substances "ant diarrheal": (Imodium®)</li>
+                                        <li>Moxidectine substances "Anti Parasites" (Cydectin®, Equest®)</li>
+                                    </ul>
+                                    
+                                    <p><strong>Class B: Use only under close control of veterinarian</strong></p>
+                                    <ul>
+                                        <li>Cytostatics "Chemotherapy": (Vinblastine, Vincristine, Doxorubicine, Paclitaxel, Docetaxel, Methotrexat, Vincristine)</li>
+                                        <li>Immunosuppressive: (Cyclosporine A)</li>
+                                        <li>Heart glycosides: (Digoxine, Methyldigoxine)</li>
+                                        <li>Opioids: (Morphium)</li>
+                                        <li>Antiarrhythmics: (Verapamil, Diltiazem, Chinidine)</li>
+                                        <li>Antiemetics (Ondansetron, Domperidon, Metoclopramide)</li>
+                                        <li>Antibiotics (Sparfloxacin, Grepafloxacin, Erythromycin)</li>
+                                        <li>Antihistamin (Ebastin)</li>
+                                        <li>Glucocorticoid (Dexamethason)</li>
+                                        <li>Acepromazine (tranquilizer and pre-anesthetic agent)*</li>
+                                        <li>Butorphanol "analgesic and pre-anesthetic agent"*</li>
+                                        <li>Other drugs: Etoposide, Mitoxantrone, Ondansetron, Paclitaxel, Rifampicin</li>
+                                    </ul>
+                                    
+                                    <p><strong>Class C: Can be used only in the permitted application form and dose!</strong></p>
+                                    <ul>
+                                        <li>Selamectin (Stronghold®), Milbemax® and Advocate®</li>
+                                    </ul>
+                                    
+                                    <p>* In dogs with the MDR1 mutation, acepromazine and butorphanol cause more profound and prolonged sedation. Reduce the dose by 25% in heterozygous dogs (MDR1/N) and by 30-50% in homozygous dogs (MDR1/MDR1).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progressive Retinal Atrophy -->
+                        <div class="accordion-item glossary-item" data-term="progressive retinal atrophy pra rod cone dystrophy rcd crd">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pra" aria-expanded="false">
+                                    Progressive Retinal Atrophy (PRA)
+                                </button>
+                            </h2>
+                            <div id="pra" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Test Type:</strong> Blood test or buccal swabs</p>
+                                    <p><strong>Inheritance:</strong> Autosomal recessive (most forms)</p>
+                                    <p><strong>Official UK Kennel Club DNA Testing Scheme in:</strong> English Springer Spaniel, Miniature Wire haired Dachshund, Miniature Long Haired Dachshund, and Miniature Smooth Haired Dachshund (crd1-4)</p>
+                                    <p>The vertebrate retina (thin layer of neural cells that lines the back of the eyeball) contains photoreceptor cells (rods and cones) that respond to light. Cones mediate high-resolution and colour vision, and rods mediate lower-resolution, black-and-white, night vision.</p>
+                                    <p>Numerous breed specific tests exist to check for rod-cone or cone-rod dystrophies (crd, rcd).</p>
+                                    <p>In rod-cone dystrophies, rod cells are initially affected and then degeneration of the cone cells, resulting in complete blindness. Whereas, cone-rod dystrophies are characterised by the relatively early loss of cone photoreceptors while the rod function remains relatively preserved, resulting in day blindness.</p>
+                                    <p>Some are early onset causing untreatable visual impairment at less than a year old with severe blindness in early adulthoo
+
+                        <!-- Laboratories Section -->
+                        <div class="accordion-item glossary-item" data-term="laboratories testing labs">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#labs" aria-expanded="false">
+                                    Laboratories for Health Testing in the UK
+                                </button>
+                            </h2>
+                            <div id="labs" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                                <div class="accordion-body">
+                                    <p>Several trusted laboratories in the UK provide health testing:</p>
+                                    <ul>
+                                        <li><a href="https://www.petgeneticslab.co.uk/" target="_blank">Pet Genetics Lab</a></li>
+                                        <li><a href="https://www.laboklin.co.uk/" target="_blank">Laboklin UK</a></li>
+                                        <li><a href="https://www.wisdompanel.co.uk/" target="_blank">Wisdom Panel (via Mars Veterinary)</a></li>
+                                        <li><a href="https://www.animaldnadiagnostics.co.uk/" target="_blank">Animal DNA Diagnostics</a></li>
+                                        <li><a href="https://www.idexx.co.uk/" target="_blank">Idexx Laboratories UK</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: #3c763d; color: white;">
+        <div class="container py-4">
+            <div class="row">
+                <!-- Logo and Vision Statement -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <img src="/Checkapet/images/logo-white.png" alt="CheckAPet Logo" class="mb-3" width="150">
+                    <p class="mb-3">Our vision is for a healthier population of happy pets in the UK</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Your Link Column -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Your Link</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/Checkapet/vets.html" class="text-white">Vets</a></li>
+                        <li class="mb-2"><a href="/Checkapet/breeding.html" class="text-white">Breeders</a></li>
+                        <li class="mb-2"><a href="/Checkapet/buying.html" class="text-white">Buyers</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Information Column -->
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Information</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/Checkapet/glossary.html" class="text-white">Glossary</a></li>
+                        <li class="mb-2"><a href="/Checkapet/health-testing.html" class="text-white">Laboratories for health testing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- CheckAPet Column -->
+                <div class="col-md-3">
+                    <h5>CheckAPet</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/Checkapet/about.html" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="/Checkapet/contact.html" class="text-white">Contact Us</a></li>
+                        <li class="mb-2"><a href="/Checkapet/terms.html" class="text-white">Terms and Conditions</a></li>
+                        <li class="mb-2"><a href="/Checkapet/cookies.html" class="text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright Bar -->
+            <div class="row mt-4">
+                <div class="col">
+                    <hr style="border-color: rgba(255,255,255,0.2);">
+                    <p class="text-center mb-0">©2025 CheckAPet. All rights reserved | <a href="/Checkapet/privacy.html" class="text-white">Privacy & Policy</a> | <a href="/Checkapet/terms-of-service.html" class="text-white">Terms of Service</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/Checkapet/main.js"></script>
+    <script src="/Checkapet/js/glossary.js"></script>
+</body>
+</html>
