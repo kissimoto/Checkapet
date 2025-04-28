@@ -154,3 +154,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the page
     init();
 });
+
+// Add this to your main.js file to apply to all accordions across the site
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all accordion items
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    // Add hover effect to each item
+    accordionItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.position = 'relative';
+            this.style.zIndex = '100';
+            this.style.transform = 'translateY(-3px)';
+            this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.position = '';
+            this.style.zIndex = '';
+            this.style.transform = '';
+            this.style.boxShadow = '';
+        });
+    });
+});
