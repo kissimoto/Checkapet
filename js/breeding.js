@@ -155,25 +155,30 @@ document.addEventListener('DOMContentLoaded', function() {
     init();
 });
 
-// Add this to your main.js file to apply to all accordions across the site
+// Add this to your main.js or to any page-specific JavaScript file
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all accordion items
+    // Select all accordion items on the page
     const accordionItems = document.querySelectorAll('.accordion-item');
     
-    // Add hover effect to each item
+    // Add hover effects to each item
     accordionItems.forEach(item => {
+        // Add CSS transition properties for smooth animation
+        item.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+        
+        // Add hover effect
         item.addEventListener('mouseenter', function() {
-            this.style.position = 'relative';
-            this.style.zIndex = '100';
             this.style.transform = 'translateY(-3px)';
             this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+            this.style.position = 'relative';
+            this.style.zIndex = '10';
         });
         
+        // Remove hover effect
         item.addEventListener('mouseleave', function() {
-            this.style.position = '';
-            this.style.zIndex = '';
             this.style.transform = '';
             this.style.boxShadow = '';
+            this.style.position = '';
+            this.style.zIndex = '';
         });
     });
 });
