@@ -103,20 +103,6 @@
             <div class="row">
                 <div class="col-12">
                     <div class="accordion glossary-accordion" id="glossaryAccordion">
-                        <!-- Affected -->
-                        <div class="accordion-item glossary-item" data-term="affected mutation disease trait">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#affected" aria-expanded="false">
-                                    Affected
-                                </button>
-                            </h2>
-                            <div id="affected" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
-                                <div class="accordion-body">
-                                    <p>The dog has the correct number of copies of the mutation to be affected for the disease/trait being tested for. They will almost certainly develop the disease/trait during their lifetime.</p>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Acquired Disease -->
                         <div class="accordion-item glossary-item" data-term="acquired disease aging">
                             <h2 class="accordion-header">
@@ -140,7 +126,9 @@
                             </h2>
                             <div id="autosomal" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
                                 <div class="accordion-body">
-                                    <p>The mutation is located on one of the autosomes, not on the X or Y sex chromosomes. The disease/trait is not linked to the sex of the animal and affects both males and females equally.</p>
+                                    <p>Autosomal refers to genes located on the autosomes, which are the non-sex chromosomes. In dogs and cats, there are 38 autosomes (19 pairs) plus the sex chromosomes (X and Y).</p>
+                                    <p>When a mutation is autosomal, it means the mutation is located on one of these non-sex chromosomes. As a result, the disease or trait is not linked to the animal's sex and affects both males and females equally.</p>
+                                    <p>This is in contrast to sex-linked traits, which are carried on the X or Y chromosome and may affect males and females differently (such as X-linked conditions that often affect males more severely than females).</p>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +142,7 @@
                             </h2>
                             <div id="carrier" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
                                 <div class="accordion-body">
-                                    <p>The dog has one copy of the mutation and one normal copy of DNA. These dogs will not develop the tested disease/trait. However, they will pass the mutation on to approximately 50% of their offspring. Carriers only occur with diseases or traits with a recessive mode of inheritance. Furthermore, only females can be carriers of diseases or traits that are X-linked recessive.</p>
+                                    <p>The animal has one copy of the mutation and one normal copy of DNA. These animals will not develop the tested disease/trait. However, they will pass the mutation on to approximately 50% of their offspring. Carriers only occur with diseases or traits with a recessive mode of inheritance. Furthermore, only females can be carriers of diseases or traits that are X-linked recessive.</p>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +156,7 @@
                             </h2>
                             <div id="clear" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
                                 <div class="accordion-body">
-                                    <p>The dog has two copies of the normal gene and will not develop the disease/trait being tested for. However, we cannot formally exclude the possibility they might develop a similar condition due to other causes or the effect of other, unidentified mutations.</p>
+                                    <p>The animal has two copies of the normal gene and will not develop the disease/trait being tested for. However, we cannot formally exclude the possibility they might develop a similar condition due to other causes or the effect of other, unidentified mutations.</p>
                                 </div>
                             </div>
                         </div>
@@ -258,8 +246,16 @@
                             </h2>
                             <div id="ebv" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
                                 <div class="accordion-body">
-                                    <p>EBV is a statistical technique that calculates how likely an individual is to have a disease based on the family history or pedigree. The breed average is set at 0 and the score for an individual is higher if the risk is above average to pass on the genes or negative if less likely than average to pass them on. The further away from 0 the higher or lower its genetic risk.</p>
-                                    <p>As more data becomes available, the breed average may change and a dog's EBV will change accordingly. At birth the puppy will be an average of the two parents (e.g., if dam is -8 and sire is +8 then the puppy will be 0, this is average genetic status for the breed, but no reflection of the health of the e.g. hips, the hips score is needed in this instance to reflect that.</p>
+                                    <p>Estimated Breeding Values (EBVs) predict whether an animal is more or less likely to have, and pass on, genes related to a particular health problem. EBVs link information about an animal's family history with data on whether they, or their relatives, have a specific health issue and to what degree.</p>
+                                    <p>How EBVs work:</p>
+                                    <ul>
+                                        <li>The breed average is set at 0</li>
+                                        <li>A positive value (above 0) indicates higher risk than average</li>
+                                        <li>A negative value (below 0) indicates lower risk than average</li>
+                                        <li>The further away from 0, the higher or lower the genetic risk</li>
+                                    </ul>
+                                    <p>For example, if a mother (dam) has an EBV of -8 (low risk) and a father (sire) has an EBV of +8 (high risk), their puppy will have an EBV of 0 (average risk). As more data becomes available, the breed average may change and an animal's EBV will be updated accordingly.</p>
+                                    <p>EBVs help breeders make more informed decisions by considering not just an individual animal's test results, but also the health history of their entire family.</p>
                                 </div>
                             </div>
                         </div>
@@ -273,8 +269,10 @@
                             </h2>
                             <div id="genotype" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
                                 <div class="accordion-body">
-                                    <p>'Genotype' describes the genetic makeup of the dog (DNA tests from blood or cheek swab).</p>
-                                    <p>Genotype refers to the genetics of an individual, which may not be visible, e.g., polycystic kidneys.</p>
+                                    <p>'Genotype' refers to the genetic makeup of an animal - the actual genes it possesses. Genotype testing is done through DNA analysis from blood samples or cheek swabs.</p>
+                                    <p>An animal's genotype may include traits that aren't visibly expressed. For example, a dog with a normal black coat (phenotype) might carry the recessive "yellow coat" gene (genotype) and could pass this on to puppies if bred with another carrier.</p>
+                                    <p><strong>Testing Methods:</strong> Genotypic testing takes place in DNA labs through blood tests or buccal (cheek) swabs.</p>
+                                    <p><strong>Why It Matters:</strong> DNA tests predict potential health risks by identifying the presence of specific genes, even when the animal shows no visible signs of disease.</p>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +286,16 @@
                             </h2>
                             <div id="hereditary" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
                                 <div class="accordion-body">
-                                    <p>A Hereditary Disease is one which is passed genetically from the parents, but which may not be expressed as a disease in the puppy.</p>
+                                    <p>A disorder caused by mutations (changes) in certain genes or chromosomes that are passed down from parent to offspring. While an animal inherits the genetic mutation, it may not always show symptoms of the disease.</p>
+                                    <p><strong>Examples of purely hereditary diseases include:</strong></p>
+                                    <ul>
+                                        <li><strong>Polycystic Kidney Disease (PKD):</strong> A condition involving fluid-filled cysts in the kidneys leading to kidney failure, more common in cats than dogs.</li>
+                                        <li><strong>Hypertrophic Cardiomyopathy (HCM):</strong> A heart condition where the heart muscle thickens, prevalent in cats and less common in dogs.</li>
+                                        <li><strong>von Willebrand Disease:</strong> A bleeding disorder caused by a deficiency in a specific clotting factor, more common in dogs than cats.</li>
+                                        <li><strong>Muscular Dystrophy:</strong> A group of inherited diseases characterized by progressive muscle weakness and degeneration.</li>
+                                        <li><strong>Mucopolysaccharidosis (MPS):</strong> A group of inherited metabolic disorders affecting various organs and tissues.</li>
+                                    </ul>
+                                    <p>Unlike acquired diseases, hereditary conditions cannot be contracted through exposure to pathogens or environmental factors - they are exclusively passed through genes.</p>
                                 </div>
                             </div>
                         </div>
@@ -302,8 +309,11 @@
                             </h2>
                             <div id="phenotype" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
                                 <div class="accordion-body">
-                                    <p>'Phenotype' describes the physical look of the dog (tests include X-rays, temperament tests, cardiac ultrasound, patella tests).</p>
-                                    <p>Phenotypic refers to physical characteristics visible on body, e.g., blue eyes.</p>
+                                    <p>'Phenotype' refers to the observable physical characteristics or traits of an animal - what you can actually see or measure. This includes appearance, behavior, and other measurable traits.</p>
+                                    <p>Examples of phenotypic traits include coat color (like blue eyes), body size, and physical health conditions that can be observed or detected through examinations.</p>
+                                    <p><strong>Testing Methods:</strong> Phenotypic testing takes place during veterinary examinations, including X-rays, cardiac ultrasounds, eye examinations, and other physical assessments.</p>
+                                    <p><strong>Why It Matters:</strong> Physical examinations confirm an animal's current health status and visible traits, but don't always reveal genetic carriers of diseases.</p>
+                                    <p><strong>Genotype vs. Phenotype Example:</strong> A Labrador might have the genotype for both black and yellow coat colors, but its phenotype will only show one color depending on which genes are dominant. Similarly, an animal can carry disease genes (genotype) without showing any symptoms (phenotype).</p>
                                 </div>
                             </div>
                         </div>
