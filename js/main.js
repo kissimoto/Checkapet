@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'Labrador Retriever': ['Hip Dysplasia', 'Elbow Dysplasia', 'Progressive Retinal Atrophy', 'Exercise Induced Collapse'],
             'German Shepherd': ['Hip Dysplasia', 'Elbow Dysplasia', 'Degenerative Myelopathy'],
             'French Bull Dog': ['BOAS Assessment', 'Patellar Luxation', 'Eye Test'],
-            'German Boxer': ['Aortic Stenosis', 'Cardiomyopathy', 'Hip Dysplasia'],
+            'Boxer': ['Aortic Stenosis', 'Cardiomyopathy', 'Hip Dysplasia'],
             'Irish Wolfhound': ['Heart Testing', 'Hip Dysplasia', 'Elbow Dysplasia', 'Eye Testing'],
             // Add more breeds as needed
         };
