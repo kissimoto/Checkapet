@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Dog breeds data
     const dogBreeds = [
+        'English Springer Spaniel', 'French Bull Dog', 'Boxer', 
         'Airedale Terrier', 'Bernese Mountain Dog', 'Chihuahua', 'Toy Poodle',
-        'English Springer Spaniel', 'French Bull Dog', 'German Boxer', 
         'German Shepherd', 'Hungarian Vizsla (Magyar Vizsla/Smooth haired)',
         'Irish Terrier', 'Irish Wolfhound', 'Jack Russell Terrier', 
         'Jagd Terrier', 'Kerry Blue Terrier', 'Labrador Retriever'
