@@ -29,7 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
         'French Bull Dog': ['BOAS Assessment', 'Patellar Luxation', 'Eye Test'],
         'Boxer': ['Aortic Stenosis', 'Cardiomyopathy', 'Hip Dysplasia'],
         'Irish Wolfhound': ['Heart Testing', 'Hip Dysplasia', 'Elbow Dysplasia', 'Eye Testing'],
+        'English Springer Spaniel': ['Hip Dysplasia', 'Progressive Retinal Atrophy', 'Fucosidosis', 'Phosphofructokinase Deficiency'],
+        'Airedale Terrier': ['Hip Dysplasia', 'Elbow Dysplasia', 'Eye Testing', 'Heart Testing'],
+        'Bernese Mountain Dog': ['Hip Dysplasia', 'Elbow Dysplasia', 'Eye Testing', 'Degenerative Myelopathy', 'Von Willebrand Disease'],
+        'Chihuahua': ['Heart Testing', 'Eye Testing', 'Patellar Luxation', 'Episodic Falling'],
+        'Toy Poodle': ['Progressive Retinal Atrophy', 'Eye Testing', 'Hip Dysplasia', 'Von Willebrand Disease', 'Degenerative Myelopathy'],
+        'Hungarian Vizsla (Magyar Vizsla/Smooth haired)': ['Hip Dysplasia', 'Elbow Dysplasia', 'Eye Testing', 'Epilepsy'],
+        'Irish Terrier': ['Hip Dysplasia', 'Eye Testing', 'Hyperuricosuria', 'Cystinuria'],
+        'Jack Russell Terrier': ['Eye Testing', 'Patellar Luxation', 'Hereditary Ataxia', 'Congenital Sensorineural Deafness'],
+        'Jagd Terrier': ['Hip Dysplasia', 'Eye Testing', 'Heart Testing', 'Patellar Luxation'],
+        'Kerry Blue Terrier': ['Hip Dysplasia', 'Eye Testing', 'Von Willebrand Disease', 'Cerebellar Abiotrophy'],
+    
         // Add more breed-specific recommendations as needed
+
+
         'general_dog': [
             'Physical examination',
             'Hip dysplasia scoring (for larger breeds)',
