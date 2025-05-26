@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Labrador Retriever': ['Hip Dysplasia', 'Elbow Dysplasia', 'Progressive Retinal Atrophy', 'Exercise Induced Collapse'],
         'German Shepherd': ['Hip Dysplasia', 'Elbow Dysplasia', 'Degenerative Myelopathy'],
         'French Bull Dog': ['BOAS (Brachycephalic Obstructive Airway Syndrome)', 'Patellar Luxation', 'Eye Issues', 'Spinal Problems'],
-        'German Boxer': ['Aortic Stenosis', 'Cardiomyopathy', 'Hip Dysplasia'],
+        'Boxer': ['Aortic Stenosis', 'Cardiomyopathy', 'Hip Dysplasia'],
         'Irish Wolfhound': ['Heart Disease', 'Hip Dysplasia', 'Elbow Dysplasia', 'Eye Issues'],
         // Add more breed-specific considerations as needed
         'general_dog': [
