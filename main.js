@@ -1,4 +1,3 @@
-/*
 // Main JavaScript for CheckAPet website
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile navigation toggle enhancement
@@ -41,4 +40,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-*/
