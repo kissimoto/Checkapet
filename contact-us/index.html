@@ -73,54 +73,74 @@
 </section>
 
         <!-- Page Title Section -->
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12">
-<div class="container py-5" id="imtkgg">
+ <!-- Contact Section -->
 <section class="bg-light py-5">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <h1 class="fw-bold mb-4">Let us know what you think!</h1>
-                <p class="mb-4">Want to reach out directly?</p>
-                
-                <!-- Contact Info -->
-                <div class="row justify-content-center mb-4">
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center gap-3 mb-3">
-                            <img src="https://dittofipublicfiles.s3.us-west-2.amazonaws.com/9496/55962-Email.png" alt="Email icon" width="24" height="24">
+            <div class="col-12 text-center mb-5">
+                <h1 class="fw-bold mb-3">Let us know what you think!</h1>
+                <p class="text-muted">Want to reach out directly?</p>
+            </div>
+        </div>
+        
+        <div class="row align-items-start">
+            <!-- Contact Information Column -->
+            <div class="col-lg-5 col-md-5 mb-4 mb-md-0">
+                <div class="pe-lg-4">
+                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit mattis sit phasellus.</p>
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info-item">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://dittofipublicfiles.s3.us-west-2.amazonaws.com/9496/55962-Email.png" alt="Email icon" class="contact-icon">
                             <div>
-                                <span>Email:</span>
+                                <span class="text-muted small">Email:</span>
                                 <h6 class="fw-semibold mb-0">contact@checkapet.com</h6>
                             </div>
                         </div>
-                        
+                    </div>
+                    
+                    <div class="contact-info-item">
                         <div class="d-flex align-items-center gap-3">
-                            <img src="https://dittofipublicfiles.s3.us-west-2.amazonaws.com/9496/55963-Phone.png" alt="Phone icon" width="24" height="24">
+                            <img src="https://dittofipublicfiles.s3.us-west-2.amazonaws.com/9496/55963-Phone.png" alt="Phone icon" class="contact-icon">
                             <div>
-                                <span>Phone:</span>
-                                <h6 class="fw-semibold mb-0">[Your phone number]</h6>
+                                <span class="text-muted small">Phone:</span>
+                                <h6 class="fw-semibold mb-0">(414) 687 - 5892</h6>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Contact Form -->
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control border-0 shadow-sm" placeholder="Your Name">
+            </div>
+            
+            <!-- Contact Form Column -->
+            <div class="col-lg-7 col-md-7">
+                <div class="contact-form-container">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <label class="form-label fw-semibold" for="name">Name</label>
+                                <input class="form-control" id="name" placeholder="Your Name" type="text" required>
                             </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control border-0 shadow-sm" placeholder="Your Email">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold" for="email">Email</label>
+                                <input class="form-control" id="email" placeholder="Your Email" type="email" required>
                             </div>
-                            <div class="mb-3">
-                                <textarea class="form-control border-0 shadow-sm" placeholder="Your Message" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <label class="form-label fw-semibold" for="phone">Phone</label>
+                                <input class="form-control" id="phone" placeholder="Your Phone Number" type="tel">
                             </div>
-                            <button class="btn btn-primary" type="submit">Send Message</button>
-                        </form>
-                    </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold" for="message">Message</label>
+                            <textarea class="form-control" id="message" placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        
+                        <button class="btn btn-primary" type="submit">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
