@@ -629,5 +629,69 @@
             handleImageFiles(e.target.files);
         });
         
-        function handleImageFiles(files) {
-            Array.from(
+        // Update breed suggestions based on pet type
+        function updateBreedOptions() {
+            const petType = document.getElementById('petType').value;
+            const breedInput = document.getElementById('breed');
+            const suggestionsDiv = document.getElementById('breedSuggestions');
+            
+            if (petType && breedData[petType]) {
+                breedInput.placeholder = `Type ${petType} breed name...`;
+                suggestionsDiv.innerHTML = '';
+            }
+        }
+        
+        // Show breed suggestions
+        document.getElementById('breed').addEventListener('input', function() {
+            const petType = document.getElementById('petType').value;
+            const input = this.value.toLowerCase();
+            const suggestionsDiv = document.getElementById('breedSuggestions');
+            
+            if (petType && breedData[petType] && input.length > 0) {
+                const matches = breedData[petType].filter(breed => 
+                    breed.toLowerCase().includes(input)
+                ).slice(0, 5);
+                
+                suggestionsDiv.innerHTML = matches.map(breed => 
+                    `<div class="breed-suggestion" onclick="selectBreed('${breed}')">${breed}</div>`
+                ).join('');
+            } else {
+                suggestionsDiv.innerHTML = '';
+            }
+        });
+        
+        function selectBreed(breed) {
+            document.getElementById('breed').value = breed;
+            document.getElementById('breedSuggestions').innerHTML = '';
+        }
+        
+        // Show/hide license section based on breeder type
+        document.getElementById('breederType').addEventListener('change', function() {
+            const licenseSection = document.getElementById('licenseSection');
+            const licenseInput = document.getElementById('licenseNumber');
+            
+            if (this.value === 'licensed') {
+                licenseSection.style.display = 'block';
+                licenseInput.required = true;
+            } else {
+                licenseSection.style.display = 'none';
+                licenseInput.required = false;
+                licenseInput.value = '';
+            }
+        });
+        
+        // Update pet fields based on litter type
+        function updatePetFields() {
+            const litterType = document.getElementById('litterType').value;
+            const litterSizeSection = document.getElementById('litterSizeSection');
+            const litterSizeInput = document.getElementById('litterSize');
+            
+            if (litterType === 'litter') {
+                litterSizeSection.style.display = 'block';
+                litterSizeInput.required = true;
+            } else {
+                litterSizeSection.style.display = 'none';
+                litterSizeInput.required = false;
+                litterSizeInput.value = '';
+            }
+        }
