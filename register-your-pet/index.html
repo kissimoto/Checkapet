@@ -593,105 +593,295 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script>
-        let currentStep = 1;
-        const totalSteps = 7;
-        let uploadedImages = [];
-        
-        // Breed suggestions data
-        const breedData = {
-            dog: ['Labrador Retriever', 'Golden Retriever', 'German Shepherd', 'Bulldog', 'Poodle', 'Beagle', 'Rottweiler', 'Yorkshire Terrier', 'French Bulldog', 'Siberian Husky', 'Border Collie', 'Australian Shepherd', 'Cocker Spaniel', 'Boxer', 'Dachshund'],
-            cat: ['British Shorthair', 'Persian', 'Maine Coon', 'Ragdoll', 'Siamese', 'Scottish Fold', 'Sphynx', 'Russian Blue', 'Bengal', 'Abyssinian', 'Norwegian Forest Cat', 'Birman', 'Oriental', 'Burmese', 'Chartreux']
-        };
-        
-        // Photo upload functionality
-        const photoInput = document.getElementById('petPhotos');
-        const uploadArea = document.querySelector('.file-upload-area');
-        const uploadedImagesContainer = document.getElementById('uploadedImages');
-        
-        // Drag and drop for photos
-        uploadArea.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            uploadArea.classList.add('dragover');
-        });
-        
-        uploadArea.addEventListener('dragleave', () => {
-            uploadArea.classList.remove('dragover');
-        });
-        
-        uploadArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            uploadArea.classList.remove('dragover');
-            handleImageFiles(e.dataTransfer.files);
-        });
-        
-        photoInput.addEventListener('change', (e) => {
-            handleImageFiles(e.target.files);
-        });
-        
-        // Update breed suggestions based on pet type
-        function updateBreedOptions() {
-            const petType = document.getElementById('petType').value;
-            const breedInput = document.getElementById('breed');
-            const suggestionsDiv = document.getElementById('breedSuggestions');
-            
-            if (petType && breedData[petType]) {
-                breedInput.placeholder = `Type ${petType} breed name...`;
-                suggestionsDiv.innerHTML = '';
-            }
+    // Complete JavaScript code for register-your-pet form
+// Replace everything between <script> and </script> tags (after Bootstrap script) with this code
+
+let currentStep = 1;
+const totalSteps = 7;
+let uploadedImages = [];
+
+// Breed suggestions data
+const breedData = {
+    dog: ['Labrador Retriever', 'Golden Retriever', 'German Shepherd', 'Bulldog', 'Poodle', 'Beagle', 'Rottweiler', 'Yorkshire Terrier', 'French Bulldog', 'Siberian Husky', 'Border Collie', 'Australian Shepherd', 'Cocker Spaniel', 'Boxer', 'Dachshund'],
+    cat: ['British Shorthair', 'Persian', 'Maine Coon', 'Ragdoll', 'Siamese', 'Scottish Fold', 'Sphynx', 'Russian Blue', 'Bengal', 'Abyssinian', 'Norwegian Forest Cat', 'Birman', 'Oriental', 'Burmese', 'Chartreux']
+};
+
+// Photo upload functionality
+const photoInput = document.getElementById('petPhotos');
+const uploadArea = document.querySelector('.file-upload-area');
+const uploadedImagesContainer = document.getElementById('uploadedImages');
+
+// Drag and drop for photos
+uploadArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    uploadArea.classList.add('dragover');
+});
+
+uploadArea.addEventListener('dragleave', () => {
+    uploadArea.classList.remove('dragover');
+});
+
+uploadArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    uploadArea.classList.remove('dragover');
+    handleImageFiles(e.dataTransfer.files);
+});
+
+photoInput.addEventListener('change', (e) => {
+    handleImageFiles(e.target.files);
+});
+
+function handleImageFiles(files) {
+    Array.from(files).forEach(file => {
+        if (file.size > 5 * 1024 * 1024) {
+            alert('File size must be less than 5MB');
+            return;
         }
         
-        // Show breed suggestions
-        document.getElementById('breed').addEventListener('input', function() {
-            const petType = document.getElementById('petType').value;
-            const input = this.value.toLowerCase();
-            const suggestionsDiv = document.getElementById('breedSuggestions');
-            
-            if (petType && breedData[petType] && input.length > 0) {
-                const matches = breedData[petType].filter(breed => 
-                    breed.toLowerCase().includes(input)
-                ).slice(0, 5);
-                
-                suggestionsDiv.innerHTML = matches.map(breed => 
-                    `<div class="breed-suggestion" onclick="selectBreed('${breed}')">${breed}</div>`
-                ).join('');
-            } else {
-                suggestionsDiv.innerHTML = '';
-            }
-        });
-        
-        function selectBreed(breed) {
-            document.getElementById('breed').value = breed;
-            document.getElementById('breedSuggestions').innerHTML = '';
+        if (!['image/jpeg', 'image/jpg', 'image/png'].includes(file.type)) {
+            alert('Only JPG and PNG files are allowed');
+            return;
         }
         
-        // Show/hide license section based on breeder type
-        document.getElementById('breederType').addEventListener('change', function() {
-            const licenseSection = document.getElementById('licenseSection');
-            const licenseInput = document.getElementById('licenseNumber');
-            
-            if (this.value === 'licensed') {
-                licenseSection.style.display = 'block';
-                licenseInput.required = true;
-            } else {
-                licenseSection.style.display = 'none';
-                licenseInput.required = false;
-                licenseInput.value = '';
-            }
-        });
-        
-        // Update pet fields based on litter type
-        function updatePetFields() {
-            const litterType = document.getElementById('litterType').value;
-            const litterSizeSection = document.getElementById('litterSizeSection');
-            const litterSizeInput = document.getElementById('litterSize');
-            
-            if (litterType === 'litter') {
-                litterSizeSection.style.display = 'block';
-                litterSizeInput.required = true;
-            } else {
-                litterSizeSection.style.display = 'none';
-                litterSizeInput.required = false;
-                litterSizeInput.value = '';
-            }
+        if (uploadedImages.length >= 10) {
+            alert('Maximum 10 photos allowed');
+            return;
         }
+        
+        uploadedImages.push(file);
+        displayUploadedImage(file);
+    });
+}
+
+function displayUploadedImage(file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'image-preview';
+        imageDiv.innerHTML = `
+            <img src="${e.target.result}" alt="Pet photo">
+            <button type="button" class="image-remove" onclick="removeImage('${file.name}')">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+        uploadedImagesContainer.appendChild(imageDiv);
+    };
+    reader.readAsDataURL(file);
+}
+
+function removeImage(fileName) {
+    uploadedImages = uploadedImages.filter(file => file.name !== fileName);
+    updateUploadedImagesDisplay();
+}
+
+function updateUploadedImagesDisplay() {
+    uploadedImagesContainer.innerHTML = '';
+    uploadedImages.forEach(file => displayUploadedImage(file));
+}
+
+// Update breed suggestions based on pet type
+function updateBreedOptions() {
+    const petType = document.getElementById('petType').value;
+    const breedInput = document.getElementById('breed');
+    const suggestionsDiv = document.getElementById('breedSuggestions');
+    
+    if (petType && breedData[petType]) {
+        breedInput.placeholder = `Type ${petType} breed name...`;
+        suggestionsDiv.innerHTML = '';
+    }
+}
+
+// Show breed suggestions
+document.getElementById('breed').addEventListener('input', function() {
+    const petType = document.getElementById('petType').value;
+    const input = this.value.toLowerCase();
+    const suggestionsDiv = document.getElementById('breedSuggestions');
+    
+    if (petType && breedData[petType] && input.length > 0) {
+        const matches = breedData[petType].filter(breed => 
+            breed.toLowerCase().includes(input)
+        ).slice(0, 5);
+        
+        suggestionsDiv.innerHTML = matches.map(breed => 
+            `<div class="breed-suggestion" onclick="selectBreed('${breed}')">${breed}</div>`
+        ).join('');
+    } else {
+        suggestionsDiv.innerHTML = '';
+    }
+});
+
+function selectBreed(breed) {
+    document.getElementById('breed').value = breed;
+    document.getElementById('breedSuggestions').innerHTML = '';
+}
+
+// Show/hide license section based on breeder type
+document.getElementById('breederType').addEventListener('change', function() {
+    const licenseSection = document.getElementById('licenseSection');
+    const licenseInput = document.getElementById('licenseNumber');
+    
+    if (this.value === 'licensed') {
+        licenseSection.style.display = 'block';
+        licenseInput.required = true;
+    } else {
+        licenseSection.style.display = 'none';
+        licenseInput.required = false;
+        licenseInput.value = '';
+    }
+});
+
+// Update pet fields based on litter type
+function updatePetFields() {
+    const litterType = document.getElementById('litterType').value;
+    const litterSizeSection = document.getElementById('litterSizeSection');
+    const litterSizeInput = document.getElementById('litterSize');
+    
+    if (litterType === 'litter') {
+        litterSizeSection.style.display = 'block';
+        litterSizeInput.required = true;
+    } else {
+        litterSizeSection.style.display = 'none';
+        litterSizeInput.required = false;
+        litterSizeInput.value = '';
+    }
+}
+
+function validateStep(step) {
+    const stepElement = document.getElementById(`step${step}`);
+    const requiredFields = stepElement.querySelectorAll('[required]');
+    let isValid = true;
+    
+    // Clear previous validation states
+    requiredFields.forEach(field => {
+        field.classList.remove('is-invalid');
+    });
+    
+    // Validate required fields
+    requiredFields.forEach(field => {
+        if (field.type === 'checkbox') {
+            if (!field.checked) {
+                field.classList.add('is-invalid');
+                isValid = false;
+            }
+        } else if (!field.value.trim()) {
+            field.classList.add('is-invalid');
+            isValid = false;
+        }
+    });
+    
+    return isValid;
+}
+
+function nextStep() {
+    if (currentStep <= totalSteps && validateStep(currentStep)) {
+        if (currentStep === totalSteps) {
+            completeRegistration();
+            return;
+        }
+        
+        document.getElementById(`step${currentStep}`).classList.remove('active');
+        currentStep++;
+        document.getElementById(`step${currentStep}`).classList.add('active');
+        updateProgress();
+        updateButtons();
+        updateStepIndicators();
+    }
+}
+
+function previousStep() {
+    if (currentStep > 1) {
+        document.getElementById(`step${currentStep}`).classList.remove('active');
+        currentStep--;
+        document.getElementById(`step${currentStep}`).classList.add('active');
+        updateProgress();
+        updateButtons();
+        updateStepIndicators();
+    }
+}
+
+function updateProgress() {
+    const progress = (currentStep / totalSteps) * 100;
+    document.getElementById('progressFill').style.width = progress + '%';
+}
+
+function updateButtons() {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    prevBtn.style.display = currentStep > 1 ? 'block' : 'none';
+    
+    if (currentStep === totalSteps) {
+        nextBtn.innerHTML = 'Complete Registration <i class="fas fa-check ms-2"></i>';
+    } else {
+        nextBtn.innerHTML = 'Next <i class="fas fa-arrow-right ms-2"></i>';
+    }
+}
+
+function updateStepIndicators() {
+    const dots = document.querySelectorAll('.step-dot');
+    dots.forEach((dot, index) => {
+        if (index < currentStep) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+function completeRegistration() {
+    const formData = {
+        breederInfo: {
+            name: document.getElementById('breederName').value,
+            type: document.getElementById('breederType').value,
+            license: document.getElementById('licenseNumber').value
+        },
+        petInfo: {
+            type: document.getElementById('petType').value,
+            breed: document.getElementById('breed').value,
+            litterType: document.getElementById('litterType').value,
+            litterSize: document.getElementById('litterSize').value
+        },
+        petDetails: {
+            age: document.getElementById('petAge').value,
+            gender: document.getElementById('petGender').value,
+            color: document.getElementById('petColor').value,
+            microchipped: document.getElementById('microchipped').value
+        },
+        health: {
+            status: document.getElementById('healthStatus').value,
+            vaccinations: document.getElementById('vaccinations').value,
+            issues: document.getElementById('healthIssues').value,
+            geneticTesting: document.getElementById('geneticTesting').value,
+            testingDetails: document.getElementById('testingDetails').value
+        },
+        viewing: {
+            motherVisible: document.getElementById('motherVisible').value,
+            fatherVisible: document.getElementById('fatherVisible').value,
+            puppyContract: document.getElementById('puppyContract').value,
+            viewingNotes: document.getElementById('viewingNotes').value,
+            collectionLocation: document.getElementById('collectionLocation').value
+        },
+        photos: uploadedImages.map(f => f.name),
+        agreements: {
+            breederTerms: document.getElementById('breederTerms').checked,
+            paagStandards: document.getElementById('paagStandards').checked,
+            buyerAge: document.getElementById('buyerAge').checked,
+            accurateInfo: document.getElementById('accurateInfo').checked
+        }
+    };
+    
+    // Store in sessionStorage for demo purposes
+    sessionStorage.setItem('checkaPetBreederRegistration', JSON.stringify(formData));
+    
+    // Show success
+    document.getElementById(`step${currentStep}`).classList.remove('active');
+    document.getElementById('stepSuccess').classList.add('active');
+    document.getElementById('navigationButtons').style.display = 'none';
+    updateProgress();
+    
+    console.log('Breeder registration completed:', formData);
+}
+
+// Initialize when page loads
+updateProgress();
+updateButtons();
