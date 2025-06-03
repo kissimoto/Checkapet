@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register to Buy - CheckAPet</title>
+    <title>Join Waiting List - CheckAPet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
             background-color: white;
             border-radius: 4px;
             transition: width 0.3s ease;
-            width: 20%;
+            width: 25%;
         }
         
         .step-content {
@@ -97,44 +97,18 @@
         }
         
         .btn-outline-secondary {
-            border: 2px solid #6c757d;
-            color: #6c757d;
+            border: 2px solid #3c763d;
+            color: white;
+            background-color: #3c763d;
             padding: 0.75rem 2rem;
             font-weight: 600;
             border-radius: 0.5rem;
         }
         
-        .file-upload-area {
-            border: 2px dashed #dee2e6;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            text-align: center;
-            transition: border-color 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .file-upload-area:hover {
-            border-color: #3c763d;
-            background-color: #f8f9fa;
-        }
-        
-        .file-upload-area.dragover {
-            border-color: #3c763d;
-            background-color: #e8f5e8;
-        }
-        
-        .uploaded-files {
-            margin-top: 1rem;
-        }
-        
-        .file-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.5rem;
-            background-color: #f8f9fa;
-            border-radius: 0.25rem;
-            margin-bottom: 0.5rem;
+        .btn-outline-secondary:hover {
+            background-color: #2e5b2e;
+            border-color: #2e5b2e;
+            color: white;
         }
         
         .age-verification {
@@ -174,214 +148,52 @@
         .step-dot.active {
             background-color: white;
         }
+        
+        .breed-preference-card {
+            border: 2px solid #e9ecef;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .breed-preference-card:hover {
+            border-color: #3c763d;
+        }
+        
+        .breed-preference-card.selected {
+            border-color: #3c763d;
+            background-color: #f8f9fa;
+        }
+        
+        .info-box {
+            background-color: #e8f5e8;
+            border: 1px solid #c3e6c3;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .waiting-list-info {
+            background-color: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .preference-tag {
+            display: inline-block;
+            background-color: #3c763d;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="registration-container">
-            <!-- Progress Header -->
-            <div class="progress-header">
-                <h2 class="mb-0">Join CheckAPet</h2>
-                <p class="mb-0 mt-2">Register to find your perfect pet</p>
-                <div class="step-indicator">
-                    <div class="step-dot active"></div>
-                    <div class="step-dot"></div>
-                    <div class="step-dot"></div>
-                    <div class="step-dot"></div>
-                    <div class="step-dot"></div>
-                </div>
-                <div class="progress-bar-custom">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-            </div>
-            
-            <!-- Step Content -->
-            <div class="step-content">
-                <!-- Step 1: Age Verification -->
-                <div class="step active" id="step1">
-                    <h4 class="mb-4">Age Verification</h4>
-                    <div class="age-verification">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fas fa-exclamation-triangle text-warning me-2"></i>
-                            <strong>Important: You must be 18 or older to use CheckAPet</strong>
-                        </div>
-                        <p class="mb-3">Per our terms and conditions, only users aged 18 and over may contact advertisers and purchase pets through our platform.</p>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="birthDate" class="form-label fw-semibold">Date of Birth *</label>
-                        <input type="date" class="form-control" id="birthDate" required>
-                        <div class="invalid-feedback">You must be at least 18 years old to register.</div>
-                    </div>
-                    
-                    <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" id="ageConfirm" required>
-                        <label class="form-check-label" for="ageConfirm">
-                            I confirm that I am at least 18 years of age
-                        </label>
-                    </div>
-                </div>
-                
-                <!-- Step 2: Personal Information -->
-                <div class="step" id="step2">
-                    <h4 class="mb-4">Personal Information</h4>
-                    
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="firstName" class="form-label fw-semibold">First Name *</label>
-                            <input type="text" class="form-control" id="firstName" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="lastName" class="form-label fw-semibold">Last Name *</label>
-                            <input type="text" class="form-control" id="lastName" required>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="email" class="form-label fw-semibold">Email Address *</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="phone" class="form-label fw-semibold">Phone Number *</label>
-                        <input type="tel" class="form-control" id="phone" required>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="accountType" class="form-label fw-semibold">Account Type *</label>
-                        <select class="form-select" id="accountType" required>
-                            <option value="">Select account type</option>
-                            <option value="private">Private Individual</option>
-                            <option value="company">Company</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- Step 3: Address Information -->
-                <div class="step" id="step3">
-                    <h4 class="mb-4">Address Information</h4>
-                    <p class="text-muted mb-4">We need your complete address as required by our terms. Your full address will not be displayed publicly.</p>
-                    
-                    <div class="mb-3">
-                        <label for="houseNumber" class="form-label fw-semibold">House Number *</label>
-                        <input type="text" class="form-control" id="houseNumber" required>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="streetAddress" class="form-label fw-semibold">Street Address *</label>
-                        <input type="text" class="form-control" id="streetAddress" required>
-                    </div>
-                    
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="city" class="form-label fw-semibold">City *</label>
-                            <input type="text" class="form-control" id="city" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="postcode" class="form-label fw-semibold">Postcode *</label>
-                            <input type="text" class="form-control" id="postcode" required>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="county" class="form-label fw-semibold">County</label>
-                        <input type="text" class="form-control" id="county">
-                    </div>
-                </div>
-                
-                <!-- Step 4: Document Upload -->
-                <div class="step" id="step4">
-                    <h4 class="mb-4">Document Upload</h4>
-                    <p class="text-muted mb-4">Upload identification documents for verification (optional but recommended)</p>
-                    
-                    <div class="file-upload-area" onclick="document.getElementById('fileInput').click()">
-                        <i class="fas fa-cloud-upload-alt fa-3x text-muted mb-3"></i>
-                        <h6>Click to upload or drag and drop</h6>
-                        <p class="text-muted small mb-0">Accepted formats: JPG, PNG, PDF (Max 5MB each)</p>
-                        <input type="file" id="fileInput" multiple accept=".jpg,.jpeg,.png,.pdf" style="display: none;">
-                    </div>
-                    
-                    <div class="uploaded-files" id="uploadedFiles"></div>
-                    
-                    <div class="form-check mt-4">
-                        <input class="form-check-input" type="checkbox" id="verificationLater">
-                        <label class="form-check-label" for="verificationLater">
-                            I'll complete verification later (you can still browse pets)
-                        </label>
-                    </div>
-                </div>
-                
-                <!-- Step 5: Terms Agreement -->
-                <div class="step" id="step5">
-                    <h4 class="mb-4">Terms & Conditions</h4>
-                    
-                    <div class="border rounded p-3 mb-4" style="max-height: 300px; overflow-y: auto;">
-                        <h6>Key Points:</h6>
-                        <ul class="small">
-                            <li>You must be at least 18 years old to use this platform</li>
-                            <li>You can only maintain one account with us</li>
-                            <li>All information provided must be accurate and truthful</li>
-                            <li>You agree to use our secure messenger system for communications</li>
-                            <li>You understand that we don't verify advertiser information - please verify independently</li>
-                            <li>Large-scale commercial breeding is not permitted on our platform</li>
-                            <li>You agree to our privacy policy and cookie usage</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" id="termsAgree" required>
-                        <label class="form-check-label" for="termsAgree">
-                            I have read and agree to the <a href="#" target="_blank">Terms and Conditions</a>
-                        </label>
-                    </div>
-                    
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" id="privacyAgree" required>
-                        <label class="form-check-label" for="privacyAgree">
-                            I have read and agree to the <a href="#" target="_blank">Privacy Policy</a>
-                        </label>
-                    </div>
-                    
-                    <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" id="marketingOptIn">
-                        <label class="form-check-label" for="marketingOptIn">
-                            I would like to receive updates about new pets and platform features (optional)
-                        </label>
-                    </div>
-                </div>
-                
-                <!-- Success Message -->
-                <div class="step" id="stepSuccess">
-                    <div class="success-message">
-                        <div class="success-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4 class="mb-3">Welcome to CheckAPet!</h4>
-                        <p class="text-muted mb-4">Your registration is complete. You can now browse and contact pet advertisers.</p>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary" onclick="window.location.reload()">Start Browsing Pets</button>
-                            <button class="btn btn-outline-secondary">Complete Profile</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Navigation Buttons -->
-            <div class="d-flex justify-content-between p-3 border-top" id="navigationButtons">
-                <button class="btn btn-outline-secondary" id="prevBtn" onclick="previousStep()" style="display: none;">
-                    <i class="fas fa-arrow-left me-2"></i>Previous
-                </button>
-                <div></div>
-                <button class="btn btn-primary" id="nextBtn" onclick="nextStep()">
-                    Next<i class="fas fa-arrow-right ms-2"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
     <div class="container">
         <div class="registration-container">
             <!-- Progress Header -->
@@ -876,11 +688,11 @@
             summary.innerHTML = summaryHTML;
         }
         
-        function goHome() {
-            window.location.href = '/Checkapet/';
-            }
+       function goHome() {
+    window.location.href = '/Checkapet/';
+}
 
-            // Initialize when page loads
+// Initialize when page loads
 updateProgress();
 updateButtons();
     </script>
