@@ -372,3 +372,6 @@ h3 {
     position: relative !important;
     z-index: 10 !important;
 }
+.bg-tertiary-green {
+  background-color: rgb(167, 201, 87);
+}
