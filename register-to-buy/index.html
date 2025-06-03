@@ -149,23 +149,6 @@
             background-color: white;
         }
         
-        .breed-preference-card {
-            border: 2px solid #e9ecef;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            transition: border-color 0.3s ease;
-        }
-        
-        .breed-preference-card:hover {
-            border-color: #3c763d;
-        }
-        
-        .breed-preference-card.selected {
-            border-color: #3c763d;
-            background-color: #f8f9fa;
-        }
-        
         .info-box {
             background-color: #e8f5e8;
             border: 1px solid #c3e6c3;
@@ -283,7 +266,7 @@
                     
                     <div class="mb-4">
                         <label for="petType" class="form-label fw-semibold">Pet Type *</label>
-                        <select class="form-select" id="petType" required onchange="updateBreedOptions()">
+                        <select class="form-select" id="petType" required>
                             <option value="">What type of pet are you looking for?</option>
                             <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
@@ -456,38 +439,6 @@
         let currentStep = 1;
         const totalSteps = 4;
         
-        // Breed suggestions data
-        const breedData = {
-            dog: ['Labrador Retriever', 'Golden Retriever', 'German Shepherd', 'Bulldog', 'Poodle', 'Beagle', 'Rottweiler', 'Yorkshire Terrier', 'French Bulldog', 'Siberian Husky', 'Border Collie', 'Australian Shepherd', 'Cocker Spaniel', 'Boxer', 'Dachshund', 'Cockapoo', 'Labradoodle', 'Goldendoodle'],
-            cat: ['British Shorthair', 'Persian', 'Maine Coon', 'Ragdoll', 'Siamese', 'Scottish Fold', 'Sphynx', 'Russian Blue', 'Bengal', 'Abyssinian', 'Norwegian Forest Cat', 'Birman', 'Oriental', 'Burmese', 'Chartreux']
-        };
-        
-        // Update breed suggestions based on pet type
-        function goHome() {
-            window.location.href = '/Checkapet/';
-        }
-        
-        // Initialize
-        updateProgress();
-        updateButtons();
-    </script>
-</body>
-</html> updateBreedOptions() {
-            const petType = document.getElementById('petType').value;
-            const specificBreedsSection = document.getElementById('specificBreedsSection');
-            
-            if (petType === 'dog' || petType === 'cat') {
-                specificBreedsSection.style.display = 'block';
-            } else {
-                specificBreedsSection.style.display = 'none';
-            }
-        }
-        
-        // Simplified breed handling (no longer needed but kept for compatibility)
-        function selectBreed(breed) {
-            // Function kept for compatibility but no longer used
-        }
-        
         function validateStep(step) {
             const stepElement = document.getElementById(`step${step}`);
             const requiredFields = stepElement.querySelectorAll('[required]');
@@ -620,8 +571,8 @@
                 },
                 preferences: {
                     petType: document.getElementById('petType').value,
+                    idealPetDescription: document.getElementById('idealPetDescription').value,
                     breedType: document.querySelector('input[name="breedType"]:checked')?.value,
-                    specificBreeds: document.getElementById('specificBreeds').value,
                     sizePreference: document.getElementById('sizePreference').value,
                     agePreference: document.getElementById('agePreference').value,
                     timeframe: document.getElementById('timeframe').value,
@@ -682,19 +633,19 @@
                 const shortDesc = data.preferences.idealPetDescription.length > 100 ? 
                     data.preferences.idealPetDescription.substring(0, 100) + '...' : 
                     data.preferences.idealPetDescription;
-                summaryHTML += `<div class="mt-2"><small><strong>Description:</strong> ${shortDesc}</div>`;
+                summaryHTML += `<div class="mt-2"><small><strong>Description:</strong> ${shortDesc}</small></div>`;
             }
             
             summary.innerHTML = summaryHTML;
         }
         
-       function goHome() {
-    window.location.href = '/Checkapet/';
-}
-
-// Initialize when page loads
-updateProgress();
-updateButtons();
+        function goHome() {
+            window.location.href = '/Checkapet/';
+        }
+        
+        // Initialize when page loads
+        updateProgress();
+        updateButtons();
     </script>
 </body>
 </html>
