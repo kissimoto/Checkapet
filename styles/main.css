@@ -128,7 +128,7 @@ header {
     background-color: #a4d39c;
     padding: 3rem 0;
     margin: 3rem 0;
-    border-radius: 10px; /* Add this line to round the corners */
+    border-radius: 20px; /* Add this line to round the corners */
 }
 
 /* Document section styling */
