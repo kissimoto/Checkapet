@@ -324,13 +324,17 @@
             <small class="form-text text-muted">Enter the birth date of the litter</small>
         </div>
         <div class="col-md-6">
-            <label for="petGender" class="form-label fw-semibold">Gender</label>
-            <select class="form-select" id="petGender">
-                <option value="">Select gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="mixed">Mixed (for litters)</option>
-            </select>
+            <label class="form-label fw-semibold">Litter Composition</label>
+            <div class="row">
+                <div class="col-6">
+                    <label for="maleCount" class="form-label">Males</label>
+                    <input type="number" class="form-control" id="maleCount" min="0" placeholder="0">
+                </div>
+                <div class="col-6">
+                    <label for="femaleCount" class="form-label">Females</label>
+                    <input type="number" class="form-control" id="femaleCount" min="0" placeholder="0">
+                </div>
+            </div>
         </div>
     </div>
     
