@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Your Pet - CheckAPet</title>
+    <title>Register Your Litter - CheckAPet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
@@ -230,8 +230,8 @@
         <div class="registration-container">
             <!-- Progress Header -->
             <div class="progress-header">
-                <h2 class="mb-0">Register Your Pet</h2>
-                <p class="mb-0 mt-2">List your pet for responsible buyers</p>
+                <h2 class="mb-0">Register Your Litter</h2>
+                <p class="mb-0 mt-2">List your litter for responsible buyers</p>
                 <div class="step-indicator">
                     <div class="step-dot active"></div>
                     <div class="step-dot"></div>
@@ -254,9 +254,9 @@
                     <div class="warning-box">
                         <div class="d-flex align-items-center mb-3">
                             <i class="fas fa-info-circle text-warning me-2"></i>
-                            <strong>Important: You must be the breeder of any pets you advertise</strong>
+                            <strong>Important: You must be the breeder of any litter you advertise</strong>
                         </div>
-                        <p class="mb-0">Per our terms, all pets advertised must be bred by you. Rehoming and imported pets for sale are not permitted.</p>
+                        <p class="mb-0">In accordance with our terms and conditions, all litters advertised must be bred by you. Rehoming and imported animals for sale are not permitted.</p>
                     </div>
                     
                     <div class="mb-3">
@@ -269,7 +269,6 @@
                         <select class="form-select" id="breederType" required>
                             <option value="">Select breeder type</option>
                             <option value="private">Private Breeder</option>
-                            <option value="frequent">Frequent Breeder</option>
                             <option value="licensed">Licensed Breeder</option>
                         </select>
                     </div>
@@ -283,7 +282,7 @@
                     <div class="form-check mb-4">
                         <input class="form-check-input" type="checkbox" id="breederConfirm" required>
                         <label class="form-check-label" for="breederConfirm">
-                            I confirm that I am the breeder of the pet(s) I am advertising
+                            I confirm that I am the breeder of the animal(s) I am advertising
                         </label>
                     </div>
                 </div>
@@ -305,27 +304,18 @@
                         <label for="breed" class="form-label fw-semibold">Breed <span class="required-field">*</span></label>
                         <input type="text" class="form-control" id="breed" required placeholder="Type breed name...">
                         <div id="breedSuggestions" class="mt-2"></div>
-                        <small class="form-text text-muted">For crossbreeds, list in mixed breed category with both parent breeds</small>
                     </div>
                     
                     <div class="mb-3">
-                        <label for="litterType" class="form-label fw-semibold">Advertisement Type <span class="required-field">*</span></label>
-                        <select class="form-select" id="litterType" required onchange="updatePetFields()">
-                            <option value="">Select type</option>
-                            <option value="single">Single Pet</option>
-                            <option value="litter">Entire Litter</option>
-                        </select>
-                    </div>
-                    
-                    <div class="mb-3" id="litterSizeSection" style="display: none;">
-                        <label for="litterSize" class="form-label fw-semibold">Number of Pets in Litter</label>
-                        <input type="number" class="form-control" id="litterSize" min="1" max="20">
+                        <label for="litterSize" class="form-label fw-semibold">Number in the Litter</label>
+                        <input type="number" class="form-control" id="litterSize" min="1" max="15">
+                        <input type="text" class="form-control" id="tbc" required placeholder="To be confirmed..">
                     </div>
                 </div>
                 
-                <!-- Step 3: Pet Details -->
+                <!-- Step 3: Litter Details -->
                 <div class="step" id="step3">
-                    <h4 class="mb-4">Pet Details</h4>
+                    <h4 class="mb-4">Litter Details</h4>
                     
                     <div class="row mb-3">
                         <div class="col-md-6">
@@ -335,8 +325,6 @@
                                 <option value="8-12_weeks">8-12 weeks</option>
                                 <option value="3-6_months">3-6 months</option>
                                 <option value="6-12_months">6-12 months</option>
-                                <option value="1-2_years">1-2 years</option>
-                                <option value="2+_years">2+ years</option>
                             </select>
                         </div>
                         <div class="col-md-6">
@@ -351,7 +339,7 @@
                     </div>
                     
                     <div class="warning-box">
-                        <p class="mb-0"><strong>Age Requirement:</strong> Pets must not be separated from their mother before 8 weeks of age as per animal welfare guidelines.</p>
+                        <p class="mb-0"><strong>Age Requirement:</strong> The young must not be separated from their mother before 8 weeks of age as per animal welfare guidelines.</p>
                     </div>
                     
                     <div class="mb-3">
@@ -373,7 +361,7 @@
                 
                 <!-- Step 4: Health Information -->
                 <div class="step" id="step4">
-                    <h4 class="mb-4">Health & Welfare</h4>
+                    <h4 class="mb-4">Health</h4>
                     <p class="text-muted mb-4">All health and welfare issues must be clearly disclosed as per our terms.</p>
                     
                     <div class="mb-3">
@@ -387,19 +375,18 @@
                     </div>
                     
                     <div class="mb-3">
-                        <label for="vaccinations" class="form-label fw-semibold">Vaccination Status</label>
+                        <label for="vaccinations" class="form-label fw-semibold">Vaccination Status at Collection</label>
                         <select class="form-select" id="vaccinations">
                             <option value="">Select vaccination status</option>
-                            <option value="up_to_date">Up to date</option>
-                            <option value="partial">Partially vaccinated</option>
-                            <option value="not_vaccinated">Not yet vaccinated</option>
-                            <option value="too_young">Too young for vaccinations</option>
+                            <option value="partial">Fully vaccinated</option>
+                            <option value="not_vaccinated">First vaccine only</option>
+                            <option value="too_young">Unvaccinated</option>
                         </select>
                     </div>
                     
                     <div class="mb-3">
                         <label for="healthIssues" class="form-label fw-semibold">Health Issues or Concerns</label>
-                        <textarea class="form-control" id="healthIssues" rows="3" placeholder="Please disclose any health issues, genetic conditions, or welfare concerns. Leave blank if none."></textarea>
+                        <textarea class="form-control" id="healthIssues" rows="3" placeholder="Please disclose any health issues or genetic conditions. Leave blank if none."></textarea>
                         <small class="form-text text-muted">Required disclosure for transparency</small>
                     </div>
                     
@@ -410,14 +397,13 @@
                             <option value="completed">Both parents fully tested for breed-specific conditions</option>
                             <option value="partial">Partial testing completed</option>
                             <option value="in_progress">Testing in progress</option>
-                            <option value="not_required">No testing required for this breed</option>
                         </select>
                         <small class="form-text text-muted">Required: Genetic tests of dam and sire for known health issues of the breed</small>
                     </div>
                     
                     <div class="mb-3">
                         <label for="testingDetails" class="form-label fw-semibold">Testing Details <span class="required-field">*</span></label>
-                        <textarea class="form-control" id="testingDetails" rows="3" required placeholder="List specific tests performed (e.g., Hip/Elbow scoring, PRA, EIC, DM, Heart clearance). Include test dates and results."></textarea>
+                        <textarea class="form-control" id="testingDetails" rows="3" required placeholder="Summary of tests performed. Certificates to be uploaded."></textarea>
                         <small class="form-text text-muted">Provide details of all genetic health tests performed on both parents</small>
                     </div>
                     
@@ -434,7 +420,7 @@
                     <h4 class="mb-4">Parents & Viewing</h4>
                     
                     <div class="warning-box">
-                        <p class="mb-0"><strong>Viewing Requirement:</strong> Buyers must be able to see pets with their mother. Collection must be at the mother's residence.</p>
+                        <p class="mb-0"><strong>Viewing Requirement:</strong> Buyers must be able to see the litter with their mother. Collection must be at the mother's residence.</p>
                     </div>
                     
                     <div class="mb-3">
@@ -461,8 +447,7 @@
                         <select class="form-select" id="puppyContract" required>
                             <option value="">Select option</option>
                             <option value="provided">Contract will be provided to buyers</option>
-                            <option value="standard">Using CheckAPet standard contract template</option>
-                            <option value="custom">Custom contract prepared</option>
+                            <option value="standard">Using CheckAPet kitten contract template</option>
                         </select>
                         <small class="form-text text-muted">Required: All buyers must receive a written contract</small>
                     </div>
@@ -481,16 +466,18 @@
                 
                 <!-- Step 6: Photos -->
                 <div class="step" id="step6">
-                    <h4 class="mb-4">Pet Photos</h4>
-                    <p class="text-muted mb-4">Upload clear, recent photos of your pet(s). All photos must be authentic and of the actual pet for sale.</p>
+                    <h4 class="mb-4">Photos</h4>
+                    <p class="text-muted mb-4">We recommend you upload the maximum number of photos with at least half showing the mother with the litter</p>
                     
                     <div class="warning-box mb-4">
                         <p class="mb-2"><strong>Photo Requirements:</strong></p>
                         <ul class="mb-0 small">
                             <li>Photos must be of the actual pet(s) for sale</li>
-                            <li>For litters: Include photo of entire litter with mother</li>
-                            <li>No copied or downloaded images from other sources</li>
-                            <li>Clear, well-lit photos showing pet's condition</li>
+                            <li>Include several photos of entire litter with mother</li>
+                            <li>No copied, downloaded images</li>
+                            <li>No enhanced images</li>
+                            <li>Include images of the sire if possible</li>
+                            <li>Clear, well-lit photos</li>
                         </ul>
                     </div>
                     
@@ -521,7 +508,8 @@
                             <li>Pet must be bred by you (no rehoming or imports for sale)</li>
                             <li>Pet must not be separated from mother before 8 weeks or later</li>
                             <li>Breeder must provide genetic tests of dam and sire for known health issues of the breed</li>
-                            <li>Breeder must provide puppy contract</li>
+                            <li>Breeder must provide a puppy or kitten contract</li>
+                            <li>I confirm both parents are health tested</li>
                             <li>All health issues must be disclosed</li>
                             <li>Photos must be authentic and of actual pet for sale</li>
                             <li>Buyers must collect at your premises (no delivery/courier)</li>
@@ -536,7 +524,7 @@
                     <div class="form-check mb-3">
                         <input class="form-check-input" type="checkbox" id="breederTerms" required>
                         <label class="form-check-label" for="breederTerms">
-                            I have read and agree to the Breeder Terms and Conditions
+                            I have read and I agree to the Breeder Agreement Summary
                         </label>
                     </div>
                     
@@ -544,6 +532,7 @@
                         <input class="form-check-input" type="checkbox" id="paagStandards" required>
                         <label class="form-check-label" for="paagStandards">
                             I confirm my advert meets PAAG (Pet Advertising Advisory Group) standards
+                            <a href= "paag.org.uk/advertising-standards/">PAAG</a>
                         </label>
                     </div>
                     
@@ -603,8 +592,8 @@ let uploadedImages = [];
 
 // Breed suggestions data
 const breedData = {
-    dog: ['Labrador Retriever', 'Golden Retriever', 'German Shepherd', 'Bulldog', 'Poodle', 'Beagle', 'Rottweiler', 'Yorkshire Terrier', 'French Bulldog', 'Siberian Husky', 'Border Collie', 'Australian Shepherd', 'Cocker Spaniel', 'Boxer', 'Dachshund'],
-    cat: ['British Shorthair', 'Persian', 'Maine Coon', 'Ragdoll', 'Siamese', 'Scottish Fold', 'Sphynx', 'Russian Blue', 'Bengal', 'Abyssinian', 'Norwegian Forest Cat', 'Birman', 'Oriental', 'Burmese', 'Chartreux']
+    dog: ['Labrador Retriever', 'Labradoodle', 'Cockapoo', 'Cavapoo','Cavachon', 'Springador', 'Sprocker', 'Puggle','Golden Retriever', 'Goldendoodle', 'German Shepherd', 'Bulldog', 'Poodle', 'Beagle', 'Rottweiler', 'Yorkshire Terrier', 'French Bulldog', 'Siberian Husky', 'Border Collie', 'Australian Shepherd', 'Cocker Spaniel', 'Boxer', 'Other','Cross Breeds', 'Dachshund'],
+    cat: ['British Shorthair', 'Persian', 'Maine Coon', 'Ragdoll', 'Cross Breeds', 'Siamese', 'Russian Blue', 'Bengal', 'Abyssinian', 'Norwegian Forest Cat', 'Birman', 'Oriental', 'Burmese', 'Chartreux']
 };
 
 // Photo upload functionality
