@@ -313,51 +313,47 @@
                     </div>
                 </div>
                 
-                <!-- Step 3: Litter Details -->
-                <div class="step" id="step3">
-                    <h4 class="mb-4">Litter Details</h4>
-                    
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="petAge" class="form-label fw-semibold">Age <span class="required-field">*</span></label>
-                            <select class="form-select" id="petAge" required>
-                                <option value="">Select age</option>
-                                <option value="8-12_weeks">8-12 weeks</option>
-                                <option value="3-6_months">3-6 months</option>
-                                <option value="6-12_months">6-12 months</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="petGender" class="form-label fw-semibold">Gender</label>
-                            <select class="form-select" id="petGender">
-                                <option value="">Select gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="mixed">Mixed (for litters)</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <p class="mb-0"><strong>Age Requirement:</strong> The young must not be separated from their mother before 8 weeks of age as per animal welfare guidelines.</p>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="petColor" class="form-label fw-semibold">Color/Markings</label>
-                        <input type="text" class="form-control" id="petColor" placeholder="e.g., Golden, Black and Tan, Tabby">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="microchipped" class="form-label fw-semibold">Microchipping Status <span class="required-field">*</span></label>
-                        <select class="form-select" id="microchipped" required>
-                            <option value="">Select status</option>
-                            <option value="yes">Already microchipped</option>
-                            <option value="before_collection">Will be microchipped before collection</option>
-                            <option value="too_young">Too young (will be done at appropriate age)</option>
-                        </select>
-                        <small class="form-text text-muted">Dogs: 8 weeks, Cats: 20 weeks</small>
-                    </div>
-                </div>
+<!-- Step 3: Litter Details -->
+<div class="step" id="step3">
+    <h4 class="mb-4">Litter Details</h4>
+    
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="petAge" class="form-label fw-semibold">Date of Birth <span class="required-field">*</span></label>
+            <input type="date" class="form-control" id="petAge" required>
+            <small class="form-text text-muted">Enter the birth date of the litter</small>
+        </div>
+        <div class="col-md-6">
+            <label for="petGender" class="form-label fw-semibold">Gender</label>
+            <select class="form-select" id="petGender">
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="mixed">Mixed (for litters)</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="warning-box">
+        <p class="mb-0"><strong>Age Requirement:</strong> The young must not be separated from their mother before 8 weeks of age as per animal welfare guidelines.</p>
+    </div>
+    
+    <div class="mb-3">
+        <label for="petColor" class="form-label fw-semibold">Color/Markings</label>
+        <input type="text" class="form-control" id="petColor" placeholder="e.g., Golden, Black and Tan, Tabby">
+    </div>
+    
+    <div class="mb-3">
+        <label for="microchipped" class="form-label fw-semibold">Microchipping Status <span class="required-field">*</span></label>
+        <select class="form-select" id="microchipped" required>
+            <option value="">Select status</option>
+            <option value="yes">Already microchipped</option>
+            <option value="before_collection">Will be microchipped before collection</option>
+            <option value="too_young">Too young (will be done at appropriate age)</option>
+        </select>
+        <small class="form-text text-muted">Dogs: 8 weeks, Cats: 20 weeks</small>
+    </div>
+</div>
                 
                 <!-- Step 4: Health Information -->
                 <div class="step" id="step4">
@@ -421,15 +417,6 @@
                     
                     <div class="warning-box">
                         <p class="mb-0"><strong>Viewing Requirement:</strong> Buyers must be able to see the litter with their mother. Collection must be at the mother's residence.</p>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="motherVisible" class="form-label fw-semibold">Mother Available for Viewing <span class="required-field">*</span></label>
-                        <select class="form-select" id="motherVisible" required>
-                            <option value="">Select option</option>
-                            <option value="yes">Yes, mother will be present during viewing</option>
-                            <option value="no">No (please explain below)</option>
-                        </select>
                     </div>
                     
                     <div class="mb-3">
