@@ -12,7 +12,7 @@
         body {
             background-color: #f8f9fa;
             font-family: 'Sanchez', serif;
-        }
+        }f
         
         .registration-container {
             max-width: 800px;
@@ -329,50 +329,62 @@
         <small class="form-text text-muted">Enter the birth date of the litter</small>
     </div>
     
-    <div class="mb-3">
-        <label class="form-label fw-semibold">Litter Composition</label>
-        <div class="row">
-            <div class="col-6">
-                <label for="maleCount" class="form-label">Males</label>
-                <input type="number" class="form-control" id="maleCount" min="0" placeholder="0">
-            </div>
-            <div class="col-6">
-                <label for="femaleCount" class="form-label">Females</label>
-                <input type="number" class="form-control" id="femaleCount" min="0" placeholder="0">
-            </div>
-        </div>
+<div class="mb-3">
+  <label class="form-label fw-semibold">Litter Composition</label>
+  <div class="row">
+    <div class="col-6">
+      <label for="maleCount" class="form-label">Males</label>
+      <input type="number" class="form-control" id="maleCount" min="0" placeholder="0">
     </div>
-    
-    <div class="warning-box">
-        <p class="mb-0"><strong>Age Requirement:</strong> The young must not be separated from their mother before 8 weeks of age as per animal welfare guidelines.</p>
+    <div class="col-6">
+      <label for="femaleCount" class="form-label">Females</label>
+      <input type="number" class="form-control" id="femaleCount" min="0" placeholder="0">
     </div>
+  </div>
+</div>
+
+<div class="warning-box">
+  <p class="mb-0">
+    <strong>Age Requirement:</strong>
+    The young must not be separated from their mother before 8 weeks of age as per animal welfare guidelines.
+  </p>
+</div>
+
+<!-- 🆕 INSERTED LITTER TYPE FIELD -->
+<div class="mb-3">
+  <label for="litterType" class="form-label fw-semibold">
+    Litter Type <span class="required-field">*</span>
+  </label>
+  <select class="form-select" id="litterType" onchange="updatePetFields()" required>
+    <option value="">Select litter type</option>
+    <option value="litter">Litter</option>
+    <option value="singleton">Single Pet</option>
+  </select>
+  <small class="form-text text-muted">
+    If you're selling only one puppy or kitten, choose "Single Pet".
+  </small>
+</div>
 
 <div class="mb-3">
-    <label for="litterType" class="form-label fw-semibold">Litter Type <span class="required-field">*</span></label>
-    <select class="form-select" id="litterType" onchange="updatePetFields()" required>
-        <option value="">Select litter type</option>
-        <option value="litter">Litter</option>
-        <option value="singleton">Single Pet</option>
-    </select>
-    <small class="form-text text-muted">If you're selling only one puppy or kitten, choose "Single Pet".</small>
+  <label for="petColor" class="form-label fw-semibold">Color/Markings</label>
+  <input type="text" class="form-control" id="petColor" placeholder="e.g., Golden, Black and Tan, Tabby">
 </div>
-    
-    <div class="mb-3">
-        <label for="petColor" class="form-label fw-semibold">Color/Markings</label>
-        <input type="text" class="form-control" id="petColor" placeholder="e.g., Golden, Black and Tan, Tabby">
-    </div>
-    
-    <div class="mb-3">
-        <label for="microchipped" class="form-label fw-semibold">Microchipping Status <span class="required-field">*</span></label>
-        <select class="form-select" id="microchipped" required>
-            <option value="">Select status</option>
-            <option value="yes">Already microchipped</option>
-            <option value="before_collection">Will be microchipped before collection</option>
-            <option value="too_young">Too young (will be done at appropriate age)</option>
-        </select>
-        <small class="form-text text-muted">Dogs: 8 weeks, Cats: 20 weeks</small>
-    </div>
+
+<div class="mb-3">
+  <label for="microchipped" class="form-label fw-semibold">
+    Microchipping Status <span class="required-field">*</span>
+  </label>
+  <select class="form-select" id="microchipped" required>
+    <option value="">Select status</option>
+    <option value="yes">Already microchipped</option>
+    <option value="before_collection">Will be microchipped before collection</option>
+    <option value="too_young">Too young (will be done at appropriate age)</option>
+  </select>
+  <small class="form-text text-muted">
+    Dogs: 8 weeks, Cats: 20 weeks
+  </small>
 </div>
+
                 
                 <!-- Step 4: Health Information -->
                 <div class="step" id="step4">
