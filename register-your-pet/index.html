@@ -826,6 +826,13 @@ function updateStepIndicators() {
     });
 }
 
+console.log('Before completeRegistration');
+try {
+    completeRegistration();
+} catch (e) {
+    console.error('Registration failed:', e);
+}
+
 function completeRegistration() {
 console.log('Starting registration completion...');
     console.log('Breeder name:', document.getElementById('breederName'));
@@ -844,7 +851,7 @@ console.log('Starting registration completion...');
             breed: document.getElementById('breed').value,
             litterType: document.getElementById('litterType').value || '',
             litterSize: document.getElementById('litterSize').value || '',
-            litterSizeTBC: document.getElementById('tbc').checked
+            tbc: document.getElementById('tbc').checked
         },
         petDetails: {
             dateOfBirth: document.getElementById('petAge').value, // Changed from 'age' to 'dateOfBirth'
