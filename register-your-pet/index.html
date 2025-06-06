@@ -835,8 +835,9 @@ function completeRegistration() {
             litterSize: document.getElementById('litterSize').value
         },
         petDetails: {
-            age: document.getElementById('petAge').value,
-            gender: document.getElementById('petGender').value,
+            dateOfBirth: document.getElementById('petAge').value, // Changed from 'age' to 'dateOfBirth'
+            maleCount: document.getElementById('maleCount').value, // New field
+            femaleCount: document.getElementById('femaleCount').value, // New field
             color: document.getElementById('petColor').value,
             microchipped: document.getElementById('microchipped').value
         },
