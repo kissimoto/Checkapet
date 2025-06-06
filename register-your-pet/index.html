@@ -842,8 +842,8 @@ console.log('Starting registration completion...');
         petInfo: {
             type: document.getElementById('petType').value,
             breed: document.getElementById('breed').value,
-            litterType: document.getElementById('litterType').value,
-            litterSize: document.getElementById('litterSize').value,
+            litterType: document.getElementById('litterType').value || '',
+            litterSize: document.getElementById('litterSize').value || '',
             litterSizeTBC: document.getElementById('tbc').checked
         },
         petDetails: {
