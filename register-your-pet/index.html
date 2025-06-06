@@ -759,11 +759,11 @@ function validateStep(step) {
 }
 
 function nextStep() {
-    if (currentStep <= totalSteps && validateStep(currentStep)) {
-        if (currentStep === totalSteps) {
-            completeRegistration();
-            return;
-        }
+if (currentStep === totalSteps) {
+    validateStep(currentStep) && completeRegistration();
+    return;
+}
+
         
         document.getElementById(`step${currentStep}`).classList.remove('active');
         currentStep++;
