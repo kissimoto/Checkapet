@@ -827,11 +827,17 @@ function updateStepIndicators() {
 }
 
 function completeRegistration() {
+console.log('Starting registration completion...');
+    console.log('Breeder name:', document.getElementById('breederName'));
+    console.log('Pet type:', document.getElementById('petType'));
+    console.log('Male count:', document.getElementById('maleCount'));
+    console.log('Health status:', document.getElementById('healthStatus'));
+    console.log('Father visible:', document.getElementById('fatherVisible'));
     const formData = {
         breederInfo: {
             name: document.getElementById('breederName').value,
             type: document.getElementById('breederType').value,
-            license: document.getElementById('licenseNumber').valuelitterSize
+            license: document.getElementById('licenseNumber').value
         },
         petInfo: {
             type: document.getElementById('petType').value,
