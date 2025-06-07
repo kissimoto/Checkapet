@@ -829,18 +829,12 @@ function updateButtons() {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     
-    // Show Previous button from step 2 onwards
-    if (currentStep > 1) {
-        prevBtn.style.display = 'inline-block';
-        prevBtn.style.visibility = 'visible';
-    } else {
-        prevBtn.style.display = 'none';
-    }
+    prevBtn.style.display = currentStep > 1 ? 'block' : 'none';
     
     if (currentStep === totalSteps) {
-        nextBtn.innerHTML = 'Complete Registration ✓';
+        nextBtn.innerHTML = 'Complete Registration <i class="fas fa-check ms-2"></i>';
     } else {
-        nextBtn.innerHTML = 'Next →';
+        nextBtn.innerHTML = 'Next <i class="fas fa-arrow-right ms-2"></i>';
     }
 }
 
