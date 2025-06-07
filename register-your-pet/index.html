@@ -445,15 +445,6 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="motherVisible" class="form-label fw-semibold">Mother Available for Viewing <span class="required-field">*</span></label>
-                        <select class="form-select" id="motherVisible" required>
-                            <option value="">Select option</option>
-                            <option value="yes">Yes, mother will be present during viewing</option>
-                            <option value="no">No (please explain below)</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
                         <label for="fatherVisible" class="form-label fw-semibold">Father Available for Viewing</label>
                         <select class="form-select" id="fatherVisible">
                             <option value="">Select option</option>
@@ -864,7 +855,6 @@ function completeRegistration() {
             testingDetails: document.getElementById('testingDetails').value
         },
         viewing: {
-            motherVisible: document.getElementById('motherVisible').value,
             fatherVisible: document.getElementById('fatherVisible').value,
             puppyContract: document.getElementById('puppyContract').value,
             viewingNotes: document.getElementById('viewingNotes').value,
