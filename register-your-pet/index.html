@@ -360,6 +360,16 @@
                         </div>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="petGender" class="form-label fw-semibold">Primary Gender (for single pets)</label>
+                        <select class="form-select" id="petGender">
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="mixed">Mixed (for litters)</option>
+                        </select>
+                    </div>
+
                     <div class="warning-box">
                         <p class="mb-0">
                             <strong>Age Requirement:</strong>
@@ -863,14 +873,12 @@ function completeRegistration() {
         petInfo: {
             type: document.getElementById('petType').value,
             breed: document.getElementById('breed').value,
-            litterType: document.getElementById('litterType').value || '',
-            litterSize: document.getElementById('litterSize').value || '',
-            tbc: document.getElementById('tbc').checked
+            litterType: document.getElementById('litterType').value,
+            litterSize: document.getElementById('litterSize').value
         },
         petDetails: {
-            dateOfBirth: document.getElementById('petAge').value,
-            maleCount: document.getElementById('maleCount').value,
-            femaleCount: document.getElementById('femaleCount').value,
+            age: document.getElementById('petAge').value,
+            gender: document.getElementById('petGender').value,
             color: document.getElementById('petColor').value,
             microchipped: document.getElementById('microchipped').value
         },
