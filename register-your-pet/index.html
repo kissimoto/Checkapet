@@ -391,16 +391,6 @@
                     <p class="text-muted mb-4">All health and welfare issues must be clearly disclosed as per our terms.</p>
 
                     <div class="mb-3">
-                        <label for="healthStatus" class="form-label fw-semibold">Overall Health Status <span class="required-field">*</span></label>
-                        <select class="form-select" id="healthStatus" required>
-                            <option value="">Select health status</option>
-                            <option value="excellent">Excellent health</option>
-                            <option value="good">Good health</option>
-                            <option value="health_issues">Has health issues (must specify below)</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
                         <label for="vaccinations" class="form-label fw-semibold">Vaccination Status</label>
                         <select class="form-select" id="vaccinations">
                             <option value="">Select vaccination status</option>
@@ -424,7 +414,6 @@
                             <option value="completed">Both parents fully tested for breed-specific conditions</option>
                             <option value="partial">Partial testing completed</option>
                             <option value="in_progress">Testing in progress</option>
-                            <option value="not_required">No testing required for this breed</option>
                         </select>
                         <small class="form-text text-muted">Required: Genetic tests of dam and sire for known health issues of the breed</small>
                     </div>
@@ -856,7 +845,6 @@ function completeRegistration() {
             microchipped: document.getElementById('microchipped').value
         },
         health: {
-            status: document.getElementById('healthStatus').value,
             vaccinations: document.getElementById('vaccinations').value,
             issues: document.getElementById('healthIssues').value,
             geneticTesting: document.getElementById('geneticTesting').value,
