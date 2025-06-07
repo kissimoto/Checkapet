@@ -269,7 +269,6 @@
                         <select class="form-select" id="breederType" required>
                             <option value="">Select breeder type</option>
                             <option value="private">Private Breeder</option>
-                            <option value="frequent">Frequent Breeder</option>
                             <option value="licensed">Licensed Breeder</option>
                         </select>
                     </div>
@@ -315,11 +314,6 @@
                             <option value="single">Single Pet</option>
                             <option value="litter">Entire Litter</option>
                         </select>
-                    </div>
-
-                    <div class="mb-3" id="litterSizeSection" style="display: none;">
-                        <label for="litterSize" class="form-label fw-semibold">Number of Pets in Litter</label>
-                        <input type="number" class="form-control" id="litterSize" min="1" max="20">
                     </div>
                 </div>
 
@@ -725,18 +719,8 @@ document.getElementById('breederType').addEventListener('change', function() {
 
 // Update pet fields based on litter type
 function updatePetFields() {
-    const litterType = document.getElementById('litterType').value;
-    const litterSizeSection = document.getElementById('litterSizeSection');
-    const litterSizeInput = document.getElementById('litterSize');
-    
-    if (litterType === 'litter') {
-        litterSizeSection.style.display = 'block';
-        litterSizeInput.required = true;
-    } else {
-        litterSizeSection.style.display = 'none';
-        litterSizeInput.required = false;
-        litterSizeInput.value = '';
-    }
+    // This function can be simplified or removed since we no longer have litterSizeSection
+    // Keeping it for now in case future functionality is needed
 }
 
 function validateStep(step) {
@@ -831,8 +815,7 @@ function completeRegistration() {
         petInfo: {
             type: document.getElementById('petType').value,
             breed: document.getElementById('breed').value,
-            litterType: document.getElementById('litterType').value,
-            litterSize: document.getElementById('litterSize').value
+            litterType: document.getElementById('litterType').value
         },
         petDetails: {
             dateOfBirth: document.getElementById('petAge').value, // Now a date field
