@@ -413,9 +413,18 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="testingDetails" class="form-label fw-semibold">Testing Details <span class="required-field">*</span></label>
-                        <textarea class="form-control" id="testingDetails" rows="3" required placeholder="List specific tests performed (e.g., Hip/Elbow scoring, PRA, EIC, DM, Heart clearance). Include test dates and results."></textarea>
-                        <small class="form-text text-muted">Provide details of all genetic health tests performed on both parents</small>
+                        <label for="testingDetails" class="form-label fw-semibold">Upload Health Testing Certificates <span class="required-field">*</span></label>
+                        
+                        <div class="file-upload-area" onclick="document.getElementById('certificateFiles').click()">
+                            <i class="fas fa-file-upload fa-3x text-muted mb-3"></i>
+                            <h6>Click to upload health testing certificates</h6>
+                            <p class="text-muted small mb-0">PDF, JPG, PNG (Max 5MB each, up to 10 files)</p>
+                            <input type="file" id="certificateFiles" multiple accept=".pdf,.jpg,.jpeg,.png" style="display: none;" required>
+                        </div>
+
+                        <div class="uploaded-images" id="uploadedCertificates"></div>
+                        
+                        <small class="form-text text-muted">Upload certificates for all genetic health tests performed on both parents (e.g., Hip/Elbow scoring, PRA, EIC, DM, Heart clearance)</small>
                     </div>
 
                     <div class="form-check mb-3">
@@ -586,6 +595,7 @@
 let currentStep = 1;
 const totalSteps = 7;
 let uploadedImages = [];
+let uploadedCertificates = [];
 
 // Breed suggestions data
 const breedData = {
@@ -597,6 +607,11 @@ const breedData = {
 const photoInput = document.getElementById('petPhotos');
 const uploadArea = document.querySelector('.file-upload-area');
 const uploadedImagesContainer = document.getElementById('uploadedImages');
+
+// Certificate upload functionality
+const certificateInput = document.getElementById('certificateFiles');
+const certificateUploadArea = document.querySelectorAll('.file-upload-area')[1]; // Second upload area
+const uploadedCertificatesContainer = document.getElementById('uploadedCertificates');
 
 // Drag and drop for photos
 uploadArea.addEventListener('dragover', (e) => {
@@ -616,6 +631,26 @@ uploadArea.addEventListener('drop', (e) => {
 
 photoInput.addEventListener('change', (e) => {
     handleImageFiles(e.target.files);
+});
+
+// Certificate upload handlers
+certificateUploadArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    certificateUploadArea.classList.add('dragover');
+});
+
+certificateUploadArea.addEventListener('dragleave', () => {
+    certificateUploadArea.classList.remove('dragover');
+});
+
+certificateUploadArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    certificateUploadArea.classList.remove('dragover');
+    handleCertificateFiles(e.dataTransfer.files);
+});
+
+certificateInput.addEventListener('change', (e) => {
+    handleCertificateFiles(e.target.files);
 });
 
 function handleImageFiles(files) {
@@ -664,6 +699,70 @@ function removeImage(fileName) {
 function updateUploadedImagesDisplay() {
     uploadedImagesContainer.innerHTML = '';
     uploadedImages.forEach(file => displayUploadedImage(file));
+}
+
+// Certificate handling functions
+function handleCertificateFiles(files) {
+    Array.from(files).forEach(file => {
+        if (file.size > 5 * 1024 * 1024) {
+            alert('File size must be less than 5MB');
+            return;
+        }
+        
+        if (!['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'].includes(file.type)) {
+            alert('Only PDF, JPG and PNG files are allowed');
+            return;
+        }
+        
+        if (uploadedCertificates.length >= 10) {
+            alert('Maximum 10 certificates allowed');
+            return;
+        }
+        
+        uploadedCertificates.push(file);
+        displayUploadedCertificate(file);
+    });
+}
+
+function displayUploadedCertificate(file) {
+    const fileDiv = document.createElement('div');
+    fileDiv.className = 'image-preview';
+    
+    // Show different icon for PDF vs images
+    const isPDF = file.type === 'application/pdf';
+    if (isPDF) {
+        fileDiv.innerHTML = `
+            <div style="background: #f8f9fa; display: flex; align-items: center; justify-content: center; height: 100%; border-radius: 0.5rem;">
+                <i class="fas fa-file-pdf fa-2x text-danger"></i>
+            </div>
+            <button type="button" class="image-remove" onclick="removeCertificate('${file.name}')">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+    } else {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            fileDiv.innerHTML = `
+                <img src="${e.target.result}" alt="Certificate">
+                <button type="button" class="image-remove" onclick="removeCertificate('${file.name}')">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+        };
+        reader.readAsDataURL(file);
+    }
+    
+    uploadedCertificatesContainer.appendChild(fileDiv);
+}
+
+function removeCertificate(fileName) {
+    uploadedCertificates = uploadedCertificates.filter(file => file.name !== fileName);
+    updateUploadedCertificatesDisplay();
+}
+
+function updateUploadedCertificatesDisplay() {
+    uploadedCertificatesContainer.innerHTML = '';
+    uploadedCertificates.forEach(file => displayUploadedCertificate(file));
 }
 
 // Update breed suggestions based on pet type
@@ -831,7 +930,7 @@ function completeRegistration() {
             vaccinations: document.getElementById('vaccinations').value,
             issues: document.getElementById('healthIssues').value,
             geneticTesting: document.getElementById('geneticTesting').value,
-            testingDetails: document.getElementById('testingDetails').value
+            certificates: uploadedCertificates.map(f => f.name)
         },
         viewing: {
             fatherVisible: document.getElementById('fatherVisible').value,
