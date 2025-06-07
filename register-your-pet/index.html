@@ -328,9 +328,16 @@
                     <h4 class="mb-4">Pet Details</h4>
 
                     <div class="mb-3">
-                        <label for="petAge" class="form-label fw-semibold">Date of Birth <span class="required-field">*</span></label>
-                        <input type="date" class="form-control" id="petAge" required>
+                        <label for="petAge" class="form-label fw-semibold">Date of Birth</label>
+                        <input type="date" class="form-control" id="petAge">
                         <small class="form-text text-muted">Enter the birth date of the litter</small>
+                    </div>
+                    
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="toBeConfirmed">
+                        <label class="form-check-label" for="toBeConfirmed">
+                            To be confirmed (litter not yet born)
+                        </label>
                     </div>
                     
                     <div class="mb-3">
@@ -840,6 +847,7 @@ function completeRegistration() {
         },
         petDetails: {
             dateOfBirth: document.getElementById('petAge').value, // Now a date field
+            toBeConfirmed: document.getElementById('toBeConfirmed').checked,
             age: document.getElementById('petAge').value, // Keep for compatibility
             gender: document.getElementById('petGender').value,
             maleCount: document.getElementById('maleCount').value,
