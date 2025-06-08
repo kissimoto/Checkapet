@@ -311,75 +311,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row g-3">
-                <div class="col-lg-3 col-md-6">
-                    <label class="form-label fw-semibold">Type of Pet</label>
-                    <select class="form-select">
-                        <option value="">All Species</option>
-                        <option value="dogs">Dogs</option>
-                        <option value="cats">Cats</option>
-                    </select>
-                    <label class="form-label fw-semibold mt-3">Breed</label>
-                    <select class="form-select">
-                        <option value="">All Breeds</option>
-                        <option value="labrador">Labrador Retriever</option>
-                        <option value="bichon">Bichon Frise</option>
-                        <option value="border-collie">Border Collie</option>
-                        <option value="abyssinian">Abyssinian</option>
-                        <option value="siamese">Siamese</option>
-                        <option value="maine-coon">Maine Coon</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <label class="form-label fw-semibold">Location</label>
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                        <input type="text" class="form-control" placeholder="Enter location">
-                    </div>
-                    <label class="form-label fw-semibold mt-3">Distance</label>
-                    <select class="form-select">
-                        <option value="">Any distance</option>
-                        <option value="10">Within 10 miles</option>
-                        <option value="25">Within 25 miles</option>
-                        <option value="50">Within 50 miles</option>
-                        <option value="100">Within 100 miles</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <label class="form-label fw-semibold">Price Range</label>
-                    <div class="row g-2">
-                        <div class="col-6">
-                            <input type="number" class="form-control" placeholder="Min £">
-                        </div>
-                        <div class="col-6">
-                            <input type="number" class="form-control" placeholder="Max £">
-                        </div>
-                    </div>
-                    <label class="form-label fw-semibold mt-3">Premium Features</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="insurance-search">
-                        <label class="form-check-label" for="insurance-search">
-                            Insurance Included
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <label class="form-label fw-semibold">Age</label>
-                    <select class="form-select">
-                        <option value="">Any age</option>
-                        <option value="8-12">8-12 weeks</option>
-                        <option value="12-16">12-16 weeks</option>
-                        <option value="16+">16+ weeks</option>
-                    </select>
-                    <label class="form-label fw-semibold mt-3">Breeder Type</label>
-                    <select class="form-select">
-                        <option value="">All Breeders</option>
-                        <option value="private">Private Breeder</option>
-                        <option value="licensed">Licensed Breeder</option>
-                    </select>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -389,8 +320,81 @@
             <!-- Filters Sidebar -->
             <div class="col-lg-3">
                 <div class="filter-sidebar">
-                    <h5 class="fw-bold mb-3">Additional Filters</h5>
+                    <h5 class="fw-bold mb-3">Search Filters</h5>
                     
+                    <!-- Type and Breed -->
+                    <div class="filter-section">
+                        <h6 class="fw-semibold">Type of Pet</h6>
+                        <select class="form-select mb-3">
+                            <option value="">All Species</option>
+                            <option value="dogs">Dogs</option>
+                            <option value="cats">Cats</option>
+                        </select>
+                        
+                        <h6 class="fw-semibold">Breed</h6>
+                        <select class="form-select">
+                            <option value="">All Breeds</option>
+                            <option value="labrador">Labrador Retriever</option>
+                            <option value="bichon">Bichon Frise</option>
+                            <option value="border-collie">Border Collie</option>
+                            <option value="abyssinian">Abyssinian</option>
+                            <option value="siamese">Siamese</option>
+                            <option value="maine-coon">Maine Coon</option>
+                        </select>
+                    </div>
+
+                    <!-- Location and Distance -->
+                    <div class="filter-section">
+                        <h6 class="fw-semibold">Location</h6>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control" placeholder="Enter location">
+                        </div>
+                        
+                        <h6 class="fw-semibold">Distance</h6>
+                        <select class="form-select">
+                            <option value="">Any distance</option>
+                            <option value="10">Within 10 miles</option>
+                            <option value="25">Within 25 miles</option>
+                            <option value="50">Within 50 miles</option>
+                            <option value="100">Within 100 miles</option>
+                        </select>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="filter-section">
+                        <h6 class="fw-semibold">Price Range</h6>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <input type="number" class="form-control" placeholder="Min £">
+                            </div>
+                            <div class="col-6">
+                                <input type="number" class="form-control" placeholder="Max £">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Age -->
+                    <div class="filter-section">
+                        <h6 class="fw-semibold">Age</h6>
+                        <select class="form-select">
+                            <option value="">Any age</option>
+                            <option value="8-12">8-12 weeks</option>
+                            <option value="12-16">12-16 weeks</option>
+                            <option value="16+">16+ weeks</option>
+                        </select>
+                    </div>
+
+                    <!-- Breeder Type -->
+                    <div class="filter-section">
+                        <h6 class="fw-semibold">Breeder Type</h6>
+                        <select class="form-select">
+                            <option value="">All Breeders</option>
+                            <option value="private">Private Breeder</option>
+                            <option value="licensed">Licensed Breeder</option>
+                        </select>
+                    </div>
+
                     <!-- Health Testing Focus -->
                     <div class="filter-section">
                         <h6 class="fw-semibold">Health Testing</h6>
@@ -414,6 +418,29 @@
                         </div>
                     </div>
 
+                    <!-- Premium Features -->
+                    <div class="filter-section">
+                        <h6 class="fw-semibold">Premium Features</h6>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="insurance">
+                            <label class="form-check-label" for="insurance">
+                                Insurance Included
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="microchip">
+                            <label class="form-check-label" for="microchip">
+                                Microchip Included
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="socialisation">
+                            <label class="form-check-label" for="socialisation">
+                                Detailed Socialisation Program
+                            </label>
+                        </div>
+                    </div>
+
                     <!-- Documentation -->
                     <div class="filter-section">
                         <h6 class="fw-semibold">Documentation</h6>
@@ -427,18 +454,6 @@
                             <input class="form-check-input" type="checkbox" id="contract" checked disabled>
                             <label class="form-check-label" for="contract">
                                 Signed Contract (Required)
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="microchip">
-                            <label class="form-check-label" for="microchip">
-                                Microchip Included
-                            </label>
-                        </div>
-                        <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="socialisation">
-                            <label class="form-check-label" for="socialisation">
-                                Detailed Socialisation Program
                             </label>
                         </div>
                     </div>
@@ -459,6 +474,12 @@
                             </label>
                         </div>
                     </div>
+
+                    <!-- Apply Filters Button -->
+                    <div class="mt-4">
+                        <button class="btn btn-primary w-100 mb-2">Apply Filters</button>
+                        <button class="btn btn-outline-secondary w-100">Clear All</button>
+                    </div>
                 </div>
             </div>
 
@@ -466,7 +487,7 @@
             <div class="col-lg-9">
                 <div class="results-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h4 class="fw-bold mb-0">Available Pets (8 results)</h4>
+                        <h4 class="fw-bold mb-0">Available Pets (6 results)</h4>
                         <select class="form-select w-auto">
                             <option value="">Sort by: Newest</option>
                             <option value="price-low">Price: Low to High</option>
@@ -478,6 +499,13 @@
                 </div>
 
                 <div class="row g-4" id="petListings">
+                    <!-- Dogs Section Header -->
+                    <div class="col-12">
+                        <h3 class="fw-bold text-success mb-3 border-bottom border-2 border-success pb-2">
+                            <i class="fas fa-dog me-2"></i>Puppies
+                        </h3>
+                    </div>
+                    
                     <!-- Labrador Retriever -->
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="pet-card">
@@ -519,111 +547,6 @@
                                             <h6 class="fw-semibold mb-0">Northern Giants</h6>
                                             <p class="text-muted mb-0">Private Breeder • 7 years experience</p>
                                             <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Yorkshire, England</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-column gap-2 mt-3">
-                                    <button class="btn btn-primary">Contact Breeder</button>
-                                    <button class="btn btn-outline-primary">Request Visit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Labrador Litter -->
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="pet-card">
-                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                                <div class="verified-badge">Checkapet Verified</div>
-                                <div class="premium-badge">Premium Breeder</div>
-                            </div>
-                            <div class="p-3">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h5 class="fw-bold mb-1">Chocolate Lab Puppies</h5>
-                                        <p class="text-muted mb-0">Labrador Retriever</p>
-                                        <span class="age-badge">8 weeks old</span>
-                                    </div>
-                                    <div class="price-tag">£1,100</div>
-                                </div>
-
-                                <div class="health-tests">
-                                    <h6 class="fw-semibold mb-2"><i class="fas fa-heartbeat me-2"></i>Parent Health Tests</h6>
-                                    <span class="test-badge">Hip Scoring</span>
-                                    <span class="test-badge">Elbow Scoring</span>
-                                    <span class="test-badge">Eye Tests (PRA)</span>
-                                    <span class="test-badge">CNM Clear</span>
-                                </div>
-
-                                <div class="documentation-checklist">
-                                    <h6 class="fw-semibold mb-2">Documentation</h6>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination certificate & vet check</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract signed</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> 4-week health insurance</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Microchip registration</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Comprehensive socialisation</div>
-                                </div>
-
-                                <div class="breeder-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div>
-                                            <h6 class="fw-semibold mb-0">Riverside Retrievers</h6>
-                                            <p class="text-muted mb-0">Licensed Breeder • 15 years experience</p>
-                                            <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Lake District, England</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-column gap-2 mt-3">
-                                    <button class="btn btn-primary">Contact Breeder</button>
-                                    <button class="btn btn-outline-primary">Request Visit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mixed Breed Border Collie -->
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="pet-card">
-                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
-                                <div class="verified-badge">Checkapet Verified</div>
-                            </div>
-                            <div class="p-3">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h5 class="fw-bold mb-1">Border Collie x Australian Shepherd</h5>
-                                        <p class="text-muted mb-0">Cross-breed</p>
-                                        <span class="age-badge">11 weeks old</span>
-                                    </div>
-                                    <div class="price-tag">£700</div>
-                                </div>
-
-                                <div class="health-tests">
-                                    <h6 class="fw-semibold mb-2"><i class="fas fa-heartbeat me-2"></i>Parent Health Tests</h6>
-                                    <span class="test-badge">Hip Scoring (Both)</span>
-                                    <span class="test-badge">Eye Tests (CEA/PRA)</span>
-                                    <span class="test-badge">MDR1 Clear</span>
-                                    <span class="test-badge">HSF4 Clear</span>
-                                </div>
-
-                                <div class="documentation-checklist">
-                                    <h6 class="fw-semibold mb-2">Documentation</h6>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination certificate & vet check</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract signed</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
-                                    <div class="doc-item"><i class="fas fa-times-circle text-muted"></i> Health insurance (arrange yourself)</div>
-                                    <div class="doc-item"><i class="fas fa-times-circle text-muted"></i> Microchip (arrange yourself)</div>
-                                    <div class="doc-item"><i class="fas fa-times-circle text-muted"></i> Basic socialisation info</div>
-                                </div>
-
-                                <div class="breeder-info">
-                                    <div class="d-flex justify-content-between">
-                                        <div>
-                                            <h6 class="fw-semibold mb-0">Farmland Working Dogs</h6>
-                                            <p class="text-muted mb-0">Private Breeder • 9 years experience</p>
-                                            <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Northumberland, England</small>
                                         </div>
                                     </div>
                                 </div>
@@ -765,7 +688,7 @@
                     <!-- Bichon Frise -->
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="pet-card">
-                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                                 <div class="verified-badge">Checkapet Verified</div>
                             </div>
                             <div class="p-3">
@@ -864,6 +787,66 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- Second Labrador Litter -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="pet-card">
+                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                                <div class="verified-badge">Checkapet Verified</div>
+                                <div class="premium-badge">Premium Breeder</div>
+                            </div>
+                            <div class="p-3">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Chocolate Lab Puppies</h5>
+                                        <p class="text-muted mb-0">Labrador Retriever</p>
+                                        <span class="age-badge">8 weeks old</span>
+                                    </div>
+                                    <div class="price-tag">£1,100</div>
+                                </div>
+
+                                <div class="health-tests">
+                                    <h6 class="fw-semibold mb-2"><i class="fas fa-heartbeat me-2"></i>Parent Health Tests</h6>
+                                    <span class="test-badge">Hip Scoring</span>
+                                    <span class="test-badge">Elbow Scoring</span>
+                                    <span class="test-badge">Eye Tests (PRA)</span>
+                                    <span class="test-badge">CNM Clear</span>
+                                </div>
+
+                                <div class="documentation-checklist">
+                                    <h6 class="fw-semibold mb-2">Documentation</h6>
+                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination certificate & vet check</div>
+                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract signed</div>
+                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
+                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> 4-week health insurance</div>
+                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Microchip registration</div>
+                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Comprehensive socialisation</div>
+                                </div>
+
+                                <div class="breeder-info">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6 class="fw-semibold mb-0">Riverside Retrievers</h6>
+                                            <p class="text-muted mb-0">Licensed Breeder • 15 years experience</p>
+                                            <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Lake District, England</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-column gap-2 mt-3">
+                                    <button class="btn btn-primary">Contact Breeder</button>
+                                    <button class="btn btn-outline-primary">Request Visit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kittens Section Header -->
+                    <div class="col-12">
+                        <h3 class="fw-bold text-success mb-3 border-bottom border-2 border-success pb-2 mt-4">
+                            <i class="fas fa-cat me-2"></i>Kittens
+                        </h3>
                     </div>
 
                     <!-- Abyssinian Cat -->
