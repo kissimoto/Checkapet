@@ -1,5 +1,48 @@
 /* Main styles for CheckAPet website */
 
+/* Kitten contract specific styles */
+.contract-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3c763d;
+}
+
+.section-header h3 {
+    margin: 0;
+    color: #000;
+    font-size: 1.2em;
+    font-family: 'Sanchez', serif;
+}
+
+.question-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.question-title {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: 'Sanchez', serif;
+}
+
+/* ... rest of the form styles ... */
+
 /* Base styles */
 body {
     font-family: Arial, sans-serif;
