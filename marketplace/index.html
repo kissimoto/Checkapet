@@ -307,7 +307,7 @@
     <div class="container mt-5">
         <div class="row">
             <!-- Filters Sidebar -->
-            <div class="col-lg-3">
+            <div class="col-lg-2">
                 <div class="filter-sidebar">
                     <h5 class="fw-bold mb-3">Search Filters</h5>
                     
@@ -326,9 +326,10 @@
                             <option value="labrador">Labrador Retriever</option>
                             <option value="bichon">Bichon Frise</option>
                             <option value="border-collie">Border Collie</option>
+                            <option value="shih-tzu">Shih Tzu</option>
                             <option value="abyssinian">Abyssinian</option>
                             <option value="siamese">Siamese</option>
-                            <option value="maine-coon">Maine Coon</option>
+                            <option value="british-shorthair">British Shorthair</option>
                         </select>
                     </div>
 
@@ -416,10 +417,10 @@
             </div>
 
             <!-- Pet Listings -->
-            <div class="col-lg-9">
+            <div class="col-lg-10">
                 <div class="results-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h4 class="fw-bold mb-0">Available Pets (6 results)</h4>
+                        <h4 class="fw-bold mb-0">Available Pets (7 results)</h4>
                         <select class="form-select w-auto">
                             <option value="">Sort by: Newest</option>
                             <option value="price-low">Price: Low to High</option>
@@ -438,7 +439,7 @@
 
                 <div class="row g-4">
                     <!-- Labrador Retriever -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="pet-card">
                             <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                                 <div class="verified-badge">Checkapet Verified</div>
@@ -462,32 +463,34 @@
                                     <span class="test-badge">EIC Clear</span>
                                 </div>
 
-                                <div class="documentation-checklist">
-                                    <h6 class="fw-semibold mb-2">Documentation</h6>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Insurance & microchip included</div>
+                                <div class="card-details" style="display: none;">
+                                    <div class="documentation-checklist">
+                                        <h6 class="fw-semibold mb-2">Documentation</h6>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Insurance & microchip included</div>
+                                    </div>
+
+                                    <div class="breeder-info">
+                                        <h6 class="fw-semibold mb-0">Sunrise Labradors</h6>
+                                        <p class="text-muted mb-0">Licensed Breeder • 8 years</p>
+                                        <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Cornwall, England</small>
+                                    </div>
                                 </div>
 
-                                <div class="breeder-info">
-                                    <h6 class="fw-semibold mb-0">Sunrise Labradors</h6>
-                                    <p class="text-muted mb-0">Licensed Breeder • 8 years</p>
-                                    <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Cornwall, England</small>
-                                </div>
-
-                                <div class="d-flex flex-column gap-2 mt-3">
-                                    <button class="btn btn-primary">Contact Breeder</button>
-                                    <button class="btn btn-outline-primary">Request Visit</button>
+                                <div class="mt-3">
+                                    <button class="btn btn-primary w-100 mb-2">Contact Breeder</button>
+                                    <button class="btn btn-outline-secondary w-100 btn-toggle" onclick="toggleDetails(this)">Show Details</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Bichon Frise -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="pet-card">
-                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1690834850835-904615e0a6cb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
                                 <div class="verified-badge">Checkapet Verified</div>
                             </div>
                             <div class="p-3">
@@ -507,30 +510,32 @@
                                     <span class="test-badge">Curly Coat Clear</span>
                                 </div>
 
-                                <div class="documentation-checklist">
-                                    <h6 class="fw-semibold mb-2">Documentation</h6>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
-                                    <div class="doc-item"><i class="fas fa-times-circle text-muted"></i> Insurance/microchip (arrange yourself)</div>
+                                <div class="card-details" style="display: none;">
+                                    <div class="documentation-checklist">
+                                        <h6 class="fw-semibold mb-2">Documentation</h6>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
+                                        <div class="doc-item"><i class="fas fa-times-circle text-muted"></i> Insurance/microchip (arrange yourself)</div>
+                                    </div>
+
+                                    <div class="breeder-info">
+                                        <h6 class="fw-semibold mb-0">Cotswold Companions</h6>
+                                        <p class="text-muted mb-0">Private Breeder • 5 years</p>
+                                        <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Gloucestershire, England</small>
+                                    </div>
                                 </div>
 
-                                <div class="breeder-info">
-                                    <h6 class="fw-semibold mb-0">Cotswold Companions</h6>
-                                    <p class="text-muted mb-0">Private Breeder • 5 years</p>
-                                    <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Gloucestershire, England</small>
-                                </div>
-
-                                <div class="d-flex flex-column gap-2 mt-3">
-                                    <button class="btn btn-primary">Contact Breeder</button>
-                                    <button class="btn btn-outline-primary">Request Visit</button>
+                                <div class="mt-3">
+                                    <button class="btn btn-primary w-100 mb-2">Contact Breeder</button>
+                                    <button class="btn btn-outline-secondary w-100 btn-toggle" onclick="toggleDetails(this)">Show Details</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Border Collie -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="pet-card">
                             <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1551717743-49959800b1f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
                                 <div class="verified-badge">Checkapet Verified</div>
@@ -554,23 +559,73 @@
                                     <span class="test-badge">CL Clear</span>
                                 </div>
 
-                                <div class="documentation-checklist">
-                                    <h6 class="fw-semibold mb-2">Documentation</h6>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Insurance & microchip included</div>
+                                <div class="card-details" style="display: none;">
+                                    <div class="documentation-checklist">
+                                        <h6 class="fw-semibold mb-2">Documentation</h6>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Insurance & microchip included</div>
+                                    </div>
+
+                                    <div class="breeder-info">
+                                        <h6 class="fw-semibold mb-0">Highland Working Dogs</h6>
+                                        <p class="text-muted mb-0">Licensed Breeder • 12 years</p>
+                                        <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Scottish Highlands</small>
+                                    </div>
                                 </div>
 
-                                <div class="breeder-info">
-                                    <h6 class="fw-semibold mb-0">Highland Working Dogs</h6>
-                                    <p class="text-muted mb-0">Licensed Breeder • 12 years</p>
-                                    <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Scottish Highlands</small>
+                                <div class="mt-3">
+                                    <button class="btn btn-primary w-100 mb-2">Contact Breeder</button>
+                                    <button class="btn btn-outline-secondary w-100 btn-toggle" onclick="toggleDetails(this)">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shih Tzu -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pet-card">
+                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1699693989048-2ea153131283?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                                <div class="verified-badge">Checkapet Verified</div>
+                                <div class="premium-badge">Premium Breeder</div>
+                            </div>
+                            <div class="p-3">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Adorable Shih Tzu Puppies</h5>
+                                        <p class="text-muted mb-0">Shih Tzu</p>
+                                        <span class="age-badge">11 weeks old</span>
+                                    </div>
+                                    <div class="price-tag">£1,050</div>
                                 </div>
 
-                                <div class="d-flex flex-column gap-2 mt-3">
-                                    <button class="btn btn-primary">Contact Breeder</button>
-                                    <button class="btn btn-outline-primary">Request Visit</button>
+                                <div class="health-tests">
+                                    <h6 class="fw-semibold mb-2"><i class="fas fa-heartbeat me-2"></i>Parent Health Tests</h6>
+                                    <span class="test-badge">Eye Tests</span>
+                                    <span class="test-badge">Kidney Tests</span>
+                                    <span class="test-badge">Heart Clear</span>
+                                </div>
+
+                                <div class="card-details" style="display: none;">
+                                    <div class="documentation-checklist">
+                                        <h6 class="fw-semibold mb-2">Documentation</h6>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> AWF Puppy Contract</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Insurance & microchip included</div>
+                                    </div>
+
+                                    <div class="breeder-info">
+                                        <h6 class="fw-semibold mb-0">Golden Palace Dogs</h6>
+                                        <p class="text-muted mb-0">Licensed Breeder • 10 years</p>
+                                        <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Kent, England</small>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-primary w-100 mb-2">Contact Breeder</button>
+                                    <button class="btn btn-outline-secondary w-100 btn-toggle" onclick="toggleDetails(this)">Show Details</button>
                                 </div>
                             </div>
                         </div>
@@ -586,9 +641,9 @@
 
                 <div class="row g-4">
                     <!-- Abyssinian Cat -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="pet-card">
-                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1606214174585-fe31582cd22c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1653913039631-638c43ab53c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFieXNzaW5pYW58ZW58MHx8MHx8fDA%3D');">
                                 <div class="verified-badge">Checkapet Verified</div>
                             </div>
                             <div class="p-3">
@@ -603,39 +658,168 @@
 
                                 <div class="health-tests">
                                     <h6 class="fw-semibold mb-2"><i class="fas fa-heartbeat me-2"></i>Parent Health Tests</h6>
-                                    <span class="test-badge">PRA Clear</span>
-                                    <span class="test-badge">PKD Clear</span>
-                                    <span class="test-badge">FIV/FeLV Negative</span>
+                                    <span class="test-badge">rdAc-PRA Clear</span>
+                                    <span class="test-badge">rdy-PRA Clear</span>
+                                    <span class="test-badge">PK Deficiency Clear</span>
                                 </div>
 
-                                <div class="documentation-checklist">
-                                    <h6 class="fw-semibold mb-2">Documentation</h6>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Checkapet Kitten Contract</div>
-                                    <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
-                                    <div class="doc-item"><i class="fas fa-times-circle text-muted"></i> Insurance/microchip (arrange yourself)</div>
+                                <div class="card-details" style="display: none;">
+                                    <div class="documentation-checklist">
+                                        <h6 class="fw-semibold mb-2">Documentation</h6>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Checkapet Kitten Contract</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
+                                        <div class="doc-item"><i class="fas fa-times-circle text-muted"></i> Insurance/microchip (arrange yourself)</div>
+                                    </div>
+
+                                    <div class="contract-highlight">
+                                        <small><i class="fas fa-info-circle me-1"></i>Features our new Checkapet Kitten Contract</small>
+                                    </div>
+
+                                    <div class="breeder-info">
+                                        <h6 class="fw-semibold mb-0">Royal Abys</h6>
+                                        <p class="text-muted mb-0">Private Breeder • 6 years</p>
+                                        <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Surrey, England</small>
+                                    </div>
                                 </div>
 
-                                <div class="contract-highlight">
-                                    <small><i class="fas fa-info-circle me-1"></i>Features our new Checkapet Kitten Contract</small>
-                                </div>
-
-                                <div class="breeder-info">
-                                    <h6 class="fw-semibold mb-0">Royal Abys</h6>
-                                    <p class="text-muted mb-0">Private Breeder • 6 years</p>
-                                    <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Surrey, England</small>
-                                </div>
-
-                                <div class="d-flex flex-column gap-2 mt-3">
-                                    <button class="btn btn-primary">Contact Breeder</button>
-                                    <button class="btn btn-outline-primary">Request Visit</button>
+                                <div class="mt-3">
+                                    <button class="btn btn-primary w-100 mb-2">Contact Breeder</button>
+                                    <button class="btn btn-outline-secondary w-100 btn-toggle" onclick="toggleDetails(this)">Show Details</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Siamese Cat -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="pet-card">
-                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1573824267734-164bc2aa3173?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1636898056269-65f8d411f137?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
                                 <div class="verified-badge">Checkapet Verified</div>
+
+                                <div class="premium-badge">Premium Breeder</div>
+                            </div>
+                            <div class="p-3">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Seal Point Siamese</h5>
+                                        <p class="text-muted mb-0">Siamese</p>
+                                        <span class="age-badge">11 weeks old</span>
+                                    </div>
+                                    <div class="price-tag">£750</div>
+                                </div>
+
+                                <div class="health-tests">
+                                    <h6 class="fw-semibold mb-2"><i class="fas fa-heartbeat me-2"></i>Parent Health Tests</h6>
+                                    <span class="test-badge">rdAc-PRA Clear</span>
+                                    <span class="test-badge">GM1 Clear</span>
+                                    <span class="test-badge">MPS VI Clear</span>
+                                    <span class="test-badge">PCG Clear</span>
+                                </div>
+
+                                <div class="card-details" style="display: none;">
+                                    <div class="documentation-checklist">
+                                        <h6 class="fw-semibold mb-2">Documentation</h6>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Checkapet Kitten Contract</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Insurance & microchip included</div>
+                                    </div>
+                                    
+                                    <div class="contract-highlight">
+                                        <small><i class="fas fa-info-circle me-1"></i>Features our new Checkapet Kitten Contract</small>
+                                    </div>
+
+                                    <div class="breeder-info">
+                                        <h6 class="fw-semibold mb-0">Oriental Elegance</h6>
+                                        <p class="text-muted mb-0">Licensed Breeder • 10 years</p>
+                                        <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Devon, England</small>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-primary w-100 mb-2">Contact Breeder</button>
+                                    <button class="btn btn-outline-secondary w-100 btn-toggle" onclick="toggleDetails(this)">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- British Shorthair Cat -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pet-card">
+                            <div class="pet-image" style="background-image: url('https://images.unsplash.com/photo-1554396133-3ff490ac1c6d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJyaXRpc2glMjBzaG9ydGhhaXJ8ZW58MHx8MHx8fDA%3D');">
+                                <div class="verified-badge">Checkapet Verified</div>
+                            </div>
+                            <div class="p-3">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="fw-bold mb-1">British Shorthair Kittens</h5>
+                                        <p class="text-muted mb-0">British Shorthair</p>
+                                        <span class="age-badge">13 weeks old</span>
+                                    </div>
+                                    <div class="price-tag">£800</div>
+                                </div>
+
+                                <div class="health-tests">
+                                    <h6 class="fw-semibold mb-2"><i class="fas fa-heartbeat me-2"></i>Parent Health Tests</h6>
+                                    <span class="test-badge">PKD Clear</span>
+                                    <span class="test-badge">pd-PRA Clear</span>
+                                    <span class="test-badge">ALPS Clear</span>
+                                </div>
+
+                                <div class="card-details" style="display: none;">
+                                    <div class="documentation-checklist">
+                                        <h6 class="fw-semibold mb-2">Documentation</h6>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Vaccination & vet check</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Checkapet Kitten Contract</div>
+                                        <div class="doc-item"><i class="fas fa-check-circle text-success"></i> Parent health certificates</div>
+                                        <div class="doc-item"><i class="fas fa-times-circle text-muted"></i> Insurance/microchip (arrange yourself)</div>
+                                    </div>
+                                    
+                                    <div class="contract-highlight">
+                                        <small><i class="fas fa-info-circle me-1"></i>Features our new Checkapet Kitten Contract</small>
+                                    </div>
+
+                                    <div class="breeder-info">
+                                        <h6 class="fw-semibold mb-0">British Blue Beauties</h6>
+                                        <p class="text-muted mb-0">Private Breeder • 7 years</p>
+                                        <small class="location-tag"><i class="fas fa-map-marker-alt me-1"></i>Hampshire, England</small>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-primary w-100 mb-2">Contact Breeder</button>
+                                    <button class="btn btn-outline-secondary w-100 btn-toggle" onclick="toggleDetails(this)">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function toggleDetails(button) {
+            const card = button.closest('.pet-card');
+            const details = card.querySelector('.card-details');
+            
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+                button.textContent = 'Hide Details';
+                button.classList.remove('btn-outline-secondary');
+                button.classList.add('btn-outline-primary');
+            } else {
+                details.style.display = 'none';
+                button.textContent = 'Show Details';
+                button.classList.remove('btn-outline-primary');
+                button.classList.add('btn-outline-secondary');
+            }
+        }
+    </script>
+</body>
+</html>
