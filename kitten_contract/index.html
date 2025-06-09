@@ -3,43 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitten Information Pack & Contract - CheckAPet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sanchez:wght@400;700&display=swap" rel="stylesheet">
+    <title>Kitten Contract - CheckAPet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Sanchez -->
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/kitten-contract.css">
     <style>
-        /* Main styles for CheckAPet website */
-        body {
-            font-family: 'Sanchez', serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
-            margin: 0;
-            padding: 20px;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Sanchez', serif;
-            color: #000;
-        }
-        
-        .primary-green { color: #000; }
-        .bg-primary-green { background-color: #3c763d; color: white; }
-        .secondary-green { color: #5cb85c; }
-        .bg-secondary-green { background-color: #5cb85c; color: white; }
-        
-        .container {
+        /* Kitten contract specific styles */
+        .contract-content {
             max-width: 900px;
             margin: 0 auto;
             background: white;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px 0;
-            border-bottom: 3px solid #3c763d;
         }
         
         .logo-placeholder {
@@ -347,12 +327,75 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- Navigation -->
+    <header class="w-100 bg-light">
+        <div class="container"> 
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo with link to home page -->
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <span class="logo-circle me-2"></span>
+                    <span class="brand-text">CHECKAPET</span>
+                </a>
+                
+                <!-- Mobile toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navbar items -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="/Checkapet/" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="/Checkapet/breeding/" class="nav-link">Breeding</a></li>
+                        <li class="nav-item"><a href="/Checkapet/buying/" class="nav-link active">Buying</a></li>
+                        <li class="nav-item"><a href="/Checkapet/marketplace/" class="nav-link">Marketplace</a></li>
+                        <li class="nav-item"><a href="/Checkapet/vets/" class="nav-link">Vets</a></li>
+                        <li class="nav-item"><a href="/Checkapet/genetics/" class="nav-link">Genetics</a></li>
+                    </ul>
+                    
+                    <!-- Search form -->
+                    <form class="d-flex search-form me-2">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fa fa-search text-muted"></i>
+                            </span>
+                            <input class="form-control border-start-0" type="search" 
+                                   placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    
+                    <!-- Glossary button -->
+                    <a href="/Checkapet/glossary/" class="btn btn-success glossary-btn">Glossary</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h1 class="display-4 fw-bold">Kitten Contract</h1>
+                        <p class="fs-5">Contract between breeders and buyers</p>
+                        <p class="fs-5">Health testing is mandatory for breeding dogs and cats, if their offspring are advertised on this site. The offspring will be much more likely to have healthier, and so happier, lives as a result of reducing the risk of inherited disease.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Happy cat" class="img-fluid-cover rounded" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <div class="contract-content">
         <!-- Header -->
         <div class="header">
-            <div class="logo-placeholder">
-                <strong>CheckAPet Logo Here</strong>
-            </div>
             <h1 class="primary-green">Kitten Information Pack</h1>
         </div>
 
@@ -858,6 +901,9 @@
                 <div class="guidance-box">
                     This information can only be included if the owner has given permission for their contact details to be shared with a prospective owner.
                 </div>
+                <div class="guidance-box">
+                    <strong>Important:</strong> All male cats used as stud must have a Certificate of Entirety from a UK based veterinary practice.
+                </div>
                 <div class="form-group">
                     <textarea id="father-owner-contact" name="father-owner-contact" rows="3"></textarea>
                 </div>
@@ -959,12 +1005,7 @@
                     It is important to be aware of these conditions as they could have been passed on to the kitten.
                 </div>
                 <div class="guidance-box">
-                    Talk to your vet before you buy and check for information on inherited disorders on the following websites:
-                    <br>■ International Cat Care Inherited Diseases in Cats Database: <a href="https://checkapet.vet">CheckAPet.vet</a>
-                    <br>■ Universities Federation for Animal Welfare: <a href="https://checkapet.vet">CheckAPet.vet</a>
-                    <br>■ Cat Breed Health: <a href="https://checkapet.vet">CheckAPet.vet</a>
-                    <br>■ Feline Inherited Disorders Database: <a href="https://checkapet.vet">CheckAPet.vet</a>
-                    <br>■ Some Breed Club websites also report common and important inherited conditions in the breed.
+                    Talk to your vet before you buy and check for information on inherited disorders at: <a href="https://checkapet.vet">CheckAPet.vet</a>
                 </div>
                 
                 <div class="guidance-box">
@@ -1425,6 +1466,9 @@
             <p style="margin-top: 20px; color: #3c763d;"><strong>© CheckAPet 2025.</strong> You may download, print and copy this document but you must not modify it without our prior written permission or sell or republish it.</p>
             <p><strong>For more information about cat health and breeding, visit: <a href="https://checkapet.vet" style="color: #3c763d;">CheckAPet.vet</a></strong></p>
         </div>
-    </div>
+    </main>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
