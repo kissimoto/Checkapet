@@ -1,12 +1,315 @@
-/* Main styles for CheckAPet website */
-
-/* Kitten contract specific styles */
-.contract-content {
-    max-width: 900px;
-    margin: 0 auto;
-    background: white;
-    padding: 30px;
-}
+    <style>
+        /* Kitten contract specific styles */
+        .contract-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+        }
+        
+        .logo-placeholder {
+            background-color: #f8f9fa;
+            border: 2px dashed #3c763d;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-header {
+            background-color: #3c763d;
+            color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        
+        .section-header h3 {
+            margin: 0;
+            color: white;
+            font-size: 1.2em;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .question-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .question-title {
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .guidance-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 14px;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .important-note {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #000;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #000;
+            font-family: 'Sanchez', serif;
+        }
+        
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        input[type="date"], 
+        textarea, 
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            font-family: 'Sanchez', serif;
+            background: white;
+            border-bottom: 1px solid #000;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            border-color: #000;
+            outline: none;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+        }
+        
+        .checkbox-item label {
+            font-family: 'Sanchez', serif;
+            color: #000;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 12px;
+            font-family: 'Sanchez', serif;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 6px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #000;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .genetics-table th {
+            font-size: 11px;
+            line-height: 1.2;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .genetics-table input[type="text"] {
+            width: 100%;
+            padding: 4px;
+            font-size: 11px;
+            border: 1px solid #ccc;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .genetics-table input[type="checkbox"] {
+            margin: 2px;
+        }
+        
+        .contract-terms {
+            background-color: #f8f9fa;
+            border: 2px solid #000;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .definitions {
+            background-color: #3c763d;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .definitions h3 {
+            color: white;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .warranty-section {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #3c763d;
+            background-color: #f9f9f9;
+        }
+        
+        .warranty-section h3 {
+            font-family: 'Sanchez', serif;
+            color: #000;
+        }
+        
+        .clause {
+            margin: 10px 0;
+            padding-left: 20px;
+            font-family: 'Sanchez', serif;
+            color: #000;
+        }
+        
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .signature-box {
+            flex: 1;
+            text-align: center;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .signature-box h4 {
+            font-family: 'Sanchez', serif;
+            color: #000;
+        }
+        
+        .signature-line {
+            border-bottom: 2px solid #000;
+            margin: 20px 0 10px 0;
+            height: 40px;
+        }
+        
+        .price-section {
+            background-color: #3c763d;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .price-section h3 {
+            color: white;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .resource-link {
+            background-color: #3c763d;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        .resource-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Sanchez', serif;
+        }
+        
+        .resource-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+            }
+            
+            .signature-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            table {
+                font-size: 10px;
+            }
+            
+            .genetics-table input[type="text"] {
+                font-size: 9px;
+                padding: 2px;
+            }
+        }
+    </style>
 
 .section {
     margin-bottom: 30px;
