@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Jack Russell Terrier': ['Eye Testing', 'Patellar Luxation', 'Hereditary Ataxia', 'Congenital Sensorineural Deafness'],
         'Jagd Terrier': ['Hip Dysplasia', 'Eye Testing', 'Heart Testing', 'Patellar Luxation'],
         'Kerry Blue Terrier': ['Hip Dysplasia', 'Eye Testing', 'Von Willebrand Disease', 'Cerebellar Abiotrophy'],
+        'Abyssinian': ['Progressive Retinal Atrophy (rdAc-PRA)', 'Progressive Retinal Atrophy (rdy-PRA)-rare', 'PK Deficiency'],
     
         // Add more breed-specific recommendations as needed
 
