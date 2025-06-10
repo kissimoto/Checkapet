@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cat breeds data
     const catBreeds = [
         'Abyssinian', 'Bengal', 'Birman', 'British Shorthair',
-        'Maine Coon', 'Norwegian Forest Cat', 'Persian', 'Ragdoll', 
+        'Maine Coon', 'Norwegian Forest Cat', 'Ragdoll', 'Russian Blue',
         'Siamese', 'Sphynx'
     ];
     
