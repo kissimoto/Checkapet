@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Bengal': ['Progressive Retinal Atrophy (rdAc-PRA)', 'Progressive Retinal Atrophy in Bengal (b-PRA/PRA-b)', 'PK Deficiency'],
         'Birman': ['Feline Polycystic Kidney Disease (PKD)', 'pd-Progressive Retinal Atrophy (pd-PRA)', 'Hypotrichosis and Short Life Expectancy', 'Mucopolysaccharidosis Type VI (MPS VI MPS6)'],
         'British Shorthair': ['Feline Polycystic Kidney Disease (PKD)', 'pd-Progressive Retinal Atrophy (pd-PRA)', 'Autoimmune Lymphoproliferative Syndrome (ALPS)'],
-        'Main Coon': ['Hypertrophic cardiomyopathy (HCM 1 Mutation Meurs (G-- &gt; C) A31P)', 'PK Deficiency', 'SMA (Spinal Muscular Atrophy )', 'Factor XI deficiency (F11)'],
+        'Maine Coon': ['Hypertrophic cardiomyopathy (HCM 1 Mutation Meurs (G-- &gt; C) A31P)', 'PK Deficiency', 'SMA (Spinal Muscular Atrophy )', 'Factor XI deficiency (F11)'],
         'Norwegian Forest Cat': ['PK Deficiency)', 'Glycogen Storage Disease ( GSD ) Type IV'],
         'Ragdoll': ['Hypertrophic cardiomyopathy (HCM3/HCR)', 'Hypertrophic cardiomyopathy (HCM 1 Mutation Meurs (G-- &gt; C) A31P)', 'Feline Polycystic Kidney Disease (PKD)', 'pd-Progressive Retinal Atrophy (pd-PRA)'],
         'Russian Blue': ['Feline Polycystic Kidney Disease (PKD)', 'pd-Progressive Retinal Atrophy (pd-PRA)'],
