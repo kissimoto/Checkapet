@@ -39,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Irish Terrier': ['Hip Dysplasia', 'Eye Testing', 'Hyperuricosuria', 'Cystinuria'],
         'Jack Russell Terrier': ['Eye Testing', 'Patellar Luxation', 'Hereditary Ataxia', 'Congenital Sensorineural Deafness'],
         'Jagd Terrier': ['Hip Dysplasia', 'Eye Testing', 'Heart Testing', 'Patellar Luxation'],
-        'Kerry Blue Terrier': ['Hip Dysplasia', 'Eye Testing', 'Von Willebrand Disease', 'Cerebellar Abiotrophy'],
-        //Cats        
+        'Kerry Blue Terrier': ['Hip Dysplasia', 'Eye Testing', 'Von Willebrand Disease', 'Cerebellar Abiotrophy'],      
         'Abyssinian': ['Progressive Retinal Atrophy (rdAc-PRA)', 'Progressive Retinal Atrophy (rdy-PRA)-rare', 'PK Deficiency'],
         'Bengal': ['Progressive Retinal Atrophy (rdAc-PRA)', 'Progressive Retinal Atrophy in Bengal (b-PRA/PRA-b)', 'PK Deficiency'],
         'Birman': ['Feline Polycystic Kidney Disease (PKD)', 'pd-Progressive Retinal Atrophy (pd-PRA)', 'Hypotrichosis and Short Life Expectancy', 'Mucopolysaccharidosis Type VI (MPS VI MPS6)'],
