@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Contract - CheckAPet</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Sanchez -->
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .bg-primary-green { background-color: #3c763d !important; }
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            background-color: #3c763d;
+            border-radius: 50%;
+        }
+        .brand-text {
+            font-family: 'Sanchez', serif;
+            font-weight: bold;
+            color: #3c763d;
+        }
+        .navbar-nav .nav-link {
+            color: #3c763d !important;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link.active {
+            color: #2c5530 !important;
+            font-weight: bold;
+        }
+        .search-form .form-control {
+            border-color: #ddd;
+        }
+        .glossary-btn {
+            background-color: #3c763d;
+            border-color: #3c763d;
+        }
+        .contract-section {
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            color: #3c763d;
+            font-weight: bold;
+            border-bottom: 2px solid #3c763d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            font-weight: 600;
+            color: #333;
+        }
+        .form-control, .form-select {
+            border-color: #ddd;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #3c763d;
+            box-shadow: 0 0 0 0.2rem rgba(60, 118, 61, 0.25);
+        }
+        .table th {
+            background-color: #f8f9fa;
+            color: #3c763d;
+            font-weight: 600;
+        }
+        .warranty-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .print-btn {
+            background-color: #3c763d;
+            border-color: #3c763d;
+            color: white;
+            font-weight: 600;
+        }
+        .print-btn:hover {
+            background-color: #2c5530;
+            border-color: #2c5530;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { font-size: 12px; }
+            .contract-section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="w-100 bg-light no-print">
+        <div class="container"> 
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Logo with link to home page -->
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <span class="logo-circle me-2"></span>
+                    <span class="brand-text">CHECKAPET</span>
+                </a>
+                
+                <!-- Mobile toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navbar items -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="../breeding/" class="nav-link">Breeding</a></li>
+                        <li class="nav-item"><a href="../buying/" class="nav-link active">Buying</a></li>
+                        <li class="nav-item"><a href="../marketplace/" class="nav-link">Marketplace</a></li>
+                        <li class="nav-item"><a href="../vets/" class="nav-link">Vets</a></li>
+                        <li class="nav-item"><a href="../genetics/" class="nav-link">Genetics</a></li>
+                    </ul>
+                    
+                    <!-- Search form -->
+                    <form class="d-flex search-form me-2">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fa fa-search text-muted"></i>
+                            </span>
+                            <input class="form-control border-start-0" type="search" 
+                                   placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    
+                    <!-- Glossary button -->
+                    <a href="../glossary/" class="btn btn-success glossary-btn">Glossary</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-primary-green py-5 no-print">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold" style="color: white !important;">Puppy Contract</h1>
+                        <p class="fs-5" style="color: white !important;">A comprehensive information pack and contract to ensure the health, welfare and proper care of puppies. This contract promotes transparency between breeders and buyers, helping to create the best possible start for your new family member.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center">
+                            <i class="fas fa-file-contract fa-5x opacity-75" style="color: white !important;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contract Content -->
+        <div class="container my-5">
+            <div class="row justify-content-center no-print">
+                <div class="col-12 text-center mb-4">
+                    <button onclick="window.print()" class="btn print-btn btn-lg">
+                        <i class="fas fa-print me-2"></i>Print or Save as PDF
+                    </button>
+                    <p class="text-muted mt-2">Use your browser's print function to save this contract as a PDF</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <!-- Information Pack -->
+                    <div class="contract-section">
+                        <div class="text-center">
+                            <h2 class="section-title d-inline-block">Information Pack</h2>
+                        </div>
+                        <p class="text-muted text-center">To be completed by the breeder.</p>
+
+                <!-- About the Breeder -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">1. About the Breeder</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Title:</label>
+                                <input type="text" class="form-control" placeholder="Mr, Mrs, Miss, etc.">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">First Name:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Surname:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Phone:</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Address:</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Postcode:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Email:</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About the Seller (if different) -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">2. About the Seller (if different)</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Title:</label>
+                                <input type="text" class="form-control" placeholder="Mr, Mrs, Miss, etc.">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">First Name:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Surname:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Phone:</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Address:</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Postcode:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Email:</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About the Puppy's Mother -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">3. About the Puppy's Mother</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Date of Birth:</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Microchip Number (15 digits):</label>
+                                <input type="text" class="form-control" maxlength="15">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Registered with club/society:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Registration Type:</label>
+                                <input type="text" class="form-control" placeholder="e.g., Kennel Club, Greyhound Studbook">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Registration Number:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Number of caesarean sections (including this litter):</label>
+                                <input type="number" class="form-control" min="0">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Number of litters (including this one):</label>
+                                <input type="number" class="form-control" min="1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Age when first litter was born:</label>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="number" class="form-control" placeholder="Years" min="0">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" class="form-control" placeholder="Months" min="0" max="11">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Was it on her first season:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Up to date with UK vaccinations:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Vaccination certificate available to view:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Last worming product used:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Date of last worming:</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Has the mother had surgery to correct inherited features:</label>
+                                <select class="form-select mb-2">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <textarea class="form-control" rows="2" placeholder="If yes, please give details"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About the Puppy's Father -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">4. About the Puppy's Father</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="text-muted mb-3">Owner's Contact Details</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Title:</label>
+                                <input type="text" class="form-control" placeholder="Mr, Mrs, Miss, etc.">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">First Name:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Surname:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Phone:</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Address:</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Postcode:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Email:</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <h5 class="text-muted mb-3 mt-4">Father's Details</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Date of Birth:</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Microchip Number (15 digits):</label>
+                                <input type="text" class="form-control" maxlength="15">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Registered with club/society:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Registration Type:</label>
+                                <input type="text" class="form-control" placeholder="e.g., Kennel Club, Greyhound Studbook">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Registration Number:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Has the father had surgery to correct inherited features:</label>
+                                <select class="form-select mb-2">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <textarea class="form-control" rows="2" placeholder="If yes, please give details"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About the Puppy -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">5. About the Puppy</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Date of Birth:</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Sex:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Colour and distinguishing marks:</label>
+                                <textarea class="form-control" rows="3" placeholder="Please describe the puppy's colour and distinguishing marks"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Is the puppy a specific breed:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">If yes, state the breed:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Is the puppy a cross-breed:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="form-label">Mother's breed:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="form-label">Father's breed:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Puppy registered with club/society:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Registration Type:</label>
+                                <input type="text" class="form-control" placeholder="e.g., Kennel Club, Greyhound Studbook">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Registration Number:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Puppy's registered name:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Subject to Kennel Club endorsements:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">If yes, please list them:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Puppy's microchip number (15 digits):</label>
+                                <input type="text" class="form-control" maxlength="15">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Covered by breeder's insurance:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-label">Insurance company:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-label">Policy number:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="form-label">Policy expiry date:</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health and Care Information -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">6. Health and Care Information</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Born by caesarean section:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Will be vaccinated before sale:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Worming product used:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Date of worming:</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Has puppy's tail been docked:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Docking certificate attached:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Health check or vet treatment details:</label>
+                                <select class="form-select mb-2">
+                                    <option value="">Has puppy had health check/treatment?</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <input type="date" class="form-control mb-2" placeholder="Date of treatment/check">
+                                <textarea class="form-control" rows="2" placeholder="Type of treatment or check"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Current weight (kg):</label>
+                                <input type="number" class="form-control" step="0.1">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Current weight (grams):</label>
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Date weight recorded:</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diet and Feeding -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">7. Diet and Feeding</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Types of diet currently being fed:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="dry">
+                                    <label class="form-check-label" for="dry">Dry</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="pouched">
+                                    <label class="form-check-label" for="pouched">Pouched or tinned</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="frozen">
+                                    <label class="form-check-label" for="frozen">Frozen</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Daily amount fed (grams):</label>
+                                <input type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Feeding times:</label>
+                                <input type="text" class="form-control" placeholder="e.g., 8am, 1pm, 6pm">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Will buyer receive one week's food:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training and Environment -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">8. Training and Environment</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Will toilet training be started:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Toilet training location:</label>
+                                <input type="text" class="form-control" placeholder="e.g., outside on grass">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Where is puppy kept most of the time:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="environment" id="kennel">
+                                    <label class="form-check-label" for="kennel">In a kennel</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="environment" id="quiet">
+                                    <label class="form-check-label" for="quiet">In a quiet part of the house</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="environment" id="active">
+                                    <label class="form-check-label" for="active">In a part of the house with lots of activity (e.g., kitchen)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="environment" id="other_env">
+                                    <label class="form-check-label" for="other_env">Other</label>
+                                </div>
+                                <input type="text" class="form-control mt-2" placeholder="If other, please describe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Socialization -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">9. Socialization</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Who will the puppy have interacted with before sale:</label>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="adult_males">
+                                            <label class="form-check-label" for="adult_males">Adult males</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="adult_females">
+                                            <label class="form-check-label" for="adult_females">Adult females</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="children_under4">
+                                            <label class="form-check-label" for="children_under4">Children under 4 years</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="children_4to10">
+                                            <label class="form-check-label" for="children_4to10">Children 4-10 years</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="children_over10">
+                                            <label class="form-check-label" for="children_over10">Children over 10 years</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Interaction with other animals:</label>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="same_breed">
+                                            <label class="form-check-label" for="same_breed">Dogs of same breed</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="different_breeds">
+                                            <label class="form-check-label" for="different_breeds">Dogs of different breeds</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="cats">
+                                            <label class="form-check-label" for="cats">Cats</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rabbits">
+                                            <label class="form-check-label" for="rabbits">Rabbits</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Other animals (please specify)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Experiences the puppy will have had:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="collar">
+                                    <label class="form-check-label" for="collar">Wearing a collar or harness</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="separation">
+                                    <label class="form-check-label" for="separation">Being briefly separated from mother and littermates</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="restricted">
+                                    <label class="form-check-label" for="restricted">Being in a restricted environment</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="household_noises">
+                                    <label class="form-check-label" for="household_noises">Hearing household noises</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="recorded_noises">
+                                    <label class="form-check-label" for="recorded_noises">Hearing real or recorded noises (fireworks, traffic)</label>
+                                </div>
+                                <textarea class="form-control mt-2" rows="2" placeholder="Describe these experiences (washing machine, traffic noise, etc.)"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Will new owner see and interact with:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="see_mother">
+                                    <label class="form-check-label" for="see_mother">The puppy's mother (legal requirement for licensed breeders)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="see_father">
+                                    <label class="form-check-label" for="see_father">The puppy's father</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="see_littermates">
+                                    <label class="form-check-label" for="see_littermates">Other puppies in the litter</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pedigree and Breeding -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">10. Pedigree and Breeding</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Is the puppy's pedigree known:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Pedigree certificate attached:</label>
+                                <select class="form-select">
+                                    <option value="">Select...</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="form-label">Relationship between puppy's parents:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="relationship" id="unrelated">
+                                    <label class="form-check-label" for="unrelated">Unrelated</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="relationship" id="distantly_related">
+                                    <label class="form-check-label" for="distantly_related">Distantly related (second or third cousins)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="relationship" id="third_degree">
+                                    <label class="form-check-label" for="third_degree">Third degree relatives (first cousins)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="relationship" id="unknown_relation">
+                                    <label class="form-check-label" for="unknown_relation">Unknown</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Coefficient of Inbreeding (COI):</label>
+                                <input type="number" class="form-control" step="0.01" placeholder="Leave blank if unknown">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inherited Conditions and Health Screening -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">11. Inherited Conditions and Health Screening</h3>
+                    <p class="text-muted">Complete this section for common or serious inherited conditions in the breed(s) and record any related screening or DNA tests.</p>
+                    
+                    <!-- Mother's Breed Health Testing -->
+                    <div class="mb-4">
+                        <h5 class="text-success">Mother's Breed Health Testing</h5>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Mother's breed(s):</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Inherited Condition</th>
+                                        <th>Test Available</th>
+                                        <th>Test Carried Out</th>
+                                        <th>Date of Test</th>
+                                        <th>Results Available</th>
+                                        <th>Certificate Given</th>
+                                        <th>Comments</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Father's Breed Health Testing -->
+                    <div class="mb-4">
+                        <h5 class="text-success">Father's Breed Health Testing</h5>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Father's breed(s):</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Inherited Condition</th>
+                                        <th>Test Available</th>
+                                        <th>Test Carried Out</th>
+                                        <th>Date of Test</th>
+                                        <th>Results Available</th>
+                                        <th>Certificate Given</th>
+                                        <th>Comments</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Puppy's Health Testing -->
+                    <div class="mb-4">
+                        <h5 class="text-success">Puppy's Health Testing</h5>
+                        <div class="form-group mb-3">
+                            <label class="form-label">Puppy's breed(s):</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Inherited Condition</th>
+                                        <th>Test Available</th>
+                                        <th>Test Carried Out</th>
+                                        <th>Date of Test</th>
+                                        <th>Results Available</th>
+                                        <th>Certificate Given</th>
+                                        <th>Comments</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="date" class="form-control form-control-sm"></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><select class="form-select form-select-sm"><option>Yes</option><option>No</option></select></td>
+                                        <td><input type="text" class="form-control form-control-sm"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra Information -->
+                <div class="contract-section">
+                    <h3 class="h4 text-success mb-3">12. Extra Information</h3>
+                    <div class="form-group">
+                        <label class="form-label">Additional information about the puppy:</label>
+                        <textarea class="form-control" rows="5" placeholder="Use this space to include any extra information about the puppy"></textarea>
+                    </div>
+                </div>
+
+                <!-- SALE CONTRACT SECTION -->
+                <div class="contract-section mt-5 pt-5" style="border-top: 3px solid #3c763d;">
+                    <div class="text-center">
+                        <h2 class="section-title d-inline-block">Contract for the Sale and Purchase of a Puppy</h2>
+                    </div>
+
+                    <!-- Puppy Details for Contract -->
+                    <div class="contract-section">
+                        <h3 class="h4 text-success mb-3">1. Puppy Details</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Breed:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Date of Birth:</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Sex:</label>
+                                    <select class="form-select">
+                                        <option value="">Select...</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Colour:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Kennel Club registered name:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Kennel Club registration number:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Microchip number:</label>
+                                    <input type="text" class="form-control" maxlength="15">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details of Parties -->
+                    <div class="contract-section">
+                        <h3 class="h4 text-success mb-3">2. Details of Parties</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="text-muted mb-3">Seller's Details</h5>
+                                <div class="form-group">
+                                    <label class="form-label">Name:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Address:</label>
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Telephone:</label>
+                                    <input type="tel" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-muted mb-3">Buyer's Details</h5>
+                                <div class="form-group">
+                                    <label class="form-label">Name:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Address:</label>
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Telephone:</label>
+                                    <input type="tel" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Definitions -->
+                    <div class="contract-section">
+                        <h3 class="h4 text-success mb-3">Definitions</h3>
+                        <div class="warranty-section">
+                            <ul class="list-unstyled">
+                                <li><strong>"Puppy Information Pack"</strong> means the Puppy Information Pack that sets out the Dog Health Information and Future Health and Welfare Needs and forms part of this agreement.</li>
+                                <li><strong>"Dog Health Information"</strong> means the information about the Puppy, its parent and grandparents, and these animals' health and temperament.</li>
+                                <li><strong>"Good Health"</strong> means a condition of health free of parasites and hereditary disorders and of reasonably sound physical condition and temperament.</li>
+                                <li><strong>"Future Health and Welfare Needs"</strong> means the measures that should be taken to ensure that the Puppy is and remains in Good Health and is properly housed, fed, watered, trained, socialised and exercised and that it receives appropriate veterinary attention.</li>
+                                <li><strong>"Seller"</strong> means the seller of the Puppy defined above, whether or not the breeder of the Puppy.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Seller's Warranties -->
+                    <div class="contract-section">
+                        <h3 class="h4 text-success mb-3">3. The Seller Warrants</h3>
+                        <div class="warranty-section">
+                            <p><strong>3.1</strong> That if the Buyer has previously selected the Puppy from a litter or in any other circumstances, that the Puppy sold under this contract is the Puppy that the Buyer has previously selected.</p>
+                            
+                            <p><strong>3.2</strong> That the genetic health checks and health screening set out in the Puppy Information Pack have been carried out on the Puppy's parents and explanation of what this means for the Puppy is provided in the Puppy Information Pack.</p>
+                            
+                            <p><strong>3.3</strong> That the Puppy is not the result of a mating of two dogs related within two generations.</p>
+                            
+                            <p><strong>3.4</strong> That the Puppy is in Good Health, other than as the Seller specifically informs the Buyer before the date of sale.</p>
+                            
+                            <p><strong>3.5</strong> That he/she has supplied the Puppy Information Pack prior to the Buyer viewing the Puppy or a reasonable period in advance of the Buyer's decision to buy the Puppy and has communicated to the Buyer within the Puppy Information Pack:</p>
+                            <ul>
+                                <li>a) the possible consequences of buying the Puppy given the Dog Health Information, the genetic health checks and health screening carried out under clause 3.2 and the particular considerations that are likely to affect the Puppy given its breed;</li>
+                                <li>b) the meaning of any Kennel Club endorsement;</li>
+                                <li>c) the measures that should be taken, whether by neutering, contraception or otherwise, to guard against unwanted pregnancy; and</li>
+                                <li>d) the Future Health and Welfare Needs of the Puppy.</li>
+                            </ul>
+                            
+                            <p><strong>3.6</strong> That the information contained in the Puppy Information Pack supplied to the Buyer under clause 3.5 above is accurate and materially complete (to the best of the Seller's knowledge and belief where the information is supplied by a third party) and all diagnostic tests for the Puppy have been undertaken as recorded in the Dog Health Information and that reasonable care and skill is and/or will be used when explaining to the Buyer the Future Health and Welfare Needs of the Puppy and any advice or recommendations provided under clause 4.5 below.</p>
+                            
+                            <p><strong>3.7</strong> That, if he/she is a member of the Kennel Club Assured Breeder Scheme, he/she has adhered to the Standard and all requirements and recommendations under the Scheme as set out at https://www.thekennelclub.org.uk/breeding/assured-breeder-scheme/ and/or as provided to the Buyer.</p>
+                            
+                            <p><strong>3.8</strong> That he/she, having made reasonable enquiries of the Buyer, in good faith believes that the Buyer is able to meet the Puppy's Future Health and Welfare Needs.</p>
+                            
+                            <p><strong>3.9</strong> That the Puppy is more than 8 weeks old at the date of sale.</p>
+                            
+                            <p><strong>3.10</strong> That the Puppy has received adequate care and that the Seller has provided it with the opportunity to socialise with dogs, humans and other animals it is likely to come into contact with and it has experienced and become accustomed to the sounds and experiences of typical family life.</p>
+                            
+                            <p><strong>3.11</strong> That any pedigree indicated for the Puppy is correct. Where appropriate, the Seller will provide the Buyer with all relevant registration papers and pedigree certificate within one month of the date of sale, or as soon as it is available.</p>
+                        </div>
+                    </div>
+
+                    <!-- Buyer's Warranties -->
+                    <div class="contract-section">
+                        <h3 class="h4 text-success mb-3">4. The Buyer Warrants</h3>
+                        <div class="warranty-section">
+                            <p><strong>4.1</strong> That he/she has read and understands the information provided to him/her under clauses 3.2-3.5 above and contained in the Puppy Information Pack.</p>
+                            
+                            <p><strong>4.2</strong> That he/she in good faith believes that he/she will be able, and intends, to meet the Puppy's Future Health and Welfare Needs.</p>
+                            
+                            <p><strong>4.3</strong> That neither he/she nor any member of his/her household has been cautioned for or convicted of any breach of animal welfare law such as neglect, cruelty or abandonment.</p>
+                            
+                            <p><strong>4.4</strong> That he/she shall not breach the terms of any Kennel Club endorsement.</p>
+                            
+                            <p><strong>4.5</strong> That in the event that he/she is no longer able or willing to provide a home for the Puppy or otherwise to meet the Puppy's Future Health and Welfare Needs he/she will contact the Seller and have regard to any advice and recommendations that the Seller provides, including return of the Puppy at the option of the Seller.</p>
+                            
+                            <p><strong>4.6</strong> That he/she is purchasing the Puppy for himself/herself and not as agent for a third party.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mutual Agreement -->
+                    <div class="contract-section">
+                        <h3 class="h4 text-success mb-3">5. Both Buyer and Seller Agree and Understand</h3>
+                        <div class="warranty-section">
+                            <p><strong>5.1</strong> That the Puppy is a living creature with interests independent of both Buyer and Seller.</p>
+                            
+                            <p><strong>5.2</strong> That the Buyer may suffer distress and inconvenience as a result of the Puppy suffering pain or discomfort and one purpose of the Seller's warranties is to reduce or avoid such distress and inconvenience.</p>
+                            
+                            <p><strong>5.3</strong> The Buyer shall be entitled to recover from the Seller his reasonable veterinary fees and costs to treat a serious disorder suffered by the Puppy that relates to a breach of any of the Seller's warranties.</p>
+                            
+                            <p><strong>5.4</strong> Nothing in this contract affects the Buyer's statutory rights including any warranty of satisfactory quality of the Puppy implied by sale of goods legislation or other law.</p>
+                            
+                            <p><strong>5.5</strong> The Buyer agrees to take the Puppy to their vet, soon after purchase, for a general health check and advice on inoculations and worming.</p>
+                        </div>
+                    </div>
+
+                    <!-- Signatures Section -->
+                    <div class="contract-section">
+                        <h3 class="h4 text-success mb-3">6. Date, Declarations and Signatures</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Date of sale and purchase:</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Purchase price received by Seller: £</label>
+                                    <input type="number" class="form-control" step="0.01">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="warranty-section mt-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-success">Buyer Declaration</h5>
+                                    <p class="small">By signing this contract I agree and understand that I am entering into a legal and binding contract.</p>
+                                    <div class="form-group">
+                                        <label class="form-label">Buyer Signature:</label>
+                                        <div class="border p-3" style="height: 80px; background-color: #f8f9fa;">
+                                            <small class="text-muted">Signature area</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Date:</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-success">Seller Declaration</h5>
+                                    <p class="small">By signing this contract I agree and understand that I am entering into a legal and binding contract.</p>
+                                    <div class="form-group">
+                                        <label class="form-label">Seller Signature:</label>
+                                        <div class="border p-3" style="height: 80px; background-color: #f8f9fa;">
+                                            <small class="text-muted">Signature area</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Date:</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guidance Notes Section -->
+                    <div class="contract-section mt-5 pt-4" style="border-top: 2px solid #dee2e6;">
+                        <div class="text-center">
+                            <h2 class="section-title d-inline-block">Guidance Notes</h2>
+                        </div>
+                        
+                        <div class="contract-section">
+                            <h3 class="h5 text-success mb-3">About the Breeder</h3>
+                            <p><strong>Contact Details:</strong> It is strongly recommended that you do not buy a puppy from anyone other than the breeder so that you can see the puppy interacting with his/her mother and siblings in the place where he/she was born and reared.</p>
+                        </div>
+
+                        <div class="contract-section">
+                            <h3 class="h5 text-success mb-3">About the Puppy's Mother</h3>
+                            
+                            <p><strong>Microchip Number:</strong> Microchipping is the best way for dogs and puppies to be identified and returned to their owners if they get lost or stolen. It is a legal requirement in England, Wales, Scotland and Northern Ireland that all dogs over the age of eight weeks are microchipped.</p>
+                            
+                            <p><strong>Caesarean Sections:</strong> A caesarean section is an operation to take the puppies out of the mother when she hasn't been able to give birth naturally. It is a major operation which can cause problems for the mother and puppies. Some breeds and some individual mothers struggle to give birth naturally and may end up needing a caesarean every time. Vets feel that these dogs should not be bred from. You should avoid buying puppies from mothers who have had more than one caesarean. In England, licensed breeders must not breed from a dog who has already had two caesarean sections.</p>
+                            
+                            <p><strong>Number of Litters:</strong> Pregnancy, birth and rearing puppies all take a lot of energy and work for any mother. She may have problems such as difficulty giving birth and poor body condition if her nutritional needs aren't met. Mothers should be allowed at least one season between litters. Avoid puppies from mothers that have had many litters, as this may be a sign that the breeder has expected too much from the mother.</p>
+                            
+                            <p><strong>Age at First Litter:</strong> Responsible breeders should not breed from their bitch's first season and should not breed from bitches under one year old. This makes sure the mother is fully grown, mature and is as capable as possible of coping with pregnancy and birth. Different breeds mature at different rates, so check with a vet for the appropriate age when breeding can start.</p>
+                            
+                            <p><strong>Vaccinations:</strong> It is very important that the mother's routine vaccinations are up to date. She needs to be vaccinated to make sure her puppies are born with a good immunity to certain deadly diseases. This will keep the puppies healthy until they can be vaccinated themselves. Homeopathic vaccines should not have been used.</p>
+                            
+                            <p><strong>Worming:</strong> Regular worming of the mother, including during pregnancy, is important to make sure the puppies are not born infested with worms. Ask your vet about how effective the products listed are, and whether they are up to date.</p>
+                        </div>
+
+                        <div class="contract-section">
+                            <h3 class="h5 text-success mb-3">About Surgery to Correct Inherited Features</h3>
+                            <p>Many breeds have been bred to emphasise certain features which over time have become more and more exaggerated. Although 'normal' for a breed, flat faces, heavy wrinkles and very floppy ears are just a few examples of features that may cause problems. For example, dogs with short flat faces often have features that can cause breathing problems, such as narrow nostrils and tiny windpipes. You should be told if either parent has had surgery to fix a problem such as eyelids which rubbed on the eye, as this may no longer be obvious, but could still be inherited by the puppy.</p>
+                        </div>
+
+                        <div class="contract-section">
+                            <h3 class="h5 text-success mb-3">About the Puppy</h3>
+                            
+                            <p><strong>Age Requirements:</strong> The puppy should be at least 8 weeks old before they can leave their mum.</p>
+                            
+                            <p><strong>Kennel Club Endorsements:</strong> Before a puppy is sold the breeder can apply to the Kennel Club to place endorsements on his/her records. For example: "PROGENY NOT ELIGIBLE FOR REGISTRATION" or "EXPORT PEDIGREE NOT ALLOWED". The breeder must explain what the endorsements mean before you agree to buy the puppy.</p>
+                            
+                            <p><strong>Microchipping:</strong> It is a legal requirement in England, Wales, Scotland and Northern Ireland that all puppies are microchipped by the time they are eight weeks old and before they go to their new homes. It is also a legal requirement for the new owner to contact the relevant database to update their records with their contact details.</p>
+                            
+                            <p><strong>Insurance:</strong> Breeders often insure their litters. Some insurance policies provide free cover for new owners against a puppy's illness or injury for a limited period after the puppy has been bought.</p>
+                            
+                            <p><strong>Vaccinations:</strong> Vaccinations are very important to prevent certain deadly diseases such as parvovirus. If the mother was vaccinated properly the puppy should have resistance to these diseases for roughly the first 10 weeks of his/her life.</p>
+                            
+                            <p><strong>Tail Docking:</strong> The law bans tail docking in England, Wales, and Northern Ireland except under certain conditions and only when carried out by a vet. In Scotland there is a total ban. Tail docking involves removing a puppy's tail either by cutting it off or using a tight rubber band to make it die. Many animal welfare and veterinary organisations are strongly opposed to the practice unless the tail is injured or diseased.</p>
+                        </div>
+
+                        <div class="contract-section">
+                            <h3 class="h5 text-success mb-3">Diet and Environment</h3>
+                            
+                            <p><strong>Diet:</strong> It is important that you know the type of food that the puppy is used to and how often and when he/she is used to being fed, so that these can all be kept as similar as possible when you take the puppy home. When you change to a new food, you should do this gradually over four to five days.</p>
+                            
+                            <p><strong>Toilet Training:</strong> Puppies start to learn a preference at an early age for the surface that they toilet on. The more they use a particular surface, the stronger this preference becomes.</p>
+                            
+                            <p><strong>Environment:</strong> A puppy's early social and physical environment strongly influences their behaviour as adults. A puppy that has lived in a home environment, particularly in a part of it where people come and go, is more likely to be prepared for life in a home.</p>
+                        </div>
+
+                        <div class="contract-section">
+                            <h3 class="h5 text-success mb-3">Socialization</h3>
+                            
+                            <p><strong>Critical Period:</strong> The period from 3–14 weeks of age in a puppy's life are critical in determining how he/she will react to people and new situations. Lack of social contact during this period increases the risk of behaviours associated with fear and anxiety later in life.</p>
+                            
+                            <p><strong>People Contact:</strong> Puppies need to have contact with men, women and children during this period. In general, the more people that puppies have interacted with the better.</p>
+                            
+                            <p><strong>Other Animals:</strong> Puppies need to meet a variety of other dogs in order to learn social skills and how different types of dog communicate. If puppies have experience of other animals, they will be more likely to adapt quickly to any other animals they have to live with in your home.</p>
+                            
+                            <p><strong>Seeing the Mother:</strong> Licensed breeders in England must only show you a puppy with his/her biological mother. Regardless of the law where you're buying your puppy, it is very important that you see the puppy's mother and the other puppies in the litter. Unscrupulous breeders may try to show you another dog instead of the puppy's mother.</p>
+                        </div>
+
+                        <div class="contract-section">
+                            <h3 class="h5 text-success mb-3">Pedigree and Inbreeding</h3>
+                            
+                            <p><strong>Pedigree Certificate:</strong> The pedigree certificate shows the puppy's ancestry and may go back up to five generations, starting with the puppy's parents in the left column through to the great-great-great grandparents in the right column.</p>
+                            
+                            <p><strong>Inbreeding:</strong> If the puppy's parents are related to each other, the puppy is inbred. Inbreeding is not desirable as it increases the risk of inherited disease such as cancer and blindness. Avoid a puppy from matings between first- or second-degree relatives.</p>
+                            
+                            <p><strong>Coefficient of Inbreeding (COI):</strong> This is a number where the higher the number, the more inbred the puppy. Avoid puppies with a COI of over 12.5 and above the average for their breed. You can find the COI for puppies registered with the Kennel Club using their Mate Select service.</p>
+                        </div>
+
+                        <div class="contract-section">
+                            <h3 class="h5 text-success mb-3">Inherited Conditions and Health Screening</h3>
+                            
+                            <p><strong>Inherited Disorders:</strong> Many breeds of dog are prone to a number of inherited disorders and some breeds have higher likelihoods of developing particular disorders. Crossbred dogs can also inherit disorders from their parents' breeds. Some inherited conditions are very rare or cause only minor suffering, while others are extremely painful or life-threatening.</p>
+                            
+                            <p><strong>Health Screening Tests:</strong> Several health screening tests can measure the risk that a dog will be affected by the disease, be a carrier (and able to pass it on to their offspring) or be unaffected. The breeder should have listed important disorders, and where the disorder can be screened for in the puppy and his/her parents, attached copies of the results certificates for any tests carried out.</p>
+                            
+                            <p><strong>Useful Resources:</strong></p>
+                            <ul>
+                                <li>Dog Breed Health: www.dogbreedhealth.com</li>
+                                <li>University of Cambridge Inherited Diseases in Dogs Database</li>
+                                <li>Universities Federation for Animal Welfare</li>
+                                <li>Canine Inherited Disorders Database</li>
+                                <li>Canine Health Schemes: British Veterinary Association and Kennel Club</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="contract-section mt-4 p-3" style="background-color: #f8f9fa; border-left: 4px solid #3c763d;">
+                        <h5 class="text-success">Disclaimer</h5>
+                        <p class="small mb-0">The Puppy Contract and related documents are intended to provide a fair basis for the sale and purchase of a puppy with the primary aim of promoting animal welfare. No warranties, representations or undertakings, express or implied, are made about the documents. AWF and RSPCA own and reserve all intellectual property rights in the documents. You may download, print and copy this document but you must not modify it without prior written permission or sell or republish it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
