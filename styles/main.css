@@ -208,10 +208,6 @@ footer hr {
 /* Accordion hover effects - with higher specificity */
 
 .accordion .accordion-item {
-background-color: rgb(167, 201, 87);
-}
-
-.accordion .accordion-item {
     margin-bottom: 0.75rem !important;
     border: 1px solid #dee2e6 !important;
     border-radius: 0.5rem !important;
